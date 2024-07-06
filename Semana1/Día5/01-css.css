@@ -78,10 +78,17 @@ tr:hover {
 /* al contenido antes del elemento */
 .linea::before {
   content: "\2192";
-  color:silver;
+  /* color:silver; */
 }
 
 .linea::after {
   content: "\2190";
-  color:silver;
+  /* color:silver; */
+}
+
+/* Operador Más, el operador , */
+/* selector2, selector y va a funcionar como un Y  */
+/* optimización */
+.linea::before, .linea::after {
+  color:purple;
 }

@@ -3,7 +3,26 @@ p {
     font-weight: bold;
 }
 
+#crucial {
+    /* de pref, nunca utilicen important */
+    color: green !important;
+}
+
+.resaltado {
+    color:chocolate;
+}
+
+/* test */
 p {
     font-family: Arial;
     color:dodgerblue;
 }
+
+/* 
+menos a más
+5.selectores de etiqueta: p, header, div
+4.clases
+3.ids
+2.estilos inline: style="propiedad:valor"
+1.!important
+*/

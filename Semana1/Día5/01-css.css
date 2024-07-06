@@ -40,3 +40,6 @@ ul li {
 }
 
 /* combinador de hermanos */
+span ~ p {
+  color: red;
+}

@@ -30,6 +30,13 @@ p {
 /* algunos cuantos operadores para seleccionar elementos de forma más especifica */
 
 /* primeros elementos hijos */
+/* ctrl + } - cmd + } */
 ul > li {
   color:yellow;
 }
+/* a todos los hijos, ya no interesa si son primeros, segundos, nietos, tataranietos */
+ul li {
+  font-style:italic;
+}
+
+/* combinador de hermanos */

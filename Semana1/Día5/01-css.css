@@ -1,0 +1,28 @@
+/* Selectores */
+main {
+  background-color: dodgerblue;
+  font-family: Arial;
+}
+
+p {
+  font-weight: bold;
+}
+
+/* selectores de clase */
+/* .nombre_clase */
+.texto-blanco {
+  color: white;
+}
+
+.importante {
+  text-decoration: underline;
+}
+
+/* selectores de id */
+/* #nombre_del_id */
+#p-final{
+  color:lightgray;
+  font-style: italic;
+}
+/* en CSS se utilices clases */
+/* en JS usualmente ID */

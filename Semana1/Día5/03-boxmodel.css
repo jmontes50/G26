@@ -1,0 +1,14 @@
+header {
+  border:2px solid blue;
+  margin:50px;
+}
+
+h1{
+  border:2px solid red;
+  padding:20px;
+}
+
+main{
+  border:2px solid green;
+  margin:50px;
+}

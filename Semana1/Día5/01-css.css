@@ -57,3 +57,11 @@ tr:nth-of-type(odd) {
 tr:nth-of-type(even) {
   background-color:ghostwhite;
 }
+
+tr:nth-of-type(4){
+  font-weight: bold;
+}
+
+.parrafos p:nth-child(3){
+  color:orange;
+}

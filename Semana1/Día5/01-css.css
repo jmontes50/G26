@@ -40,6 +40,9 @@ ul li {
 }
 
 /* combinador de hermanos */
+/* virgulilla */
 span ~ p {
   color: red;
 }
+
+/* pseudoclase */

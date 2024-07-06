@@ -46,3 +46,14 @@ span ~ p {
 }
 
 /* pseudoclase */
+/* selector:pseudoclase */
+/* del selector previo que tengo, voy a afectar a los impares*/
+/* odd - impar */
+tr:nth-of-type(odd) {
+  background-color: gold;
+}
+
+/* even - par */
+tr:nth-of-type(even) {
+  background-color:ghostwhite;
+}

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./01-css.css" />
     <!-- usando style -->
@@ -12,57 +12,61 @@
         border: 4px solid peru;
       }
     </style>
-</head>
-<body>
-  <header>
-    <!-- estilos inline -->
-    <h1 style="color:darkblue; background-color: aqua;">
-      Repaso CSS
-    </h1>
-  </header>
-  <main>
-    <section>
-      <p 
-        class="texto-blanco importante">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, doloremque.
-      </p>
-      <p class="texto-blanco">
-        Temporibus sapiente inventore asperiores. Sapiente magnam omnis qui voluptate veniam.
-      </p>
-      <p>
-        Enim ratione eaque ut obcaecati assumenda distinctio temporibus quam vitae.
-      </p>
-      <!-- la idea de un id es que sea único -->
-      <p id="p-final">
-        Porro sequi, in ea praesentium nostrum atque harum quasi quia
-      </p>
-    </section>
-    <!-- Lista -->
-    <section>
-      <h2>Literatura</h2>
-      <ul>
-        <li>El Sr. de los anillos</li>
-        <li>100 años de soledad</li>
-        <li>El amor en los tiempos del Cólera</li>
-        <li>Los Gallinazos sin plumas</li>
-      </ul>
+  </head>
+  <body>
+    <header>
+      <!-- estilos inline -->
+      <h1 style="color: darkblue; background-color: aqua">Repaso CSS</h1>
+    </header>
+    <main>
+      <section>
+        <p class="texto-blanco importante">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus,
+          doloremque.
+        </p>
+        <p class="texto-blanco">
+          Temporibus sapiente inventore asperiores. Sapiente magnam omnis qui
+          voluptate veniam.
+        </p>
+        <p>
+          Enim ratione eaque ut obcaecati assumenda distinctio temporibus quam
+          vitae.
+        </p>
+        <!-- la idea de un id es que sea único -->
+        <p id="p-final">
+          Porro sequi, in ea praesentium nostrum atque harum quasi quia
+        </p>
+      </section>
+      <!-- Lista -->
+      <section>
+        <h2>Literatura</h2>
+        <ul>
+          <li>El Sr. de los anillos</li>
+          <li>100 años de soledad</li>
+          <li>El amor en los tiempos del Cólera</li>
+          <li>Los Gallinazos sin plumas</li>
+        </ul>
 
-      <h2>Animales</h2>
-      <ul>
-        <li>Mamiferos</li>
+        <h2>Animales</h2>
         <ul>
-          <li>Osos</li>
-          <li>Nutrias</li>
-          <li>Gatos</li>
+          <li>Mamiferos</li>
+          <ul>
+            <li>Osos</li>
+            <li>Nutrias</li>
+            <div>
+              <li>Gatos</li>
+            </div>
+          </ul>
+          <li>Aves</li>
+          <ul>
+            <li>Pingüino</li>
+            <div>
+              <li>Gallinazo</li>
+            </div>
+          </ul>
+          <li>Ornitorrinco</li>
         </ul>
-        <li>Aves</li>
-        <ul>
-          <li>Pingüino</li>
-          <li>Gallinazo</li>
-        </ul>
-        <li>Ornitorrinco</li>
-      </ul>
-    </section>
-  </main>
-</body>
+      </section>
+    </main>
+  </body>
 </html>

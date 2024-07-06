@@ -26,3 +26,10 @@ p {
 }
 /* en CSS se utilices clases */
 /* en JS usualmente ID */
+
+/* algunos cuantos operadores para seleccionar elementos de forma más especifica */
+
+/* primeros elementos hijos */
+ul > li {
+  color:yellow;
+}

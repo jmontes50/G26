@@ -1,3 +1,11 @@
+/* reset CSS */
+/* busca resetear estilos predefinidos de CSS */
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header {
   border:2px solid blue;
   /* esto aplica para margin, padding */
@@ -18,4 +26,10 @@ h1{
 main{
   border:2px solid green;
   margin:50px;
+
+  width: 500px;
+  height: 300px;
+  padding:40px;
+  /* border-box -> vas a medir lo que se indique incluyendo al contenido + borde + padding */
+  box-sizing: border-box;
 }

@@ -33,3 +33,9 @@ main{
   /* border-box -> vas a medir lo que se indique incluyendo al contenido + borde + padding */
   box-sizing: border-box;
 }
+
+aside{
+  border:2px solid blue;
+  padding:20px;
+  width:300px;
+}

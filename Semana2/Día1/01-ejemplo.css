@@ -1,0 +1,26 @@
+/* reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* temporal */
+  border: 2px solid red;
+}
+header {
+  text-align: center;
+  width:1280px;
+  margin:0 auto;
+  padding:96px;
+}
+h1{
+  /* top right bottom left */
+  margin-top:20px;
+  margin-bottom:40px;
+}
+p{
+  margin-bottom: 40px;
+}
+
+img{
+  margin-top: 40px;
+}

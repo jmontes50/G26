@@ -1,8 +1,12 @@
 header {
   border:2px solid blue;
+  /* esto aplica para margin, padding */
   /* margin:50px; */
-  /* 02 valores: EJEX EJEY */
-  margin: 40px 100px;
+  /* 02 valores: EJEY EJEX */
+  /* margin: 40px 100px; */
+  /* 04 valores: arriba derecha abajo izq 🕛 */
+  /* margin: 20px 40px 60px 80px; */
+  margin: 0 auto;
   width: 500px;
 }
 

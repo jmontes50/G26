@@ -38,6 +38,7 @@ aside{
   border:2px solid blue;
   padding:20px;
   width:300px;
+  overflow: scroll;
 }
 
 /* tanto inline como inline block,
@@ -55,7 +56,7 @@ span {
 /* se acomodan al costado pero si puedo cambiar su tamaño */
 /* label, input */
 input {
-  width: 200px;
+  width: 300px;
 }
 
 /* Si un elemento viene con un display predefinido no lo vamos a tocar, no cambiariamos de display a inline o de inline-block a block */

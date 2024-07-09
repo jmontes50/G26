@@ -39,3 +39,23 @@ aside{
   padding:20px;
   width:300px;
 }
+
+/* tanto inline como inline block,
+se acomodan al costado si es que hay espacio */
+
+/* inline */
+/* acomoda al contenido */
+/* no le puedo dar tamaño */
+span {
+  background-color:yellow;
+  width:900px;
+}
+
+/* inline block */
+/* se acomodan al costado pero si puedo cambiar su tamaño */
+/* label, input */
+input {
+  width: 200px;
+}
+
+/* Si un elemento viene con un display predefinido no lo vamos a tocar, no cambiariamos de display a inline o de inline-block a block */

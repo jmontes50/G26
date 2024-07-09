@@ -20,7 +20,22 @@ h1{
 p{
   margin-bottom: 40px;
 }
-
 img{
   margin-top: 40px;
+}
+
+.btn {
+  padding: 18px;
+  border-radius: 36px;
+}
+
+.btn-claro {
+  background-color: white;
+  color:black;
+  border-color:black;
+}
+
+.btn-oscuro {
+  background-color: black;
+  color:white;
 }

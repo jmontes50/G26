@@ -1,6 +1,9 @@
 header {
   border:2px solid blue;
-  margin:50px;
+  /* margin:50px; */
+  /* 02 valores: EJEX EJEY */
+  margin: 40px 100px;
+  width: 500px;
 }
 
 h1{

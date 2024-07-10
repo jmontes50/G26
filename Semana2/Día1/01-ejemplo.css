@@ -1,4 +1,4 @@
-/* font face, para poder utilizar una fuente externa mediante un archivo tengo que utilizar font-face para que mi css lo reconozca */
+/* font face, para poder utilizar una fuente extra mediante un archivo tengo que utilizar font-face para que mi css lo reconozca */
 @font-face {
   font-family: 'Poppins';
   src: url('./Poppins-Regular.ttf');

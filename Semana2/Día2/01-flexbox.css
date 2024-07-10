@@ -1,0 +1,29 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  border:2px solid red;
+}
+
+.menu {
+  background-color: aquamarine;
+  height:800px;
+  /* esta propiedad se aplica a un elemento padre,madre y los hijos inmediatos son los que se ven afectados por las reglas que definamos en este elemento */
+  display: flex;
+  /* brecha, se da una separación entre los elementos hijos */
+  /* gap: 20px; */
+  /* justify-content alinea de forma horizontal */
+  /* justify-content: space-around; */
+  justify-content: space-evenly;
+  /* justify-content: space-between; */
+  /* justify-content: center; */
+  /* alineación vertical */
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.link{
+  background-color: orange;
+  height: 100px;
+  width:100px;
+}

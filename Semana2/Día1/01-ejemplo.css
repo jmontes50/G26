@@ -1,3 +1,8 @@
+/* font face, para poder utilizar una fuente externa mediante un archivo tengo que utilizar font-face para que mi css lo reconozca */
+@font-face {
+  font-family: 'Poppins';
+  src: url('./Poppins-Regular.ttf');
+}
 /* reset CSS */
 * {
   margin: 0;
@@ -25,7 +30,8 @@ h1{
 p{
   margin-bottom: 40px;
   color:gray;
-  font-family: Arial;
+  /* font-family: Arial; */
+  font-family: 'Poppins', Arial, sans-serif;
 }
 small{
   font-family: Arial;

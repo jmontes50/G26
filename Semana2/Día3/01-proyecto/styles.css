@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   /* temporal */
-  border:2px solid red;
+  /* border:2px solid red; */
 }
 
 li {
@@ -153,4 +153,33 @@ header .btn-claro {
 
 .pregunta2 > i {
   color: #3F9BCE;
+}
+
+/* tabla */
+
+.tabla-workspace {
+  width:100%;
+  border:0;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tabla-workspace td {
+  padding: 16px;
+}
+/* a los td de los tr que sean impares vamos a pintarlo de color diferente */
+.tabla-workspace tr:nth-of-type(odd) td{
+  background-color: #FED501;
+}
+
+.tabla-workspace tr td:nth-of-type(1) {
+  /* border-radius: 20px; */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.tabla-workspace tr td:nth-of-type(4) {
+  /* border-radius: 20px; */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

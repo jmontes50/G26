@@ -126,6 +126,8 @@ header .btn-claro {
 .preguntas {
   display: flex;
   gap: 36px;
+  height: 510px;
+  margin-bottom: 96px;
 }
 
 .pregunta1 {
@@ -134,6 +136,7 @@ header .btn-claro {
 
 .pregunta2 {
   border-top: 5px solid #3F9BCE;
+  align-self: flex-end;
 }
 
 .pregunta1, .pregunta2 {

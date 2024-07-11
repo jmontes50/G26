@@ -92,3 +92,20 @@ header .btn-claro {
   margin-top:30px;
   width: 100%;
 }
+
+/* #DE5217
+#3F9BCE */
+
+/* preguntas */
+.preguntas {
+  display: flex;
+  gap: 36px;
+}
+
+.pregunta1 {
+  border-top: 5px solid #DE5217;
+}
+
+.pregunta2 {
+  border-top: 5px solid #3F9BCE;
+}

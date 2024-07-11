@@ -135,3 +135,19 @@ header .btn-claro {
 .pregunta2 {
   border-top: 5px solid #3F9BCE;
 }
+
+.pregunta1, .pregunta2 {
+  padding: 20px 0;
+}
+
+.preguntas h2{
+  margin-top: 20px;
+}
+
+.pregunta1 > i {
+  color: #DE5217;
+}
+
+.pregunta2 > i {
+  color: #3F9BCE;
+}

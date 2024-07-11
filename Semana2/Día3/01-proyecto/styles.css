@@ -33,5 +33,8 @@ a {
   display: flex;
   gap:20px;
   font-family: 'Poppins', sans-serif;
+  align-items:center;
 }
+
+
 

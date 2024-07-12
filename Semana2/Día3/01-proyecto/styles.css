@@ -157,6 +157,16 @@ header .btn-claro {
 
 /* tabla */
 
+.tabla{
+  margin-bottom: 96px;
+}
+
+.tabla h6 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
 .tabla-workspace {
   width:100%;
   border:0;

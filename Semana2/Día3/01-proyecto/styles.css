@@ -227,6 +227,14 @@ header .btn-claro {
   min-height: 225px;
 }
 
+.tarjeta h4 {
+  margin:20px 0;
+}
+
+.img-texto {
+  font-size: 1rem;
+}
+
 .img-texto, .tarjeta h4 {
   text-align: center;
 }

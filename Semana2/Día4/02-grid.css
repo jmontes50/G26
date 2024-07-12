@@ -8,5 +8,14 @@
 .contenedor {
   /* vh - viewport height */
   min-height: 100vh;
+  border:2px solid red;
+  /* objgrid - crear una grilla # */
+  display: grid;
+  /* grid-template-columns: 200px 200px 200px; */
+  /* fr espacio libre, free space */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 150px 150px 150px;
+
 }
 

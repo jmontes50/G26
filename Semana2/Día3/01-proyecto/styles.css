@@ -165,6 +165,7 @@ header .btn-claro {
 /* acción */
 .accion {
   background-color: #FED501;
+  margin-bottom: 96px;
 }
 
 .contenido-accion{
@@ -216,6 +217,15 @@ header .btn-claro {
 }
 
 /* recursos */
+.recursos{
+  margin-bottom: 96px;
+}
+
+.recursos h2{
+  margin-bottom: 48px;
+  text-align: center;
+}
+
 .tarjetas {
   display: flex;
   gap:40px;

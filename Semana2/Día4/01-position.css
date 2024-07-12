@@ -1,0 +1,36 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  height:700px;
+  border:3px solid red;
+}
+
+.caja1,
+.caja2,
+.caja3,
+.caja4,
+.caja5 {
+  width:120px;
+  height:120px;
+  border:2px solid black;
+}
+
+.caja1 {
+  background-color: steelblue;
+}
+.caja2 {
+  background-color: coral;
+}
+.caja3 {
+  background-color: aqua;
+}
+.caja4 {
+  background-color: yellow;
+}
+.caja5 {
+  background-color: rebeccapurple;
+}

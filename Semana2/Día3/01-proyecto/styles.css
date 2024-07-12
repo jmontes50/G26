@@ -155,6 +155,20 @@ header .btn-claro {
   color: #3F9BCE;
 }
 
+/* acción */
+.accion {
+  background-color: #FED501;
+}
+
+.contenido-accion{
+  padding:96px 0;
+  text-align:center;
+}
+
+.contenido-accion h2, .contenido-accion p {
+  margin-bottom:30px;
+}
+
 /* tabla */
 
 .tabla{

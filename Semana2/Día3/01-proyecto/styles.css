@@ -41,11 +41,18 @@ h5 {
 h6 {
   font-size: 2rem; /*40px;*/
 }
+
+p, a{
+  font-size:1.25rem;
+  font-family: 'Poppins', sans-serif;
+}
+
 .container {
   /* margin: topbottom costados */
   margin:0 auto;
   max-width: 1280px;
 }
+
 
 /* btn, btn-claro, btn-oscuro */
 

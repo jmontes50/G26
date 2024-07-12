@@ -214,3 +214,19 @@ header .btn-claro {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+/* recursos */
+.tarjetas {
+  display: flex;
+  gap:40px;
+}
+
+.img-top {
+  display: flex;
+  justify-content: center;
+  min-height: 225px;
+}
+
+.img-texto, .tarjeta h4 {
+  text-align: center;
+}

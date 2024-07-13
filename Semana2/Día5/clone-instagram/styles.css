@@ -21,4 +21,17 @@
 
 .navbar-content{
   display: flex;
+  align-items:center;
+  height:52px;
+  justify-content: space-between;
+}
+
+.search {
+  padding:5px 3px;
+  border-radius:5px;
+}
+
+.navbar-icons {
+  display:flex;
+  gap:22px;
 }

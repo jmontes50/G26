@@ -1,66 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- mis estilos -->
     <link rel="stylesheet" href="./styles.css" />
-</head>
-<body>
-  <nav class="navbar">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-content">
+          <img src="./assets/Logo.png" alt="logo Instagram" class="logo" />
+          <input type="text" class="search" placeholder="search" />
+          <div class="navbar-icons">
+            <img src="./assets/Menu-Button-Item.png" alt="house icon" />
+            <img src="./assets/Icons/ActivityFeed.png" alt="activity icon" />
+            <img src="./assets/Icons/FindPeople.png" alt="find people icon" />
+            <img src="./assets/Icons/Messenger.png" alt="messenger icon" />
+            <img src="./assets/Icons/NewPosts.png" alt="new post icon" />
+            <img src="./assets/Profile-Pic-S.png" alt="profile icon" />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- grid -->
     <div class="container">
-      <div class="navbar-content">
-        <img 
-          src="./assets/Logo.png" 
-          alt="logo Instagram"
-          class="logo"
-        />
-        <input 
-          type="text"
-          class="search"
-          placeholder="search"
-        />
-        <div class="navbar-icons">
-          <img 
-            src="./assets/Menu-Button-Item.png" 
-            alt="house icon"
+      <main class="photos">
+        <div class="img-box">
+          <img
+            src="./assets/Explore/Small-Post-1.png"
+            alt="foto1"
+            class="photo"
           />
-          <img 
-            src="./assets/Icons/ActivityFeed.png"
-            alt="activity icon"
-          />
-          <img 
-            src="./assets/Icons/FindPeople.png"
-            alt="find people icon"
-          />
-          <img 
-            src="./assets/Icons/Messenger.png"
-            alt="messenger icon"
-          />
-          <img 
-            src="./assets/Icons/NewPosts.png"
-            alt="new post icon"
-          />
-          <img 
-            src="./assets/Profile-Pic-S.png"
-            alt="profile icon"
-          />
+          <!--  -->
+          <div class="shadow">
+            <span>100</span>
+            <span>50</span>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
-  </nav>
-  <!-- grid -->
-   <div class="container">
-    <main class="photos">
-      <div class="img-box">
-        <img src="./assets/Explore/Small-Post-1.png" alt="foto1" class="photo" />
-        <!--  -->
-        <div class="shadow">
-          <span>100</span>
-          <span>50</span>
-        </div>
-      </div>
-    </main>
-   </div>
-</body>
+  </body>
 </html>

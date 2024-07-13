@@ -5,19 +5,38 @@
   border:2px solid gray;
 }
 
+.contenedor {
+  display: grid;
+  height:750px;
+  /* grid areas */
+  grid-template-areas: 
+  "cabecera cabecera cabecera cabecera"
+  "principal principal principal"
+  "principal principal principal"
+  "principal principal principal"
+  "principal principal principal"
+  "pie pie pie pie"
+  "pie pie pie pie"
+  ;
+}
+
 /* header, main, aside, footer */
 header{
   background-color: aquamarine;
+  grid-area:cabecera;
 }
 
 main{
   background-color: steelblue;
+  grid-area:principal;
 }
 
 aside{
   background-color: coral;
+  grid-area:publicidad;
 }
 
 footer{
   background-color: gold;
+  grid-area:pie;
 }

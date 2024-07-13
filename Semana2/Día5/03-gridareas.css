@@ -1,0 +1,23 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  border:2px solid gray;
+}
+
+/* header, main, aside, footer */
+header{
+  background-color: aquamarine;
+}
+
+main{
+  background-color: steelblue;
+}
+
+aside{
+  background-color: coral;
+}
+
+footer{
+  background-color: gold;
+}

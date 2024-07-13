@@ -15,10 +15,13 @@
   /* fr espacio libre, free space */
   /* grid-template-columns: 1fr 1fr 1fr; */
   /* repeat(cantidad, tamaño) */
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* minmax(tam_min, tam_max */
+  grid-template-columns: repeat(3, minmax(300px, 400px));
   /* grid-template-rows: 150px 150px 150px; */
   /* en grid template rows puedo utilizar los fr, siempre y cuando el contenedor tenga una altura */
   grid-template-rows: repeat(3, 1fr);
-
+  /* se separan entre items */
+  gap:20px;
 }
 

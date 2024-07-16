@@ -58,7 +58,12 @@
   left: 0;
   font-family: Arial, sans-serif;
   color:white;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  /* gradiente, background, background-image */
+  /* va a recibir multiples valores, la idea es al menos 3 */
+  /* linear-gradient() */
+  /* background: linear-gradient(45deg, rgb(245, 4, 4) 0%, rgb(34, 252, 147) 100%); */
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.25) 100%);
   width: 100%;
   height: 100%;
   justify-content: center;

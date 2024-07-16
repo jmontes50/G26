@@ -9,7 +9,9 @@
   /* transition-property: width; */
   transition-property: all;
   /* transition-timing-function: steps(5); */
-  transition-timing-function: ease-in-out;
+  /* transition-timing-function: ease-in-out; */
+  transition-timing-function: cubic-bezier(.32,.38,.41,1.18);
+  transition-delay: 1s;
 }
 
 .caja1:hover {

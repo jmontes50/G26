@@ -12,6 +12,8 @@
   /* transition-timing-function: ease-in-out; */
   transition-timing-function: cubic-bezier(.32,.38,.41,1.18);
   transition-delay: 1s;
+  /* transform */
+  transform: translate(50px, 100px);
 }
 
 .caja1:hover {
@@ -33,3 +35,11 @@
   box-shadow: 5px 5px 10px 2px black;
 }
 
+p {
+  width:400px;
+  background-color: deepskyblue;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  /* transform: translate(100px, 50px) scale(2) rotate(45deg) skewX(20deg) */
+  transform: translateX(100px);
+}

@@ -1,0 +1,16 @@
+.nave {
+  width:150px;
+  animation-name: vuelo;
+  animation-duration: 5s;
+}
+
+@keyframes vuelo {
+  /* desde */
+  from {
+    transform: translate(0, 0);
+  }
+  /* hacia */
+  to {
+    transform: translate(600px, 0);
+  }
+}

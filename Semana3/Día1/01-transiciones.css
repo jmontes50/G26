@@ -8,6 +8,8 @@
   transition-duration: 500ms;
   /* transition-property: width; */
   transition-property: all;
+  /* transition-timing-function: steps(5); */
+  transition-timing-function: ease-in-out;
 }
 
 .caja1:hover {

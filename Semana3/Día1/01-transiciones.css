@@ -1,0 +1,31 @@
+.caja1 {
+  background-color: red;
+  width:100px;
+  height:100px;
+  /* transiciones, es como va a cambiar de un estado a otro */
+  /* lo ideal es que no demore mas de 500ms */
+  /* transition-duration: 2s; */
+  transition-duration: 500ms;
+  /* transition-property: width; */
+  transition-property: all;
+}
+
+.caja1:hover {
+  background-color: orange;
+  width: 200px;
+}
+
+.caja2 {
+  background-color: blue;
+  width:100px;
+  height:100px;
+  transition-duration: 500ms;
+  transition-property: background-color;
+}
+
+.caja2:hover{
+  /* es bastante pesado */
+  background-color: blueviolet;
+  box-shadow: 5px 5px 10px 2px black;
+}
+

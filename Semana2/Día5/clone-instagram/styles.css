@@ -52,6 +52,11 @@
 }
 
 .shadow {
+  display: none;
+}
+
+/* cuando el cursor este por encima de img-box, cambiamos los estilos de shadow */
+.img-box:hover .shadow {
   display: flex;
   position: absolute;
   top: 0;

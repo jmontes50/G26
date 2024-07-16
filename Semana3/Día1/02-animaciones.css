@@ -1,7 +1,7 @@
 .nave {
   width:150px;
   animation-name: vuelo;
-  animation-duration: 5s;
+  animation-duration: 10s;
 }
 
 @keyframes vuelo {
@@ -18,11 +18,20 @@
   50% {
     transform: translate(500px, 500px) rotate(90deg);
   }
-  /* 50% {
-    transform: translate(250px) scale(1.5);
-  } */
-  /* hacia */
+  55% {
+    transform: translate(500px, 500px) rotate(180deg);
+  }
+  70%{
+    transform: translate(0, 500px) rotate(180deg);
+  }
+  75%{
+    transform: translate(0, 500px) rotate(270deg);
+  }
+
+  95%{
+    transform: translate(0, 0) rotate(270deg);
+  }
   to {
-    transform: translate(600px, 0);
+    transform: translate(0, 0) rotate(360deg);
   }
 }

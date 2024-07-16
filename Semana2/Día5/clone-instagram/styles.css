@@ -80,3 +80,14 @@
   align-items: center;
   gap:8px;
 }
+
+/* cada imagen, ubicación en la grilla */
+.img-box:nth-of-type(3) {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+  overflow: visible;
+}
+
+.img-box:nth-of-type(3) .shadow {
+  height:584px;
+}

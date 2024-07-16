@@ -35,3 +35,27 @@
   display:flex;
   gap:22px;
 }
+
+/* grilla */
+
+.photos {
+  display: grid;
+  /* grid explicito */
+  grid-template-columns: repeat(3, minmax(292px, 1fr));
+  grid-template-rows: repeat(2, minmax(292px, auto));
+}
+
+/* imgbox va a tomar el tamaño que le corresponda según como este definida la grilla */
+.img-box { 
+  overflow: hidden;
+  position: relative;
+}
+
+.shadow {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: Arial, sans-serif;
+  color:white;
+}

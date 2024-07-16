@@ -42,13 +42,18 @@
   display: grid;
   /* grid explicito */
   grid-template-columns: repeat(3, minmax(292px, 1fr));
-  grid-template-rows: repeat(2, minmax(292px, auto));
+  grid-template-rows: repeat(2, 292px);
 }
 
 /* imgbox va a tomar el tamaño que le corresponda según como este definida la grilla */
 .img-box { 
   overflow: hidden;
   position: relative;
+  height:292px;
+}
+
+.photo {
+  width:100%;
 }
 
 .shadow {

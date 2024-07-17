@@ -28,7 +28,10 @@
   /* referencia */
   position: relative;
   filter: grayscale(100%);
+  /* transición */
   transition-duration: 0.5s;
+  /* animación */
+
 }
 
 .card:hover {
@@ -91,4 +94,21 @@
 .card:nth-of-type(9) {
   grid-column: 2 / 3;
   grid-row: 4 / 5;
+}
+
+@keyframes entrada {
+  /* desde */
+  from {
+    /* no va aparecer */
+    transform: scale(0);
+  }
+  /* que aparezca un poquito más grande */
+  70% {
+    transform: scale(1.05);
+  }
+
+  /* hacia, aparece al 100% */
+  to {
+    transform: scale(1);
+  }
 }

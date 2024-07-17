@@ -31,7 +31,9 @@
   /* transición */
   transition-duration: 0.5s;
   /* animación */
-
+  animation-name: entrada;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 
 .card:hover {
@@ -39,6 +41,22 @@
   box-shadow: 0 0 10px black;
   filter: grayscale(0);
   transform: translate(0, 5px) scale(1.02) rotate(0.5deg);
+}
+
+@keyframes entrada {
+  /* desde */
+  from {
+    /* no va aparecer */
+    transform: scale(0);
+  }
+  /* que aparezca un poquito más grande */
+  70% {
+    transform: scale(1.05);
+  }
+  /* hacia, aparece al 100% */
+  to {
+    transform: scale(1);
+  }
 }
 
 .card img {
@@ -96,19 +114,3 @@
   grid-row: 4 / 5;
 }
 
-@keyframes entrada {
-  /* desde */
-  from {
-    /* no va aparecer */
-    transform: scale(0);
-  }
-  /* que aparezca un poquito más grande */
-  70% {
-    transform: scale(1.05);
-  }
-
-  /* hacia, aparece al 100% */
-  to {
-    transform: scale(1);
-  }
-}

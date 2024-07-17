@@ -6,6 +6,7 @@
   animation-timing-function: ease-in-out;
   /* le puedes indicar un número o indicar que sea infinito */
   animation-iteration-count: infinite;
+  /* animation: vuelo 5s 2s ease-in-out infinite; */
 }
 
 @keyframes vuelo {

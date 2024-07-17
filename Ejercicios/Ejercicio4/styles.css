@@ -3,7 +3,7 @@
   padding:0;
   box-sizing: border-box;
   /* temporal */  
-  border:2px solid blue;
+  /* border:2px solid blue; */
 }
 
 .contenedor {
@@ -27,6 +27,15 @@
 .card {
   /* referencia */
   position: relative;
+  filter: grayscale(100%);
+  transition-duration: 0.5s;
+}
+
+.card:hover {
+  /* box-shadow: X Y blur esparcir color; */
+  box-shadow: 0 0 10px black;
+  filter: grayscale(0);
+  transform: translate(0, 5px) scale(1.02) rotate(0.5deg);
 }
 
 .card img {

@@ -15,4 +15,10 @@
   min-height: 1000px;
    /* hasta donde se puede agrandar su altura*/
   max-height: 1200px;
+  margin:0 auto;
+  padding:40px;
+  /* grid */
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  grid-template-rows: repeat(4, minmax(150px, 1fr));
 }

@@ -40,6 +40,6 @@ p {
   background-color: deepskyblue;
   color:white;
   font-family: Arial, Helvetica, sans-serif;
-  /* transform: translate(100px, 50px) scale(2) rotate(45deg) skewX(20deg) */
-  transform: translateX(100px);
+  transform: translate(100px, 50px) scale(2) rotate(45deg) skewX(20deg)
+  /* transform: translateX(100px); */
 }

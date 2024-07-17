@@ -1,0 +1,18 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /* temporal */  
+  border:2px solid blue;
+}
+
+.contenedor {
+  /* hasta donde se puede reducir su ancho*/
+  min-width: 800px;
+  /* hasta donde se puede agrandar su ancho*/
+  max-width: 1200px;
+  /* hasta donde se puede reducir su altura */
+  min-height: 1000px;
+   /* hasta donde se puede agrandar su altura*/
+  max-height: 1200px;
+}

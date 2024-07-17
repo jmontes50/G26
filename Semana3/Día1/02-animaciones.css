@@ -6,6 +6,7 @@
   animation-timing-function: ease-in-out;
   /* le puedes indicar un número o indicar que sea infinito */
   animation-iteration-count: infinite;
+  /*animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode and animation-play-state. */
   /* animation: vuelo 5s 2s ease-in-out infinite; */
 }
 

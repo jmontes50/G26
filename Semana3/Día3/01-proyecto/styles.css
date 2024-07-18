@@ -259,6 +259,13 @@ header .btn-claro {
 /* pondriamos solo 01 @media por cada breakpoint */
 
 @media screen and (width <= 768px) {
+  /* preguntas */
+  .preguntas {
+    flex-direction: column;
+    height:auto;
+    padding: 0 30px;
+    margin-bottom: 60px;
+  }
 
   /* accion */
   .contenido-accion {

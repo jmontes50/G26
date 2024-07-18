@@ -1,0 +1,268 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* temporal */
+  /* border:2px solid red; */
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  /* inherit - heredada */
+  color: inherit;
+}
+
+/* estilos generales */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fraunces', serif;
+  font-weight:300;
+}
+
+h1 {
+  font-size: 4.5rem; /*72px;*/
+}
+h2 {
+  font-size: 4rem; /*64px;*/
+}
+h3 {
+  font-size: 3.5rem; /*56px;*/
+}
+h4 {
+  font-size: 3rem; /*48px;*/
+}
+h5 {
+  font-size: 2.5rem; /*48px;*/
+}
+h6 {
+  font-size: 2rem; /*40px;*/
+}
+
+p, a{
+  font-size:1.25rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  /* margin: topbottom costados */
+  margin:0 auto;
+  max-width: 1280px;
+}
+
+
+/* btn, btn-claro, btn-oscuro */
+
+/* nav */
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding:40px;
+}
+
+.main-links {
+  display: flex;
+  gap:20px;
+  font-family: 'Poppins', sans-serif;
+  align-items:center;
+}
+
+.btn {
+  /* definiendo la figura del botón */
+  border-radius:36px;
+  padding:10px 15px;
+}
+
+.btn-claro {
+  border:1px solid #000;
+  color: rgb(0,0,0);
+}
+
+.btn-oscuro {
+  background-color: #000;
+  color:rgb(255,255,255);
+}
+
+/* header */
+
+header{
+  text-align:center;
+  padding:96px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.small {
+  font-weight: 400;
+  margin-bottom:30px;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  /* font-size: 4.5rem; 72px; */
+  margin-bottom:30px;
+}
+
+.texto-header {
+  font-size:20px;
+  color: rgb(96, 96, 96);
+  margin-bottom:30px;
+}
+
+.btn-grande {
+  padding:15px 20px;
+}
+
+header .btn-claro {
+  margin-right:10px;
+}
+
+.rectangulo-header {
+  margin-top:30px;
+  width: 100%;
+}
+
+/* #DE5217
+#3F9BCE */
+
+/* preguntas */
+.preguntas {
+  display: flex;
+  gap: 36px;
+  height: 510px;
+  margin-bottom: 96px;
+}
+
+.pregunta1 {
+  border-top: 5px solid #DE5217;
+}
+
+.pregunta2 {
+  border-top: 5px solid #3F9BCE;
+  align-self: flex-end;
+}
+
+.pregunta1, .pregunta2 {
+  padding: 20px 0;
+}
+
+.preguntas h2{
+  margin-top: 20px;
+}
+
+.pregunta1 > i {
+  color: #DE5217;
+}
+
+.pregunta2 > i {
+  color: #3F9BCE;
+}
+
+/* acción */
+.accion {
+  background-color: #FED501;
+  margin-bottom: 96px;
+}
+
+.contenido-accion{
+  padding:96px 0;
+  text-align:center;
+}
+
+.contenido-accion h2, .contenido-accion p {
+  margin-bottom:30px;
+}
+
+/* tabla */
+
+.tabla{
+  margin-bottom: 96px;
+}
+
+.tabla h6 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.tabla-workspace {
+  width:100%;
+  border:0;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tabla-workspace td {
+  padding: 16px;
+}
+/* a los td de los tr que sean impares vamos a pintarlo de color diferente */
+.tabla-workspace tr:nth-of-type(odd) td{
+  background-color: #FED501;
+}
+
+.tabla-workspace tr td:first-child {
+  /* border-radius: 20px; */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.tabla-workspace tr td:last-child {
+  /* border-radius: 20px; */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/* 2da opción */
+/* @media screen and (...) {
+  tabla
+} */
+
+/* recursos */
+.recursos{
+  margin-bottom: 96px;
+}
+
+.recursos h2{
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.tarjetas {
+  display: flex;
+  gap:40px;
+  flex-direction: row;
+}
+
+.img-top {
+  display: flex;
+  justify-content: center;
+  min-height: 225px;
+}
+
+.tarjeta h4 {
+  margin:20px 0;
+}
+
+.img-texto {
+  font-size: 1rem;
+}
+
+.img-texto, .tarjeta h4 {
+  text-align: center;
+}
+
+/* media queries */
+/* o los ponemos abajo al final */
+/* pondriamos solo 01 @media por cada breakpoint */
+
+@media screen and (width <= 768px) {
+  /* tabla */
+
+  /* tarjetas */
+  .tarjetas {
+    flex-direction: column;
+  }
+}

@@ -259,6 +259,20 @@ header .btn-claro {
 /* pondriamos solo 01 @media por cada breakpoint */
 
 @media screen and (width <= 768px) {
+  /* general */
+  html {
+    font-size: 10px;
+  }
+  p, a {
+    font-size: 1.5rem;
+  }
+  .img-texto {
+    font-size: 1.5rem;
+  }
+  /* header */
+  header {
+    padding: 30px;
+  }
   /* preguntas */
   .preguntas {
     flex-direction: column;
@@ -277,6 +291,7 @@ header .btn-claro {
   .tabla {
     width: 90%;
     margin:0 auto;
+    margin-bottom: 60px;
     overflow-x: scroll;
   }
   /* forzando un poco la tabla para plantear que tuviera muchos datos */
@@ -287,5 +302,9 @@ header .btn-claro {
   /* tarjetas */
   .tarjetas {
     flex-direction: column;
+  }
+
+  .tarjeta {
+    padding: 30px;
   }
 }

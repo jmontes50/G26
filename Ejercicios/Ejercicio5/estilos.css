@@ -19,8 +19,13 @@ h1 {
   margin:0 auto;
   display: grid;
   gap:10px;
-  grid-template-columns: repeat(4, 300px);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 200px);
+}
+
+.fotos img {
+  width:100%;
+  object-fit: cover;
 }
 
 @media screen and (width <= 768px) {

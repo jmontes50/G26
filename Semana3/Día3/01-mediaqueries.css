@@ -14,8 +14,22 @@ h1 {
     Estas propiedades solo serán útiles bajo esta condicional y este medio
   }
 }*/
+/* PC escritoriop, una laptop, una tablet grande de 401 a 1024 */
 @media screen and (width <= 1024px) {
   h1 {
     color: steelblue;
+  }
+  header {
+    background-color: yellow;
+  }
+}
+
+/* dispositivo movil en vertical de 0 a 400 */
+@media screen and (width <= 400px) {
+  h1 {
+    color:green;
+  }
+  header {
+    background-color: red;
   }
 }

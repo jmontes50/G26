@@ -259,7 +259,23 @@ header .btn-claro {
 /* pondriamos solo 01 @media por cada breakpoint */
 
 @media screen and (width <= 768px) {
+
+  /* accion */
+  .contenido-accion {
+    padding-left:30px;
+    padding-right:30px;
+  }
+
   /* tabla */
+  .tabla {
+    width: 90%;
+    margin:0 auto;
+    overflow-x: scroll;
+  }
+  /* forzando un poco la tabla para plantear que tuviera muchos datos */
+  .tabla-workspace {
+    min-width: 800px;
+  }
 
   /* tarjetas */
   .tarjetas {

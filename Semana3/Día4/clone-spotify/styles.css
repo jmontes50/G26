@@ -31,7 +31,7 @@
   padding: 0;
   box-sizing: border-box;
   /* temporal */
-  border:1px solid var(--azul);
+  /* border:1px solid var(--azul); */
 }
 
 body {
@@ -41,10 +41,15 @@ body {
 }
 
 /* inicio general */
-
+main {
+  padding:30px 45px;
+}
 /* fin general */
 
 /* búsquedas recientes */
+.busquedas-recientes h2 {
+  margin-bottom:30px;
+}
 .tarjetas-busqueda {
   display: flex;
   gap:20px;
@@ -57,6 +62,8 @@ body {
   flex-direction: column;
   gap:10px;
   position:relative;
+  background-color: var(--secondary-color-02);
+  border-radius:10px;
 }
 
 .cerrar-artista {

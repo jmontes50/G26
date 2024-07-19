@@ -31,7 +31,7 @@
   padding: 0;
   box-sizing: border-box;
   /* temporal */
-  /* border:1px solid var(--azul); */
+  border:1px solid var(--azul);
 }
 
 body {
@@ -87,3 +87,21 @@ section {
 }
 
 /* Explorar todo - Browse All */
+
+
+.contenedor-generos {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(6, minmax(250px, 1fr));
+}
+
+.cuadro-genero {
+  padding: 20px;
+  border-radius:10px;
+}
+
+.album-genero {
+  width:150px;
+  /* translate(x, y) */
+  transform: translate(100px, 50px) rotate(30deg);
+}

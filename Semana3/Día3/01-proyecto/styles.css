@@ -294,10 +294,27 @@ header .btn-claro {
     height: 100vh;
     background-color: #FED501;
     top:0;
-    left:0;
+    right:-100vw;
     padding: 60px;
     font-size: 1.65rem;
     gap:40px;
+  }
+
+  .abrir-menu {
+    position:absolute;
+    display: block;
+    top:30px;
+    right:40px;
+    /* que me permite modificar el cursor */
+    cursor: pointer;
+  }
+
+  .cerrar-menu {
+    display: block;
+  }
+  /* :checked verifica si un checkbox o radio input esta marcado  */
+  #checkmenu:checked ~ .main-links {
+    right:0;
   }
 
   /* preguntas */

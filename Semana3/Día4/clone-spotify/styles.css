@@ -98,10 +98,60 @@ section {
 .cuadro-genero {
   padding: 20px;
   border-radius:10px;
+  overflow: hidden;
+  height:250px;
 }
 
 .album-genero {
   width:150px;
   /* translate(x, y) */
-  transform: translate(100px, 50px) rotate(30deg);
+  transform: translate(100px, 70px) rotate(30deg);
+}
+
+.cuadro-genero:nth-of-type(1) {
+  background-color: var(--genre-color01);
+}
+
+.cuadro-genero:nth-of-type(2) {
+  background-color: var(--genre-color02);
+}
+
+.cuadro-genero:nth-of-type(3) {
+  background-color: var(--genre-color03);
+}
+
+.cuadro-genero:nth-of-type(4) {
+  background-color: var(--genre-color04);
+}
+
+.cuadro-genero:nth-of-type(5) {
+  background-color: var(--genre-color05);
+}
+
+.cuadro-genero:nth-of-type(6) {
+  background-color: var(--genre-color06);
+}
+
+.cuadro-genero:nth-of-type(7) {
+  background-color: var(--genre-color07);
+}
+
+.cuadro-genero:nth-of-type(8) {
+  background-color: var(--genre-color08);
+}
+
+.cuadro-genero:nth-of-type(9) {
+  background-color: var(--genre-color09);
+}
+
+.cuadro-genero:nth-of-type(10) {
+  background-color: var(--genre-color10);
+}
+
+.cuadro-genero:nth-of-type(11) {
+  background-color: var(--genre-color11);
+}
+
+.cuadro-genero:nth-of-type(12) {
+  background-color: var(--genre-color12);
 }

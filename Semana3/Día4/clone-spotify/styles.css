@@ -44,6 +44,10 @@ body {
 main {
   padding:30px 45px;
 }
+
+section {
+  margin-bottom:40px;
+}
 /* fin general */
 
 /* búsquedas recientes */
@@ -81,3 +85,5 @@ main {
   font-weight: 600;
   color: var(--secondary-color-03);
 }
+
+/* Explorar todo - Browse All */

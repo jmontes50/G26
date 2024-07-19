@@ -37,4 +37,30 @@
 body {
   background-color: var(--secondary-color-01);
   color: var(--secondary-color-04);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* inicio general */
+
+/* fin general */
+
+/* búsquedas recientes */
+.tarjetas-busqueda {
+  display: flex;
+  gap:20px;
+  overflow-x: scroll;
+}
+
+.tarjeta {
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  position:relative;
+}
+
+.cerrar-artista {
+  position: absolute;
+  top:5px;
+  right:5px;
 }

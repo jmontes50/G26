@@ -50,6 +50,7 @@ main {
 .busquedas-recientes h2 {
   margin-bottom:30px;
 }
+
 .tarjetas-busqueda {
   display: flex;
   gap:20px;
@@ -70,4 +71,13 @@ main {
   position: absolute;
   top:5px;
   right:5px;
+}
+
+.nombre-artista {
+  font-weight: 600;
+}
+
+.tarjeta h5 {
+  font-weight: 600;
+  color: var(--secondary-color-03);
 }

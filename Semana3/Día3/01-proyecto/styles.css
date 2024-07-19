@@ -298,6 +298,8 @@ header .btn-claro {
     padding: 60px;
     font-size: 1.65rem;
     gap:40px;
+    transition-property: all;
+    transition-duration: 0.5s;
   }
 
   .abrir-menu {
@@ -310,11 +312,18 @@ header .btn-claro {
   }
 
   .cerrar-menu {
+    /* hago que se muestre el iconito de X porque se escondia originalmente */
     display: block;
+    position: absolute;
+    top:30px;
+    right:40px;
+    cursor: pointer;
   }
   /* :checked verifica si un checkbox o radio input esta marcado  */
   #checkmenu:checked ~ .main-links {
     right:0;
+    /* transition-property: all;
+    transition-duration: 0.5s; */
   }
 
   /* preguntas */

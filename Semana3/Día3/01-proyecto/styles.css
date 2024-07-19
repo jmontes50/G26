@@ -254,6 +254,16 @@ header .btn-claro {
   text-align: center;
 }
 
+/* menu responsive */
+#checkmenu {
+  visibility: hidden; /* no se ve pero esta ahí*/
+  /* display: none; */ /*es como si no existiera*/
+}
+/* por defecto no se deben mostrar */
+.abrir-menu, .cerrar-menu {
+  display: none;
+}
+
 /* media queries */
 /* o los ponemos abajo al final */
 /* pondriamos solo 01 @media por cada breakpoint */
@@ -273,6 +283,23 @@ header .btn-claro {
   header {
     padding: 30px;
   }
+  /* navbar */
+  .main-links {
+    /* como toma de referencia al navegador igual que el position: absolute, los demás elementos ya no lo tienen en cuenta */
+    position: fixed;
+    flex-direction: column;
+    /* va a ocupar todo el ancho de la pantalla del dispositivo */
+    width: 100vw;
+    /* va a ocupar todo el alto de la pantalla del dispositivo */
+    height: 100vh;
+    background-color: #FED501;
+    top:0;
+    left:0;
+    padding: 60px;
+    font-size: 1.65rem;
+    gap:40px;
+  }
+
   /* preguntas */
   .preguntas {
     flex-direction: column;

@@ -107,7 +107,8 @@ section {
 .album-genero {
   width:150px;
   /* translate(x, y) */
-  transform: translate(100px, 70px) rotate(30deg);
+  /* calc me permite hacer operaciones aritméticas calc(50px + 1rem); calc(10% * 5) */
+  transform: translate(calc(100px + 20%), 70px) rotate(30deg);
 }
 
 .cuadro-genero:nth-of-type(1) {

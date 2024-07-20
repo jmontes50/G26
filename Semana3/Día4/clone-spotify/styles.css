@@ -42,7 +42,9 @@ body {
 
 /* inicio general */
 main {
-  padding:30px 45px;
+  padding-top: 20px;
+  padding-right: 20px;
+  width:100%;
 }
 
 section {
@@ -50,7 +52,8 @@ section {
 }
 
 .contenedor {
-  width:100vw;
+  /* width:100vw; */
+  width:100%;
   display:flex;
 }
 /* fin general */
@@ -180,6 +183,7 @@ section {
   color:var(--secondary-color-03);
   display:flex;
   flex-direction: column;
+  align-items: center;
   gap:20px;
 }
 

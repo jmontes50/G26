@@ -225,6 +225,7 @@ section {
   font-size:20px;
   align-items: center;
   margin-bottom:10px;
+  justify-content: center;
 }
 
 .controles-reproduccion i {
@@ -241,3 +242,16 @@ section {
   /* icono de play en el medio */
   font-size:40px;
 }
+
+.avance-reproduccion progress {
+  width: 500px;
+
+}
+
+/* progress::-webkit-progress-value{
+  background-color:var(--secondary-color-03);
+} 
+progress::-moz-progress-value{
+  background-color:var(--secondary-color-03);
+}
+*/

@@ -210,12 +210,21 @@ section {
 }
 
 /* controles */
+.controles {
+  display: flex;
+  flex-direction: column;
+}
+
+.reproduccion {
+  align-self: center;
+}
 
 .controles-reproduccion {
   display:flex;
   gap:30px;
   font-size:20px;
   align-items: center;
+  margin-bottom:10px;
 }
 
 .controles-reproduccion i {

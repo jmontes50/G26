@@ -48,6 +48,12 @@ main {
 section {
   margin-bottom:40px;
 }
+
+.contenedor {
+  width:100vw;
+  display:flex;
+  gap:10px;
+}
 /* fin general */
 
 /* búsquedas recientes */
@@ -158,3 +164,5 @@ section {
 .cuadro-genero:nth-of-type(12) {
   background-color: var(--genre-color12);
 }
+
+/*  */

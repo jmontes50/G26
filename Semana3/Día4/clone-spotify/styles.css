@@ -52,7 +52,6 @@ section {
 .contenedor {
   width:100vw;
   display:flex;
-  gap:10px;
 }
 /* fin general */
 
@@ -165,4 +164,10 @@ section {
   background-color: var(--genre-color12);
 }
 
-/*  */
+/* aside opciones */
+.opciones {
+  width:95px;
+  padding:10px;
+  display:flex;
+  flex-direction: column;
+}

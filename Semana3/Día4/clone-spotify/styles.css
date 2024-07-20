@@ -170,6 +170,7 @@ section {
   padding:10px;
   display:flex;
   flex-direction: column;
+  gap:10px;
 }
 
 .opciones-principales {
@@ -190,4 +191,16 @@ section {
 
 .opciones i:hover {
   color:var(--secondary-color-04);
+}
+
+.biblioteca {
+  background-color: var(--secondary-color-02);
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+.biblioteca img {
+  border-radius:5px;
 }

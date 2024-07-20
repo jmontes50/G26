@@ -208,3 +208,27 @@ section {
 .biblioteca img {
   border-radius:5px;
 }
+
+/* controles */
+
+.controles-reproduccion {
+  display:flex;
+  gap:30px;
+  font-size:20px;
+  align-items: center;
+}
+
+.controles-reproduccion i {
+  color:var(--secondary-color-03);
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+.controles-reproduccion i:hover {
+  color:var(--secondary-color-04);
+}
+
+.controles-reproduccion i:nth-of-type(3) {
+  /* icono de play en el medio */
+  font-size:40px;
+}

@@ -57,6 +57,7 @@ section {
   /* width:100vw; */
   width:100%;
   display:flex;
+  /* ten la altura de todo el viewport menos lo que mida los controles de reproducción */
   max-height: calc(100vh - var(--height-controls));
   overflow-y: scroll;
 }

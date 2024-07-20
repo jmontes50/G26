@@ -171,3 +171,23 @@ section {
   display:flex;
   flex-direction: column;
 }
+
+.opciones-principales {
+  background-color: var(--secondary-color-02);
+  padding:20px;
+  font-size: 20px;
+  color:var(--secondary-color-03);
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.opciones i {
+  transition-property: all;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.opciones i:hover {
+  color:var(--secondary-color-04);
+}

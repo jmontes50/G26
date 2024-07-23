@@ -49,27 +49,40 @@
           <div class="col bg-info">Columna</div>
         </div>
         <!-- row -->
-         <div class="row">
+        <div class="row">
           <h2><code>col-#</code></h2>
           <p>
-
+            cuando indicamos la cantidad de columnas despues de col, buscara
+            posicionarse ocupando esa cantidad de columnas hasta en un limite de
+            12. De excederse esa cantidad el elemento colapsará despues de los
+            demás.
           </p>
           <!-- columnas -->
-           <!-- combinaciones que sumen 12 columnas -->
-           <div class="col-8 bg-dark text-white">
-            Columna - 8
-           </div>
-           <div class="col-4 bg-info">
-            Columna - 4
-           </div>
-           <div class="col-6 bg-dark text-white">
-            Columna - 6
-           </div>
-           <!-- si nos excedemos de las 12 columnas los elementos colapsaran a la parte inferior -->
-           <div class="col-6 bg-info">
-            Columna - 7
-           </div>
-         </div>
+          <!-- combinaciones que sumen 12 columnas -->
+          <div class="col-8 bg-dark text-white">Columna - 8</div>
+          <div class="col-4 bg-info">Columna - 4</div>
+          <div class="col-6 bg-dark text-white">Columna - 6</div>
+          <!-- si nos excedemos de las 12 columnas los elementos colapsaran a la parte inferior -->
+          <div class="col-6 bg-info">Columna - 7</div>
+          <!-- columnas con breakpoints -->
+          <h2><code>col-breakpoint-#</code></h2>
+          <p>
+            Recordemos que los breakpoints de bootstrap son '' menos de 576px,
+            sm de 576px para arriba, md de 768px para arriba, lg 992px para
+            arriba, xl 1200px para arriba y xxl 1400px para arriba. Al indicarle
+            un breakpoint solamente lo tomará si es que aplica según el ancho de
+            la pantalla. (como los mediaqueries)
+          </p>
+          <div class="col-12 col-md-4 bg-dark text-white">Col</div>
+          <div class="col-12 col-md-4 bg-info">Col</div>
+          <hr />
+          <!-- 6 3 3 -->
+          <!-- 8 4 -->
+          <!-- 12 -->
+          <div class="col-12 col-md-8 col-xl-6 bg-danger">Primicia</div>
+          <div class="col-12 col-md-4 col-xl-3 bg-info">Importante</div>
+          <div class="col-12 col-xl-3 bg-danger">Menos importante</div>
+        </div>
       </section>
     </main>
   </body>

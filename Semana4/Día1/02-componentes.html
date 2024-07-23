@@ -10,6 +10,12 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+      .card-offer {
+        top: 1rem;
+        right: 1rem;
+      }
+    </style>
   </head>
   <body>
     <main class="container-fluid">
@@ -50,8 +56,11 @@
         <!-- columna -->
         <div class="col-6 col-sm-3">
           <!-- tarjeta -->
-          <div class="card">
+          <div class="card position-relative">
             <img src="https://picsum.photos/200/300" alt="..." />
+            <div class="position-absolute bg-info card-offer">
+              Oferta
+            </div>
             <div class="card-body">
               <h5 class="card-title">Producto</h5>
               <p class="card-text">

@@ -77,19 +77,45 @@
       </div>
       <!-- button modal -->
       <div>
-        <button class="btn btn-primary">Abrir Modal</button>
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#aviso"
+        >
+          Abrir Modal
+        </button>
       </div>
       <!-- Modal, necesita un id si o si -->
-      <div 
-        class="modal" 
-        id="aviso" 
-        tabindex="-1"
-      >
+      <div class="modal" id="aviso" tabindex="-1">
         <!-- sombra de fondo -->
         <div class="modal-dialog">
           <!-- contenedor del contenido -->
           <div class="modal-content">
-            <h2>Hola Mundo desde un modal</h2>
+            <!-- header -->
+            <div class="modal-header">
+              <h1 class="modal-title">Popup</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <!-- body -->
+            <div class="modal-body">
+              <h2>Hola Mundo desde un modal</h2>
+            </div>
+            <!-- footer -->
+            <div class="modal-footer">
+              <button 
+                type="button" 
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+              Cancelar
+              </button>
+            </div>
+            
           </div>
         </div>
       </div>

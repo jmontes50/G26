@@ -17,15 +17,23 @@
         <a class="navbar-brand" href="#">
           Galería
         </a>
+        <!-- este boton es el que colapsara el contenido más tarde -->
         <button 
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target=""
+          data-bs-target="#contenido-navbar"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
+        <!-- contenido colapsable -->
+        <!-- este elemento tiene que llevar un id para poder ser referenciado en el data-bs-target de el botón de más arriba -->
+          <div 
+          class="collapse navbar-collapse"
+          id="contenido-navbar"
+          >
+            
+          </div>
       </div>
     </nav>
 

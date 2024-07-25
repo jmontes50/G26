@@ -32,9 +32,9 @@ La plantilla la puedes encontrar [aquí](https://www.figma.com/design/QjRDVWmmye
 
 ## Documentación
 
-Considera la siguiente documentación:
+Considera la siguiente documentación para resolver los ejercicios:
 
-- [Ejemplo de grid](https://getbootstrap.com/docs/5.3/layout/grid/#example)
+- [Sistema de Grilla](https://getbootstrap.com/docs/5.3/layout/grid/#example)
 - [Comportamientos flex](https://getbootstrap.com/docs/5.3/utilities/flex/#enable-flex-behaviors)
 - [Márgenes y relleno](https://getbootstrap.com/docs/5.3/utilities/spacing/#margin-and-padding)
 - [Layouts de formularios](https://getbootstrap.com/docs/5.3/forms/layout/#forms)

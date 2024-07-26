@@ -41,3 +41,18 @@ console.log("Tipo de dato apellido", typeof apellido);
 let anio = 2024
 
 console.log("Tipo de dato año", typeof anio);
+
+let vuelto = 1.2;
+
+console.log("Tipo de dato vuelto", typeof vuelto);
+
+//que otros tipos de datos 😺
+//Booleanos - Verdadero ó falso
+let teQuiere = false; //true
+console.log("teQuiere:", teQuiere);
+console.log("Tipo de dato teQuiere", typeof teQuiere);
+
+//undefined - no esta definido
+let sueldo;
+console.log("sueldo", sueldo);
+console.log("tipo de dato de sueldo", typeof sueldo);

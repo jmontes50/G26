@@ -75,7 +75,7 @@ console.log("tipo de dato de numeroGrande:", typeof numeroGrande);
 
 //Expresión VS sentencia
 //Sentencia, orden a ejecutar
-let mes = "Julio";
+let mes = "Agosto";
 
 //Expresion, cualquier cosa que me de/retorne un valor
 console.log(mes);

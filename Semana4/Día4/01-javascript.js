@@ -1,3 +1,4 @@
+"use strict"
 console.log("Hola Mundo desde JS!!!");
 //Estamos conociendo el console.log
 //Este puede recibir varios argumentos
@@ -26,4 +27,17 @@ edad = 30;
 console.log("1.", edad);
 
 edad = "treinta y uno";
-console.log("2.", edad)
+console.log("2.", edad);
+
+// ciudad = "aqp"
+// console.log(ciudad)
+
+//sugiere utilizar camelCase para sus variables
+let precio_audifonos_g733 = 600; //snake_case
+let precioAudifonosGPro = 700 //camelCase
+
+console.log("Tipo de dato apellido", typeof apellido);
+
+let anio = 2024
+
+console.log("Tipo de dato año", typeof anio);

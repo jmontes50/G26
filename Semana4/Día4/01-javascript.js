@@ -56,3 +56,19 @@ console.log("Tipo de dato teQuiere", typeof teQuiere);
 let sueldo;
 console.log("sueldo", sueldo);
 console.log("tipo de dato de sueldo", typeof sueldo);
+
+//null
+let nada = null;
+console.log("nada:", nada);
+console.log("tipo de dato de nada:", typeof nada);
+
+//symbol - muy poco usado, algo único
+//tipo de dato primitivo
+let simbolo = Symbol();
+console.log("simbolo:", simbolo)
+console.log("tipo de dato de simbolo:", typeof simbolo);
+
+//bigIng numero grande con una n al final
+let numeroGrande = 1234567893245678932456789345678912345n;
+console.log("numero grande", numeroGrande)
+console.log("tipo de dato de numeroGrande:", typeof numeroGrande);

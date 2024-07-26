@@ -72,3 +72,10 @@ console.log("tipo de dato de simbolo:", typeof simbolo);
 let numeroGrande = 1234567893245678932456789345678912345n;
 console.log("numero grande", numeroGrande)
 console.log("tipo de dato de numeroGrande:", typeof numeroGrande);
+
+//Expresión VS sentencia
+//Sentencia, orden a ejecutar
+let mes = "Julio";
+
+//Expresion, cualquier cosa que me de/retorne un valor
+console.log(mes);

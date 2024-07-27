@@ -1,3 +1,4 @@
+// "use strict"
 // operadores aritméticos
 let cpu = 300;
 let memoria = 200;
@@ -49,6 +50,22 @@ console.log("Residuo:", modulo);
 // operaciones
 // ++ incrementar en 1;
 let a = 10;
+// a = 10;
 a = a + 1; // 11
 a++; // 12
 console.log('a:', a);
+
+let b = 20;
+// b = b + 5;
+b+=5;
+console.log('b:', b);
+
+let c = 100;
+// c = c - 1;
+c--;
+console.log('c:', c);
+
+let d = 1000;
+// d = d - 50;
+d-=50;
+console.log('d:', d);

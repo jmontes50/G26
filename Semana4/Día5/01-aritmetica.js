@@ -69,3 +69,13 @@ let d = 1000;
 // d = d - 50;
 d-=50;
 console.log('d:', d);
+
+let e = 4;
+// e = e * 2;
+e*=2;
+console.log('e:', e);
+
+let f = 15;
+// f = f / 3;
+f/=3;
+console.log('f:', f);

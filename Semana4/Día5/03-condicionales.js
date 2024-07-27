@@ -37,3 +37,13 @@ if(edad === "20"){
 }else {
     console.log("NO es igual que 20");
 }
+
+let numeroGanador = 75;
+let numeroAEvaluar = 75;
+
+//!== estrictamente diferente de... (compara valor y tipo de dato)
+if(numeroGanador !== numeroAEvaluar){
+    console.log("Intentalo otra vez");
+}else{
+    console.log("Ganaste el premio!!");
+}

@@ -40,3 +40,14 @@ let nombre = "Juan";
 
 console.log(nombre);
 //-------------------------------------
+// Módulo
+// let division = 1000 / 300;
+// console.log("division", division);
+let modulo = 1000 % 300;
+console.log("Residuo:", modulo);
+
+// operaciones
+let a = 10;
+a = a + 1;
+a++;
+console.log('a:', a);

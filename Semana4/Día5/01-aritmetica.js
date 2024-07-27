@@ -47,7 +47,8 @@ let modulo = 1000 % 300;
 console.log("Residuo:", modulo);
 
 // operaciones
+// ++ incrementar en 1;
 let a = 10;
-a = a + 1;
-a++;
+a = a + 1; // 11
+a++; // 12
 console.log('a:', a);

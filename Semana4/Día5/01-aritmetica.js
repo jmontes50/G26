@@ -21,3 +21,22 @@ console.log("multiplicación por 2", totalPorDos);
 
 let conIGV = totalPorDos * 1.17;
 console.log("con IGV", conIGV);
+
+//division
+let enCuotas = conIGV / 4;
+console.log("división en 4 cuotas", enCuotas);
+
+let margenGanancia = 1.15; //15%
+let precioFinal = (conIGV + (accesorios * 1.17)) * margenGanancia;
+console.log("PRECIO FINAL", precioFinal);
+//---------------------------------------
+/* Expresion vs sentencia
+Expresión las tenemos que relacionar con un valor, es todo lo que me va a dar un valor
+
+Sentencia las podemos relacionar con una orden 
+declarando y asignando
+*/
+let nombre = "Juan";
+
+console.log(nombre);
+//-------------------------------------

@@ -79,3 +79,8 @@ let f = 15;
 // f = f / 3;
 f/=3;
 console.log('f:', f);
+
+//asignación con exponenciación 2 ^ 3;
+let g = 2;
+g **= 3;
+console.log('g:', g);

@@ -6,6 +6,8 @@
  * 2, necesito la identificación
  * 3, si es menor de 18 pero mayor que 13 puede entrar con sus padres
  */
+
+alert("Ingrese la información requerida");
 //colocando el símbolo + delante del prompt lo convierte a número
 let edad = +prompt("Cúal es tu edad");
 let traeIdentificacion = confirm("Traes identificación?");

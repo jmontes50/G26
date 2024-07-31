@@ -4,6 +4,9 @@ let hora = prompt("Que hora es?");
 console.log(typeof hora);
 //lo convertimos a número
 let numHora = parseFloat(hora);
+console.log("numhora", typeof numHora);
+//NaN -> Not A Number, su tipo es númerico
+console.log(isNaN(numHora))
 
 if (numHora < 12) {
   console.log("Buenos días");

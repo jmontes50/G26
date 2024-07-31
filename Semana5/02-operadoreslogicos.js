@@ -23,3 +23,10 @@ console.log("menorConApoderado:", menorConApoderado);
 // }else if(edad < 18 && edad > 13 && vieneConApoderado === true) {
 //     console.log("Puede ver la película");
 // }
+
+// || ó es un operador donde al menos una de las partes tiene que ser V para que se considere toda como V
+if(esAdulto || menorConApoderado) {
+    console.log("Puede ver la Película");
+}else{
+    console.log("No puede ver la Película");
+}

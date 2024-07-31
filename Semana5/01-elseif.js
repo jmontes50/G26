@@ -7,9 +7,11 @@ let numHora = parseFloat(hora);
 
 if (numHora < 12) {
   console.log("Buenos días");
+  //para poner más condiciones, utilizamos la sentencia else if
 }else if (numHora < 18) {
-  console.log("Buenas tardes")
+  console.log("Buenas tardes");
+  //y en caso no se cumpla ninguna siempre quedara el else por defecto/default
 }else {
-  console.log("Buenas noches")
+  console.log("Buenas noches");
 }
 

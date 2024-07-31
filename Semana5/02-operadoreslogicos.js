@@ -12,8 +12,14 @@ let traeIdentificacion = confirm("Traes identificación?");
 // console.log("trae identificación", traeIdentificacion);
 let vieneConApoderado = confirm("Vienes con algún apoderado?");
 
-if(edad >= 18 && traeIdentificacion === true) {
-    console.log("Puede ver la película");
-}else if(edad < 18 && edad > 13 && vieneConApoderado === true) {
-    console.log("Puede ver la película");
-}
+let esAdulto = edad >= 18 && traeIdentificacion === true; //verdadero o falso
+console.log("esAdulto:", esAdulto);
+
+let menorConApoderado = edad < 18 && edad > 13 && vieneConApoderado === true;
+console.log("menorConApoderado:", menorConApoderado);
+
+// if(edad >= 18 && traeIdentificacion === true) {
+//     console.log("Puede ver la película");
+// }else if(edad < 18 && edad > 13 && vieneConApoderado === true) {
+//     console.log("Puede ver la película");
+// }

@@ -17,7 +17,7 @@ console.log("Fin!!!");
 
 //------------------------------
 let logueado = true;
-
+// while(logueado)
 while(logueado === true) {
   // yo podria realizar alguna tarea, siempre y cuando este logueado
   console.log("Trabajando... ");

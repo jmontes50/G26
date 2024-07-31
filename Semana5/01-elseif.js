@@ -10,8 +10,11 @@ if (numHora < 12) {
   //para poner más condiciones, utilizamos la sentencia else if
 }else if (numHora < 18) {
   console.log("Buenas tardes");
+  //otra condición
+}else if (numHora <= 24){
+  console.log("Buenas noches");
   //y en caso no se cumpla ninguna siempre quedara el else por defecto/default
 }else {
-  console.log("Buenas noches");
+  console.error("Ingrese un valor correcto");
 }
 

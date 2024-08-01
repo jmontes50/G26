@@ -8,4 +8,6 @@ console.log(arr);
 
 arr.push(20);
 
+arr.push(30);
+
 console.log(arr);

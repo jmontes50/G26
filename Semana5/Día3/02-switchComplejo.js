@@ -22,6 +22,6 @@ switch (true) {
   case numero > 30 && numero < 40: //d
     console.log("El número está entre 30 y 39");
     break;
-  default:
+  default: //e
     console.log("El número esta fuera de los rangos considerados")
 }

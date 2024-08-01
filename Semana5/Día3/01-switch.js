@@ -1,4 +1,4 @@
-let mes = 5;
+let mes = 4;
 
 //switch (expresion1)
 switch (mes) {
@@ -25,7 +25,7 @@ switch (mes) {
         break;
     case 7:
         console.log("Es Julio");
-        // break;
+        break;
     case 8:
         console.log("Es Agosto");
         break;

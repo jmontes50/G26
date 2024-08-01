@@ -7,7 +7,7 @@ Crea un programa que implemente un contador regresivo desde 10 hasta 0. Este eje
 ### Objetivo
 El programa debe imprimir en la consola los números del 10 al 0, en orden descendente.
 
-### Tips
+### A considerar
 - Inicia con una variable count establecida en 10.
 - Utiliza un bucle while que se ejecute mientras count sea mayor o igual a 0.
 - Dentro del bucle, imprime el valor actual de count y luego disminúyelo en 1.
@@ -37,7 +37,7 @@ Desarrolla un programa que genere números aleatorios entre 0 y 1 hasta que prod
 ### Objetivo
 El programa debe generar y mostrar números aleatorios hasta que produzca uno mayor que 0.8, momento en el cual deberá detenerse.
 
-### Tips
+### A considerar
 - Utiliza [Math.random()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/random) para generar números aleatorios entre 0 y 1.
 - El bucle do-while es ideal para este caso porque necesitas ejecutar el código al menos una vez antes de verificar la condición.
 
@@ -61,7 +61,7 @@ Crea un programa que imprima todos los números pares desde 0 hasta 20, inclusiv
 ### Objetivo
 El programa debe imprimir en la consola todos los números pares entre 0 y 20.
 
-### Tips
+### A considerar
 - Puedes usar un bucle for que comience en 0 y termine en 20.
 - Para imprimir solo los números pares, puedes incrementar tu variable de control en 2 en cada iteración en lugar de 1.
 
@@ -90,7 +90,7 @@ Desarrolla un programa que calcule la suma de los primeros 100 números naturale
 ### Objetivo
 El programa debe calcular y mostrar la suma de todos los números del 1 al 100.
 
-### Tips
+### A considerar
 - Utiliza una variable sum inicializada en 0 para acumular la suma.
 - Emplea un bucle for que itere desde 1 hasta 100.
 - En cada iteración, añade el número actual a sum.
@@ -110,7 +110,7 @@ Crea un programa que imprima la tabla de multiplicar del 7 (desde 1 hasta 10). E
 ### Objetivo
 El programa debe mostrar la tabla de multiplicar del 7, desde 7x1 hasta 7x10.
 
-### Tips
+### A considerar
 - Utiliza un bucle for que itere desde 1 hasta 10.
 - En cada iteración, multiplica el número actual por 7.
 - Usa template literals (`) para formatear cada línea de la tabla.
@@ -139,7 +139,7 @@ Implementa una función que calcule el área de un círculo dado su radio. Este 
 ### Objetivo
 Crear una función calcularAreaCirculo que tome el radio como parámetro y devuelva el área del círculo.
 
-### Tips
+### A considerar
 - Utiliza la constante [Math.PI](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/PI) para obtener el valor de π.
 - Recuerda que el área de un círculo se calcula con la fórmula A = πr².
 - Puede utilizar [Math.pow()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)
@@ -160,7 +160,7 @@ Desarrolla una función que determine si un número dado es primo o no. Un núme
 ### Objetivo
 Crear una función esPrimo que tome un número como argumento y devuelva true si es primo, o false si no lo es.
 
-### Tips
+### A considerar
 - Recuerda que 1 no se considera primo por definición.
 - Puedes optimizar tu función comprobando solo hasta la [raíz cuadrada](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt) del número.
 - Utiliza el operador módulo (%) para verificar si un número es divisible por otro.
@@ -183,7 +183,7 @@ Crea una función que convierta una temperatura de grados Celsius a Fahrenheit. 
 ### Objetivo
 Implementar una función celsiusAFahrenheit que tome una temperatura en Celsius como argumento y devuelva su equivalente en Fahrenheit.
 
-### Tips
+### A considerar
 - La fórmula para convertir de Celsius a Fahrenheit es: F = (C * 9/5) + 32
 - Asegúrate de que tu función maneje correctamente los decimales.
 
@@ -205,7 +205,7 @@ Implementa una función que encuentre el número más grande en un array de núm
 ### Objetivo
 Crear una función encontrarMaximo que tome un array de números como argumento y devuelva el número más grande del array.
 
-### Tips
+### A considerar
 - Asume que el primer elemento es el más grande y compáralo con el resto.
 - Utiliza un bucle for para recorrer el array desde el segundo elemento.
 - Actualiza el máximo si encuentras un número mayor.
@@ -226,7 +226,7 @@ Desarrolla una función que filtre los números pares de un array dado. Este eje
 ### Objetivo
 Crear una función filtrarPares que tome un array de números como argumento y devuelva un nuevo array que contenga solo los números pares del array original.
 
-### Tips
+### A considerar
 - Crea un nuevo array vacío para almacenar los números pares.
 - Utiliza un bucle for para recorrer el array original.
 - Usa el operador módulo (%) para verificar si cada número es par.
@@ -248,7 +248,7 @@ Implementa una función que calcule el promedio de los números en un array dado
 ### Objetivo
 Crear una función calcularPromedio que tome un array de números como argumento y devuelva el promedio de esos números.
 
-### Tips
+### A considerar
 - Utiliza una variable para acumular la suma de todos los números.
 - Emplea un bucle for para recorrer el array y sumar cada elemento.
 - Divide la suma total por la longitud del array para obtener el promedio.

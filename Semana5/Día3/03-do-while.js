@@ -12,4 +12,13 @@ do {
     console.log(contador);
     contador++;
     //while(expresión a evaluar)
-}while(contador < 10);
+}while(contador < 7);
+
+//---- do while como si fuera una pobre flor
+
+let meQuiere = false;
+
+do {
+    console.log("Me quiere??????");
+    meQuiere = confirm("Te quiere?????")
+} while ( meQuiere === true );

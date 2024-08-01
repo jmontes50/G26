@@ -48,6 +48,7 @@ console.log(`El monto después de los ${meses} meses creció a: ${montoBase.toFi
  * Se requiere saber en base a la cantidad de consultas cuanto tiene que pagar el paciente al finalizar su tratamiento.
  */
 
+/*
 let cantConsultas = 6;
 let costoTotal = 0;
 
@@ -62,3 +63,25 @@ for(let i = 1; i <= cantConsultas; i++){
 }
 
 console.log(`El costo total a pagar es de: S/ ${costoTotal}`);
+*/
+
+/**
+ * Imprima la tabla de multiplicar del 1 al 5 considerando de cada número que vaya del 1 al 10
+ *    1 2 3 ... 10
+ * 1  1 2 3
+ * 2  2 4 6
+ * .
+ * .
+ * 5 5 10 15
+ */
+
+//lo for anidados
+//esto iría del 1 al 5
+for(let i = 1; i <= 5; i++){
+  //pero deseamos para cada i mostrar su resultado multiplicandolo del 1 al 10
+  for(let j = 1; j <= 10; j++){
+    let resultado = i * j;
+    console.log(`${i} x ${j} = ${resultado}`);
+  }
+  console.log("-------------");
+}

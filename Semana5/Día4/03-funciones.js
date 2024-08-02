@@ -1,3 +1,4 @@
+//sintaxis clásica
 //function NOMBRE (parámetros) { code }
 function suma (a, b) {
  //parámetros son el equivalente a tener variables que solamente existen dentro de la función
@@ -22,3 +23,18 @@ function calcularIGV (precio) {
 }
 
 console.log(calcularIGV(45));
+
+//funciones flecha
+//calcular un margen de ganancia del 15%
+// let calcularMargen = (precio) => {
+//     return precio * 1.15;
+// }
+
+//si solamente tengo 01 parámetro
+// let calcularMargen = precio => {
+//     return precio * 1.15;
+// }
+
+let calcularMargen = precio => precio * 1.15;
+
+console.log(calcularMargen(100));

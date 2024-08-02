@@ -30,11 +30,17 @@ console.log(calcularIGV(45));
 //     return precio * 1.15;
 // }
 
-//si solamente tengo 01 parámetro
+//si solamente tengo 01 parámetro, le puedo quitar los parentesis
 // let calcularMargen = precio => {
 //     return precio * 1.15;
 // }
 
+//si directamente la función va a retornar algo
+//puedo poner la expresión a retornar
+//directamente después de la flecha
 let calcularMargen = precio => precio * 1.15;
 
 console.log(calcularMargen(100));
+
+//ciudadano de primera clase
+//En JS casi todo incluyendo funciones se pueden asignar a una variable

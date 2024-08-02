@@ -21,3 +21,13 @@ console.log("después del 1er pop: ", arr);
 arr.pop();
 
 console.log("después del 2do pop: ", arr);
+
+//shift, va a eliminar el primer item de un arreglo
+arr.shift();
+
+console.log("después del shift", arr);
+
+//unshift, agregará un item al inicio del arreglo
+arr.unshift(50);
+
+console.log("después del unshift", arr);

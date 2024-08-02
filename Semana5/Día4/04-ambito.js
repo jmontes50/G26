@@ -14,9 +14,18 @@ let conIGV = 1.18;
 let calcularPrecio = (precio) => {
     let masGanancia = 1.15;
     let precioFinal = precio * conIGV * masGanancia;
-    console.log(precioFinal);
+    // console.log(precioFinal);
+
+    if(precio > 100){
+        let conDescuento = 0.95;
+        // precioFinal = precioFinal * conDescuento;
+        precioFinal *= conDescuento;
+    }
+    // console.log(conDescuento);
+    return precioFinal.toFixed(2);
 }
-calcularPrecio(100);
+
+console.log(calcularPrecio(150));
 
 // console.log(precio)
 // console.log(masGanancia);

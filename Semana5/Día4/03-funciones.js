@@ -10,3 +10,15 @@ function suma (a, b) {
 let sumatoria = suma(50, 75);
 
 console.log(sumatoria);
+
+/**
+ * definamos una función que nos ayude a calcular el igv de un producto
+ */
+
+function calcularIGV (precio) {
+   //let precioFinal = precio * 1.18;
+    //return precioFinal;
+    return precio * 1.18;
+}
+
+console.log(calcularIGV(45));

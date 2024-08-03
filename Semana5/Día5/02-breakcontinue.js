@@ -37,9 +37,10 @@ let aprobados = [];
 for(let i = 0; i < notas.length; i++){
     if(notas[i] < 13){
         //va a hacer que se salte 01 iteración
-        console.log("me salto");
+        console.log("me salto", notas[i]);
         continue;
     }
+    console.log("trabajando con: ", notas[i]);
     aprobados.push(notas[i]);
     console.log("Más trabajoooooo...");
 }

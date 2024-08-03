@@ -15,3 +15,13 @@ console.log(gato.nombre);
 //accediendo por notación de corchete
 console.log(gato['edad']);
 console.log(gato["peso-total"]);
+
+//por desestructuración
+//Si tu conoces que propiedades tiene algo, lo puedes desestructurar
+//En vez de hacer esto por cada propiedad que necesitemos
+// let colorGato = gato.color;
+// console.log(colorGato);
+
+let { color, esAmigable } = gato;
+console.log(color);
+console.log(esAmigable);

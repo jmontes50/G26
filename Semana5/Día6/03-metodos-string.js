@@ -13,9 +13,9 @@ console.log(saludo.includes("Mundo")); //Me indica si contiene determinado texto
 
 console.log(saludo.includes("Marte"));
 
-console.log(saludo.split(" ")); //string ---> arreglo, separandolo por lo que le indiquemos
+console.log("separado por espacios", saludo.split(" ")); //string ---> arreglo, separandolo por lo que le indiquemos
 
-console.log(saludo.split(""));
+console.log("separados c/u", saludo.split(""));
 
 console.log(saludo.replace("Mundo", "Fin de semana"));
 

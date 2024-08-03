@@ -162,11 +162,11 @@ let biblioteca = {
     let indiceLibro = biblioteca.buscarLibro(isbn);
     if(indiceLibro !== -1) {
       //el libro se encontró
-      if (biblioteca.libros[i].disponible) {
+      if (biblioteca.libros[indiceLibro].disponible) {
         //si esta disponible, hacemos el prestamo
-        biblioteca.libros[i].disponible = false;
-        biblioteca.libros[i].prestatario = nombrePrestatario;
-        console.log(`El libro ${biblioteca.libros[i].titulo} se presta a ${nombrePrestatario}!`)
+        biblioteca.libros[indiceLibro].disponible = false;
+        biblioteca.libros[indiceLibro].prestatario = nombrePrestatario;
+        console.log(`El libro ${biblioteca.libros[indiceLibro].titulo} se presta a ${nombrePrestatario}!`)
       }
     }
   }

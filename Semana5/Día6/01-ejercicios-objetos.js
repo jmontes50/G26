@@ -115,10 +115,12 @@ buscar()
 
 /**
  * Una biblioteca necesita gestionar el manejo de sus libros, desde ingresos de nuevos libros hasta el prestamo de estos. establezca un objeto que ayude a manejar esta problemática.
- * bibliioteca {
+ * biblioteca {
  *  libros: Array,
  *  agregarLibro: method (Se encargará de agregar un libro),
- *  prestarLibro: method (Se encargará de cambiar el estado de un libro en especifico)
+ *  buscarLibro: method (retornará el indice del libro encontrado),
+ *  prestarLibro: method (Se encargará de cambiar el estado de un libro en especifico),
+ *  devolverLibro: method (Se encargará de cambiar el estado de un libro en especifico a su estado original),
  * }
  * 
  * libro {
@@ -144,6 +146,19 @@ let biblioteca = {
     biblioteca.libros.push(libro);
     console.log(`El libro ${titulo} se agrego exitosamente!`);
   },
+  buscarLibro: (isbn) => {
+    for(let i = 0; i < biblioteca.libros.length; i++){
+      //buscamos el libro
+      if(biblioteca.libros[i].isbn === isbn){
+        //encontramos el libro
+        console.log(`el libro con isbn ${isbn} se encontró!`);
+        return i;
+      }
+    }
+    console.log(`No se encontro el libro con isbn: ${isbn}`)
+    return -1;
+  }
+  /*
   prestarLibro: (isbn, nombrePrestatario) => {
     //Encontrar el libro
     for(let i = 0; i < biblioteca.libros.length; i++){
@@ -159,6 +174,7 @@ let biblioteca = {
     console.log(`No se encontro el libro con isbn: ${isbn}`)
     return;
   },
+  */
 }
 
 biblioteca.agregarLibro("Cien años de soledad", "Gabriel García Marquez", 1);

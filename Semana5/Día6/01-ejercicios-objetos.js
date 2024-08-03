@@ -157,6 +157,18 @@ let biblioteca = {
     }
     console.log(`No se encontro el libro con isbn: ${isbn}`)
     return -1;
+  },
+  prestarLibro: (isbn, nombrePrestatario) => {
+    let indiceLibro = biblioteca.buscarLibro(isbn);
+    if(indiceLibro !== -1) {
+      //el libro se encontró
+      if (biblioteca.libros[i].disponible) {
+        //si esta disponible, hacemos el prestamo
+        biblioteca.libros[i].disponible = false;
+        biblioteca.libros[i].prestatario = nombrePrestatario;
+        console.log(`El libro ${biblioteca.libros[i].titulo} se presta a ${nombrePrestatario}!`)
+      }
+    }
   }
   /*
   prestarLibro: (isbn, nombrePrestatario) => {

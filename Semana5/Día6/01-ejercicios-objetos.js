@@ -38,7 +38,7 @@ console.table(resultado);
 /**
  * Se tiene un arreglo de alumnos (objetos), donde cada alumno tiene su nombre y notas acumuladas del curso, el objetivo es dar un resumen donde se indique el nombre del alumno y su promedio y que indique si esta aprobado(a) (mayor ó igual de 13)
  */
-
+/*
 let alumnos = [
   {
     nombre: "Juan",
@@ -94,3 +94,29 @@ let resumenNotas = (arrAlumnos) => {
 }
 
 console.table(resumenNotas(alumnos));
+*/
+
+/**
+ * Una biblioteca necesita gestionar el manejo de sus libros, desde ingresos de nuevos libros hasta el prestamo de estos. establezca un objeto que ayude a manejar esta problemática.
+ * bibliioteca {
+ *  libros: Array,
+ *  agregarLibro: method (Se encargará de agregar un libro),
+ *  prestarLibro: method (Se encargará de cambiar el estado de un libro en especifico)
+ * }
+ */
+
+let biblioteca = {
+  libros: [],
+  agregarLibro: (titulo, autor, isbn) => {
+    let libro = {
+      //el isbn es un código único que manejan los libros
+      isbn: isbn,
+      titulo: titulo,
+      autor: autor,
+      disponible: true,
+      prestatario: null
+    }
+    biblioteca.push(libro);
+    console.log(`El libro ${titulo} se agrego exitosamente!`);
+  }
+}

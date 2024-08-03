@@ -116,7 +116,7 @@ buscar()
 /**
  * Una biblioteca necesita gestionar el manejo de sus libros, desde ingresos de nuevos libros hasta el prestamo de estos. establezca un objeto que ayude a manejar esta problemática.
  * biblioteca {
- *  libros: Array,
+ *  libros: Array<libro>,
  *  agregarLibro: method (Se encargará de agregar un libro),
  *  buscarLibro: method (retornará el indice del libro encontrado),
  *  prestarLibro: method (Se encargará de cambiar el estado de un libro en especifico),
@@ -158,6 +158,12 @@ let biblioteca = {
     console.log(`No se encontro el libro con isbn: ${isbn}`)
     return -1;
   },
+  /**
+   * 
+   * @param {number} isbn 
+   * @param {string} nombrePrestatario 
+   * Esta función me permite cambiar el estado de un libro en específico para que se considere prestado
+   */
   prestarLibro: (isbn, nombrePrestatario) => {
     let indiceLibro = biblioteca.buscarLibro(isbn);
     if(indiceLibro !== -1) {

@@ -1,6 +1,6 @@
 # Ejercicio: Analizador de Texto en JavaScript
 
-Crea una clase llamada `analizadorTexto` que tenga los siguientes métodos:
+Crea un objeto llamado `analizadorTexto` que tenga los siguientes métodos:
 
 1. `obtenerLongitud()`: Devuelve la longitud total del texto.
 2. `contarPalabras()`: Devuelve el número de palabras en el texto.

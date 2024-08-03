@@ -116,7 +116,13 @@ let biblioteca = {
       disponible: true,
       prestatario: null
     }
-    biblioteca.push(libro);
+    biblioteca.libros.push(libro);
     console.log(`El libro ${titulo} se agrego exitosamente!`);
   }
 }
+
+biblioteca.agregarLibro("Cien años de soledad", "Gabriel García Marquez", 1);
+biblioteca.agregarLibro("El mundo es ancho y ajeno", "Cesar Vallejo", 2);
+biblioteca.agregarLibro("La ciudad y los perros", "Mario Vargas Llosa", 3);
+
+console.table(biblioteca.libros);

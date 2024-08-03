@@ -25,3 +25,9 @@ console.log(gato["peso-total"]);
 let { color, esAmigable } = gato;
 console.log(color);
 console.log(esAmigable);
+
+//agregar propiedades adicionales
+gato.altura = 0.2;
+gato.hobbie = "Juzgar";
+
+console.log("de vuelta", gato);

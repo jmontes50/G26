@@ -12,3 +12,14 @@ console.log(saludo.indexOf("Mundo")); //en que indice se encuentra esta palabra
 console.log(saludo.includes("Mundo")); //Me indica si contiene determinado texto
 
 console.log(saludo.includes("Marte"));
+
+console.log(saludo.split(" ")); //string ---> arreglo, separandolo por lo que le indiquemos
+
+console.log(saludo.split(""));
+
+console.log(saludo.replace("Mundo", "Fin de semana"));
+
+let textoConEspacios = "    foo bar  ";
+console.log(textoConEspacios);
+
+console.log(textoConEspacios.trim()); //remover espacios del inicio y el final

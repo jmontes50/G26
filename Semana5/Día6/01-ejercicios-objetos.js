@@ -221,3 +221,10 @@ console.log(`Prestamo
   1er 
   libro`)
 console.table(biblioteca.libros);
+
+biblioteca.devolverLibro(1);
+
+console.log(`Devolviendo el 
+  1er 
+  libro`)
+console.table(biblioteca.libros);

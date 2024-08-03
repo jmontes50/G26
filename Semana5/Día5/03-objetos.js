@@ -5,6 +5,19 @@ let gato = {
     color: "blanco",
     esAmigable: false,
     "peso-total": 4,
+    //métodos, es una función dentro de un objeto
+    //this
+    maullar: () => {
+        //cuando utilizamos this dentro de una función flecha, o da undefined o va a referenciar a un objeto llamado window, que representa el navegador.
+        return `${gato.nombre} hace miau miau miau...`;
+    },
+    juega: function () {
+        //this hace referencia al propio objeto donde se este utilizado
+        return `${this.nombre} juega con una caja`;
+    },
+    comer() {
+        return "ñam ñam ñam..."
+    },
 }
 
 console.log(gato);
@@ -31,3 +44,9 @@ gato.altura = 0.2;
 gato.hobbie = "Juzgar";
 
 console.log("de vuelta", gato);
+
+console.log(gato.maullar());
+
+console.log(gato.juega());
+
+console.log(gato.comer());

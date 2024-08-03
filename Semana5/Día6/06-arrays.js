@@ -9,7 +9,7 @@ let forEachNums = nums.forEach(function (numerito, index, arr) {
     console.log("arreglo:", arr);
     return numerito * 2; 
 });
-console.log(forEachNums); //da undefined
+console.log("forEach", forEachNums); //da undefined
 
 //podemos utilizar una función clásica como una función flecha
 //Map va a transformar un arreglo según la expresión que reciba dentro de la función que va como argumento
@@ -17,5 +17,10 @@ let porDiez = nums.map((num, index, arr) => {
     return num * 10;
 });
 
-console.log(porDiez);
+console.log("map", porDiez);
 
+let numerosFiltrados = nums.filter((numerito) => {
+    return numerito > 5;
+})
+
+console.log("filter", numerosFiltrados);

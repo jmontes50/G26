@@ -59,7 +59,7 @@ let releaseAlbum = artista.discografia[0].duracion;
 console.log(releaseAlbum);
 
 // 'Teddy Boy'
-console.log(artista.discografia[0].canciones[2].nombreCancion)
+console.log(artista.discografia[0].canciones[2].nombreCancion);
 
 // let isNumber = (value) => {
 //   return isNaN(value)

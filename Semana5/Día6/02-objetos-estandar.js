@@ -7,10 +7,15 @@ console.log(gato.nombre);
 let nombre = "Juan";
 
 console.log(nombre.length);
+let nombreMayus = nombre.toUpperCase()
+console.log(nombreMayus)
+console.log(typeof nombreMayus)
 
 // let apellido = "Perez";
 let apellido = new String("Perez");
-console.log(apellido)
+let apellidoMayus = apellido.toUpperCase();
+console.log(apellidoMayus)
+console.log("Uppercase", apellido)
 console.log(typeof apellido)
 
 //Prototypes - prototipos

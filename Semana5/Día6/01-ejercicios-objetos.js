@@ -97,11 +97,36 @@ console.table(resumenNotas(alumnos));
 */
 
 /**
+ * Hablando del uso del return
+ * let buscar = () => {
+  for(let i = 0; i < 10; i++){
+    console.log(i)
+    if(i === 5){
+      console.log("Ya encontre lo que estaba buscando");
+      //return da un resultado
+      //también corta la ejecución de la función
+      return
+    }
+  }
+}
+
+buscar()
+ */
+
+/**
  * Una biblioteca necesita gestionar el manejo de sus libros, desde ingresos de nuevos libros hasta el prestamo de estos. establezca un objeto que ayude a manejar esta problemática.
  * bibliioteca {
  *  libros: Array,
  *  agregarLibro: method (Se encargará de agregar un libro),
  *  prestarLibro: method (Se encargará de cambiar el estado de un libro en especifico)
+ * }
+ * 
+ * libro {
+ *  isbn: number,
+    titulo: string,
+    autor: string,
+    disponible: boolean,
+    prestatario: string
  * }
  */
 
@@ -118,7 +143,22 @@ let biblioteca = {
     }
     biblioteca.libros.push(libro);
     console.log(`El libro ${titulo} se agrego exitosamente!`);
-  }
+  },
+  prestarLibro: (isbn, nombrePrestatario) => {
+    //Encontrar el libro
+    for(let i = 0; i < biblioteca.libros.length; i++){
+      //buscamos el libro
+      if(biblioteca.libros[i].isbn === isbn){
+        //encontramos el libro y podemos prestarlo
+        biblioteca.libros[i].disponible = false;
+        biblioteca.libros[i].prestatario = nombrePrestatario;
+        console.log(`El libro ${biblioteca.libros[i].titulo} se presta a ${nombrePrestatario}!`)
+        return;
+      }
+    }
+    console.log(`No se encontro el libro con isbn: ${isbn}`)
+    return;
+  },
 }
 
 biblioteca.agregarLibro("Cien años de soledad", "Gabriel García Marquez", 1);

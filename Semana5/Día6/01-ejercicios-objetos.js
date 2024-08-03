@@ -165,4 +165,13 @@ biblioteca.agregarLibro("Cien años de soledad", "Gabriel García Marquez", 1);
 biblioteca.agregarLibro("El mundo es ancho y ajeno", "Cesar Vallejo", 2);
 biblioteca.agregarLibro("La ciudad y los perros", "Mario Vargas Llosa", 3);
 
+console.log("Libros Agregados: \n status")
+console.table(biblioteca.libros);
+
+biblioteca.prestarLibro(1, "Jorge");
+biblioteca.prestarLibro(2, "Victor");
+
+console.log(`Prestamo 
+  1er 
+  libro`)
 console.table(biblioteca.libros);

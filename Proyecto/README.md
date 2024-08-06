@@ -48,7 +48,7 @@ Aquí encontrarás unos pasos sugeridos para el desarrollo del proyecto. Ten en 
 
 Tendrás que consumir una API para que tu proyecto sea funcional, considera utilizar los siguientes recursos disponibles:
 
-- [Mockapi](https://www.youtube.com/watch?v=g2LMz4SOeqM) (Recomendada): Fácil de configurar y ideal para prototipos rápidos.
+- [Mockapi](https://www.youtube.com/watch?v=g2LMz4SOeqM) (Recomendada): Fácil de configurar e ideal para prototipos rápidos.
 - [JSON Server](https://www.youtube.com/watch?v=OAOCa2qYq2Y): Útil para simular una API REST completa con datos locales, puedes deployearla en [Vercel](https://www.youtube.com/watch?v=Tjl3HgxvMWM)
 - API especializada de [RapidAPI](https://www.youtube.com/watch?v=xLDU1gLwqKM): Un repositorio de APIs libres de diferentes temáticas. Ten en cuenta que utilizar una API de RapidAPI requerirá invertir tiempo en estudiar y comprender la API específica que elijas.
 

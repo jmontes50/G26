@@ -24,3 +24,20 @@ let numerosFiltrados = nums.filter((numerito) => {
 })
 
 console.log("filter", numerosFiltrados);
+
+//find me devuelva el elemento que coincida con su busqueda
+let existe = nums.find((numerito) => {
+    // return numerito === 7; //existe
+    // return numerito === 8; //no existe
+    //find me va a devolver el primer item que coincida con la expresión indicada
+    return numerito > 5;
+})
+
+console.log("find:", existe);
+
+//findIndex, si encuentra un item en base a la expresión indicada me retornará el indice del item encontrado, en caso de no encontrar un item, me retonará -1
+//puedo utilizar una expresión mas corta
+let dondeExiste = nums.findIndex((numerito) => numerito === 5);
+// let dondeExiste = nums.findIndex((numerito) => numerito === 10);
+
+console.log("findIndex", dondeExiste);

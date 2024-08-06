@@ -47,3 +47,23 @@ console.log({ nombre });
 console.log({ nombre2 });
 
 */
+
+//Spread Operator en Arreglos
+let frutas = ["Papaya", "Kiwi", "Manzana"];
+
+let frutas2 = frutas;
+
+//copia por valor
+let frutas3 = [...frutas, "Piña", "Durazno"];
+
+frutas2.push("Mandarina");
+
+console.log({ frutas });
+console.log({ frutas2 });
+console.log({ frutas3 });
+
+const verduras = ["Lechuga", "Pepino", "Tomate"];
+
+const canasta = [...frutas, ...verduras];
+
+console.table(canasta);

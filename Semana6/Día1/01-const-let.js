@@ -29,3 +29,5 @@ const edades = [10, 20, 30, 40];
 // edades = [10, 20, 30, 40, 50];
 edades.push(50);
 console.log(edades);
+
+const suma = (a, b) => a + b;

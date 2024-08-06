@@ -57,6 +57,7 @@ Tendrás que consumir una API para que tu proyecto sea funcional, considera util
 - Implementar las funcionalidades CRUD de manera progresiva.
 - Si se definieron historias de usuario, se recomienda desarrollar el proyecto historia por historia, priorizando las más cruciales para el MVP.
 - Utilizar herramientas como [Trello](https://www.youtube.com/watch?v=NdKkEV23_cs) para la organización y seguimiento de tareas.
+- Utiliza las salas de discord para unirte a trabajar con tu equipo.
 
 ## Características Técnicas
 

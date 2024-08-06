@@ -6,11 +6,12 @@
 // import { PI, medidas as sizes } from "./06-secundario.js";
 
 import Sumatoria, { PI, medidas as sizes } from "./06-secundario.js";
+//import * as todo from "ubicacion"
 
 const res = Sumatoria(10, 20);
 
 console.log(res);
 // console.log({ medidas });
-console.log({ sizes });
+console.log( sizes );
 
 console.log({ PI });

@@ -40,16 +40,14 @@ Aquí encontrarás unos pasos sugeridos para el desarrollo del proyecto. Ten en 
 - Ejemplos genéricos de historias de usuario:
   - "Como usuario, quiero poder filtrar los registros para encontrar información específica rápidamente."
   - "Como usuario, deseo ver los registros en una tabla ordenada para tener una visión general de los datos."
-  - "Como administrador, necesito poder crear nuevos registros para mantener la información actualizada."
 
 > [!TIP]
 > Puedes revisar la siguiente [documentación](https://www.atlassian.com/es/agile/project-management/user-stories) acerca de historias de usuario
 
 ### 3. Selección de API
 
-Tendrás que consumir una API para que tu proyecto sea funcional, considera utilizar los siguientes recursos disponibles
+Tendrás que consumir una API para que tu proyecto sea funcional, considera utilizar los siguientes recursos disponibles:
 
-Elegir una de las siguientes opciones:
 - [Mockapi](https://www.youtube.com/watch?v=g2LMz4SOeqM) (Recomendada): Fácil de configurar y ideal para prototipos rápidos.
 - [JSON Server](https://www.youtube.com/watch?v=OAOCa2qYq2Y): Útil para simular una API REST completa con datos locales, puedes deployearla en [Vercel](https://www.youtube.com/watch?v=Tjl3HgxvMWM)
 - API especializada de [RapidAPI](https://www.youtube.com/watch?v=xLDU1gLwqKM): Un repositorio de APIs libres de diferentes temáticas. Ten en cuenta que utilizar una API de RapidAPI requerirá invertir tiempo en estudiar y comprender la API específica que elijas.
@@ -99,6 +97,44 @@ Para aquellos que deseen ir más allá del MVP, se sugieren las siguientes opcio
 - **Integración con Firebase**: Utilizar Firebase para autenticación de usuarios, almacenamiento en la nube, o funcionalidades en tiempo real.
 - **Pruebas con Jest y React Testing Library**: Desarrollar pruebas unitarias y de integración para asegurar la calidad y robustez del código.
 
+## Estructura del Proyecto sugerida
+
+- **src/**: Directorio principal del código fuente.
+  - **components/**: Almacena los componentes de React.
+  - **views/**: Contiene las vistas de React utilizando React Router Dom.
+  - **utils/**: Puede incluir utilidades, como funciones para el manejo de estado avanzado o la interacción con la API.
+
+## Cómo iniciar el Proyecto
+
+> [!IMPORTANT]  
+> Recuerda que debes tener [node.js](https://nodejs.org/en/) instalado
+
+1. Crea un proyecto con Vite:
+
+   ```bash
+   npm create vite@latest nombreproyecto
+   ```
+
+2. Selecciona `React` como framework y `Javascript` como lenguaje.
+
+3. Entra a la carpeta del proyecto recién creado.
+
+    ```bash
+    cd nombreproyecto
+    ```
+
+4. Instala las dependencias
+
+    ```bash
+    npm install
+    ```
+
+5. Levanta el servidor de desarrollo del proyecto
+
+    ```bash
+    npm run dev
+    ```
+
 ## Aspectos a Evaluar
 
 1. Presentación clara y concisa del proyecto, sus objetivos y la problemática que resuelve.
@@ -118,3 +154,7 @@ En caso de surgir problemas de colaboración en proyectos grupales:
 1. Priorizar la comunicación abierta y honesta entre los miembros del equipo para resolver conflictos internamente.
 2. Si los problemas persisten, notificar al docente o mentor del curso para buscar orientación y mediación.
 3. Independientemente de los desafíos, mantener el compromiso de continuar el proyecto con los recursos disponibles.
+
+## Recursos 
+
+Puedes encontrar más info [aquí](./Resources/README.md)

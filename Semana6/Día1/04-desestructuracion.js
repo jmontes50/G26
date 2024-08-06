@@ -47,4 +47,16 @@ const usarGato = ({ nombre, edad }) => {
 // usarGato("Michi", 3);
 // usarGato(3, "Pizza");
 
-usarGato( gato )
+usarGato( gato );
+
+//desestructuración a arreglos
+const arr = ["Kiwi", "Uchuva", "Tuna"];
+
+// const fruta1 = arr[0]; //implicaria crear una variable por c/fruta
+//funciona por su posicion en vez de por la clave
+const [fruta1, fruta2, fruta3] = arr;
+
+console.log(fruta1);
+console.log(fruta2);
+console.log(fruta3);
+

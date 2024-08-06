@@ -1,4 +1,4 @@
-let nums = [4, 5, 6 ,7];
+let nums = [10, 4, 5, 6 ,7];
 
 //muchas veces vamos a tener que dar una función como argumento
 //los argumentos que reciba esa función pueden tener el nombre que deseemos
@@ -49,4 +49,16 @@ let sumatoria = nums.reduce((acumulador, item) => {
 })
 
 console.log("reduce:", sumatoria);
+
+//va a ver métodos que van a modificar el arreglo original.
+console.log("revisando nums", nums);
+
+//Ordenar, esta modificando el arreglo original
+// nums.sort((a, b) => a - b);
+
+//toSorted no modifica la data original
+let ordenado = nums.toSorted((a, b) => a - b);
+
+console.log("ordenado", ordenado);
+console.log("después del sort", nums);
 

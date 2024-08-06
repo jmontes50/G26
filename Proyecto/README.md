@@ -42,8 +42,8 @@ Aquí encontrarás unos pasos sugeridos para el desarrollo del proyecto. Ten en 
   - "Como usuario, deseo ver los registros en una tabla ordenada para tener una visión general de los datos."
   - "Como administrador, necesito poder crear nuevos registros para mantener la información actualizada."
 
-  > [!TIP]
-  > Puedes revisar la siguiente [documentación](https://www.atlassian.com/es/agile/project-management/user-stories) acerca de historias de usuario
+> [!TIP]
+> Puedes revisar la siguiente [documentación](https://www.atlassian.com/es/agile/project-management/user-stories) acerca de historias de usuario
 
 ### 3. Selección de API
 

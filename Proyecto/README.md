@@ -20,6 +20,7 @@ Aquí encontrarás unos pasos sugeridos para el desarrollo del proyecto. Ten en 
 
 ### 1. Prototipado y Maquetación
 
+> [!IMPORTANT]  
 > El objetivo es visualizar claramente la estructura y el flujo de la aplicación antes de comenzar la codificación.
 
 - Desarrollar un prototipo de bajo nivel (mockup) con máximo 4 vistas principales.
@@ -41,19 +42,23 @@ Aquí encontrarás unos pasos sugeridos para el desarrollo del proyecto. Ten en 
   - "Como usuario, deseo ver los registros en una tabla ordenada para tener una visión general de los datos."
   - "Como administrador, necesito poder crear nuevos registros para mantener la información actualizada."
 
+  > [!TIP]
+  > Puedes revisar la siguiente [documentación](https://www.atlassian.com/es/agile/project-management/user-stories) acerca de historias de usuario
+
 ### 3. Selección de API
 
+Tendrás que consumir una API para que tu proyecto sea funcional, considera utilizar los siguientes recursos disponibles
+
 Elegir una de las siguientes opciones:
-- Mockapi (Recomendada): Fácil de configurar y ideal para prototipos rápidos.
-- JSON Server: Útil para simular una API REST completa con datos locales.
-- API especializada de RapidAPI: Un repositorio de APIs libres de diferentes temáticas. Ten en cuenta que utilizar una API de RapidAPI requerirá invertir tiempo en estudiar y comprender la API específica que elijas.
+- [Mockapi](https://www.youtube.com/watch?v=g2LMz4SOeqM) (Recomendada): Fácil de configurar y ideal para prototipos rápidos.
+- [JSON Server](https://www.youtube.com/watch?v=OAOCa2qYq2Y): Útil para simular una API REST completa con datos locales, puedes deployearla en [Vercel](https://www.youtube.com/watch?v=Tjl3HgxvMWM)
+- API especializada de [RapidAPI](https://www.youtube.com/watch?v=xLDU1gLwqKM): Un repositorio de APIs libres de diferentes temáticas. Ten en cuenta que utilizar una API de RapidAPI requerirá invertir tiempo en estudiar y comprender la API específica que elijas.
 
 ### 4. Desarrollo
 
 - Implementar las funcionalidades CRUD de manera progresiva.
 - Si se definieron historias de usuario, se recomienda desarrollar el proyecto historia por historia, priorizando las más cruciales para el MVP.
-- Utilizar herramientas como Trello o GitHub Projects para la organización y seguimiento de tareas.
-- Realizar commits frecuentes y descriptivos para mantener un buen control de versiones.
+- Utilizar herramientas como [Trello](https://www.youtube.com/watch?v=NdKkEV23_cs) para la organización y seguimiento de tareas.
 
 ## Características Técnicas
 
@@ -78,7 +83,7 @@ Elegir una de las siguientes opciones:
    - Utilizar props para la comunicación entre componentes padres e hijos.
 
 5. **Estilos**: 
-   - Elegir entre CSS puro, Bootstrap, o cualquier otro framework/librería de CSS.
+   - Elegir entre CSS puro u otro framework/librería de CSS.
    - Mantener una consistencia visual a lo largo de la aplicación.
    - Implementar diseños responsivos para diferentes tamaños de pantalla.
 
@@ -113,4 +118,3 @@ En caso de surgir problemas de colaboración en proyectos grupales:
 1. Priorizar la comunicación abierta y honesta entre los miembros del equipo para resolver conflictos internamente.
 2. Si los problemas persisten, notificar al docente o mentor del curso para buscar orientación y mediación.
 3. Independientemente de los desafíos, mantener el compromiso de continuar el proyecto con los recursos disponibles.
-4. Documentar las contribuciones individuales y los acuerdos del equipo para mantener la transparencia.

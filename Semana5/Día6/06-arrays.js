@@ -41,3 +41,12 @@ let dondeExiste = nums.findIndex((numerito) => numerito === 5);
 // let dondeExiste = nums.findIndex((numerito) => numerito === 10);
 
 console.log("findIndex", dondeExiste);
+
+//reduce, será utilizado para agrupar los items de una arreglo, en un solo resultado en base a la función que indiquemos
+//la función que recibe reduce como argumento, tendrá diferentes parámetros a comparación de map, o forEach
+let sumatoria = nums.reduce((acumulador, item) => {
+    return acumulador + item;
+})
+
+console.log("reduce:", sumatoria);
+

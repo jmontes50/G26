@@ -49,15 +49,20 @@ const biblioteca = {
     }
     // console.log(encontrado);
     // console.log(this.libros[encontrado])
-    //si es que si lo encontramos, retornamos el item(libro) encontrado
-    return this.libros[encontrado];
+    //si es que si lo encontramos, retornamos el libro más la posición
+    // return this.libros[encontrado]
+    return { ...this.libros[encontrado], posicion: encontrado };
   },
   venderLibro: function(nombreUsuario, dni, nombreLibro) {
     //que en base al nombre del libro lo encontremos y podamos venderlo, venderlo implica reducir su cantidad en 1 y registrar la venta en la propiedad ventas
     const libroBuscado = this.buscarLibroPorNombre(nombreLibro);
     console.log(libroBuscado);
+    //en caso no lo encuentre !libroBuscado seria true
+    //si libro es un objeto lo considera truthy
+    //https://arielfuggini.com/javascript-valores-truthy-falsy/
     if(!libroBuscado || libroBuscado.cantidad === 0){
       alert("No se encontro el libro ó no hay stock");
+      return; //para cortar la ejecución de la función
     }
 
   }
@@ -79,4 +84,4 @@ biblioteca.agregarLibro(libro1);
 
 console.table(biblioteca);
 
-biblioteca.venderLibro("","", "colera");
+biblioteca.venderLibro("","", "quijote");

@@ -64,7 +64,24 @@ const biblioteca = {
       alert("No se encontro el libro ó no hay stock");
       return; //para cortar la ejecución de la función
     }
-
+    //Si encontramos el libro, utilizando la posición reducimos la cantidad en -1 con --
+    const posicion = libroBuscado.posicion;
+    this.libros[posicion].cantidad--;
+    //registramos la venta
+    //desestructuramos las propiedades que nos interesan del libro para hacer la venta
+    const {id, nombre, precio} = libroBuscado;
+    //creamos un objeto con la data de esa venta
+    const nuevaVenta = {
+      nombreUsuario,
+      dniUsuario: dni,
+      idLibro: id,
+      nombreLibro: nombre,
+      precioLibro: precio,
+      fecha: new Date()
+    }
+    this.ventas.push(nuevaVenta);
+    alert("Venta completada!");
+    console.table(this.ventas)
   }
 };
 

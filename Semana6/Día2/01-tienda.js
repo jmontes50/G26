@@ -82,6 +82,12 @@ const biblioteca = {
     this.ventas.push(nuevaVenta);
     alert("Venta completada!");
     console.table(this.ventas)
+  },
+  actualizarLibro: function(posicion, propiedad, valor){
+    //posicion ===> 0, 3, 5
+    const libroAModificar = this.libros[posicion]; //01 libro en forma de un objeto
+    //notacion de corchetes en objetos
+    libroAModificar[propiedad] = valor;
   }
 };
 
@@ -110,4 +116,4 @@ const ejecutarVenta = () => {
   console.log("resumen stock");
   console.table(biblioteca.libros);
 }
-ejecutarVenta();
+// ejecutarVenta();

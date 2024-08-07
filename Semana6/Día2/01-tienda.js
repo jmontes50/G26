@@ -86,7 +86,7 @@ const biblioteca = {
   actualizarLibro: function(posicion, propiedad, valor){
     //posicion ===> 0, 3, 5
     const libroAModificar = this.libros[posicion]; //01 libro en forma de un objeto
-    //notacion de corchetes en objetos
+    //notacion de corchetes en objetos, porque propiedad va a ser un string
     libroAModificar[propiedad] = valor;
   }
 };
@@ -117,3 +117,19 @@ const ejecutarVenta = () => {
   console.table(biblioteca.libros);
 }
 // ejecutarVenta();
+
+const modificarLibro = () => {
+  const libro = prompt("Ingrese el libro a Buscar");
+  const libroEncontrado = biblioteca.buscarLibroPorNombre(libro);
+  //si es que no existe, damos un mensaje y cortamos la función
+  if(!libroEncontrado){
+    alert("No se encontro el libro!")
+    return;
+  }
+  //si es que si existe
+  const nombrePropiedad = prompt(`Indique la propiedad a modificar de ${libroEncontrado.nombre}`);
+  const valorPropiedad = prompt(`Ingrese el nuevo valor de ${nombrePropiedad}`);
+  biblioteca.actualizarLibro(libroEncontrado.posicion, nombrePropiedad, valorPropiedad);
+  console.table(biblioteca.libros);
+}
+modificarLibro();

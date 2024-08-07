@@ -3,6 +3,7 @@ import misLibros from "./data.js";
 
 const biblioteca = {
   libros: [],
+  ventas: [], //guardaremos las ventas de forma independiente como registro
   construirLibros: function(arrLibros) {
     this.libros = arrLibros;
   },
@@ -23,6 +24,17 @@ const biblioteca = {
     const nuevoLibro = { ...libro, id: nuevoId };
     //para agregar un nuevo libro a la propiedad libros
     this.libros.push(nuevoLibro);
+  },
+  buscarLibroPorNombre: function(nombreLibro){
+    //toUpperCase() para convertir todo a mayusculas y que coincida
+    //junto con toUpperCase utilizaremos map para convertir todo el arreglo a mayusculas 
+    //include para saber si existe a busqueda dentro del nombre del libro
+    //findIndex para encontrar el indice del libro en el arreglo
+    const nombreLibroMayus = nombreLibro.toUpperCase();
+    console.log(nombreLibroMayus);
+  },
+  venderLibro: function(nombreUsuario, dni, nombreLibro) {
+    //que en base al nombre del libro lo encontremos y podamos venderlo, venderlo implica reducir su cantidad en 1 y registrar la venta en la propiedad ventas
   }
 };
 
@@ -41,3 +53,5 @@ let libro1 = {
 biblioteca.agregarLibro(libro1);
 
 console.table(biblioteca);
+
+biblioteca.buscarLibroPorNombre("quijote");

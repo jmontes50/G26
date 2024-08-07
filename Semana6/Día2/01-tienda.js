@@ -48,11 +48,18 @@ const biblioteca = {
       return false
     }
     // console.log(encontrado);
+    // console.log(this.libros[encontrado])
     //si es que si lo encontramos, retornamos el item(libro) encontrado
-    return this.libros[encontrado]
+    return this.libros[encontrado];
   },
   venderLibro: function(nombreUsuario, dni, nombreLibro) {
     //que en base al nombre del libro lo encontremos y podamos venderlo, venderlo implica reducir su cantidad en 1 y registrar la venta en la propiedad ventas
+    const libroBuscado = this.buscarLibroPorNombre(nombreLibro);
+    console.log(libroBuscado);
+    if(!libroBuscado || libroBuscado.cantidad === 0){
+      alert("No se encontro el libro ó no hay stock");
+    }
+
   }
 };
 
@@ -72,4 +79,4 @@ biblioteca.agregarLibro(libro1);
 
 console.table(biblioteca);
 
-biblioteca.buscarLibroPorNombre("quijote");
+biblioteca.venderLibro("","", "colera");

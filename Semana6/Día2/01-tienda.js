@@ -37,7 +37,12 @@ const biblioteca = {
     const librosMayus = this.libros.map(item => { 
       return { ...item, nombre:item.nombre.toUpperCase() }
     });
-    console.table(librosMayus);
+    
+    const encontrado = librosMayus.findIndex((item) => {
+      return item.nombre.includes(nombreLibroMayus);
+    });
+
+    console.log(encontrado)
   },
   venderLibro: function(nombreUsuario, dni, nombreLibro) {
     //que en base al nombre del libro lo encontremos y podamos venderlo, venderlo implica reducir su cantidad en 1 y registrar la venta en la propiedad ventas

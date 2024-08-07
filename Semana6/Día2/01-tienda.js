@@ -38,11 +38,18 @@ const biblioteca = {
       return { ...item, nombre:item.nombre.toUpperCase() }
     });
     
+    //buscamos el la búsqueda en Mayúsculas entre los libros con nombres en Mayúsculas
+    // const encontrado = librosMayus.findIndex((item) => item.nombre.includes(nombreLibroMayus));
     const encontrado = librosMayus.findIndex((item) => {
       return item.nombre.includes(nombreLibroMayus);
     });
-
-    console.log(encontrado)
+    //en caso no lo encuentre retornamos un false
+    if (encontrado === -1) {
+      return false
+    }
+    // console.log(encontrado);
+    //si es que si lo encontramos, retornamos el item(libro) encontrado
+    return this.libros[encontrado]
   },
   venderLibro: function(nombreUsuario, dni, nombreLibro) {
     //que en base al nombre del libro lo encontremos y podamos venderlo, venderlo implica reducir su cantidad en 1 y registrar la venta en la propiedad ventas

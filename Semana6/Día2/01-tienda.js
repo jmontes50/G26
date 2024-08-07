@@ -101,4 +101,13 @@ biblioteca.agregarLibro(libro1);
 
 console.table(biblioteca);
 
-biblioteca.venderLibro("","", "quijote");
+const ejecutarVenta = () => {
+  const nombre = prompt("Indique su nombre");
+  const dni = prompt("Indique su dni");
+  const libro = prompt("Ingrese el libro a Buscar");
+
+  biblioteca.venderLibro(nombre, dni, libro);
+  console.log("resumen stock");
+  console.table(biblioteca.libros);
+}
+ejecutarVenta();

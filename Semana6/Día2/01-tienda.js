@@ -31,7 +31,13 @@ const biblioteca = {
     //include para saber si existe a busqueda dentro del nombre del libro
     //findIndex para encontrar el indice del libro en el arreglo
     const nombreLibroMayus = nombreLibro.toUpperCase();
-    console.log(nombreLibroMayus);
+    //si quiero retornar un objeto directamente con una función flecha, tenemos que ponerlo entre parentesis
+    //tener el mismo arreglo de los libros pero con el nombre en mayusculas
+    // const librosMayus = this.libros.map(item => ({ ...item, nombre:item.nombre.toUpperCase()}) );
+    const librosMayus = this.libros.map(item => { 
+      return { ...item, nombre:item.nombre.toUpperCase() }
+    });
+    console.table(librosMayus);
   },
   venderLibro: function(nombreUsuario, dni, nombreLibro) {
     //que en base al nombre del libro lo encontremos y podamos venderlo, venderlo implica reducir su cantidad en 1 y registrar la venta en la propiedad ventas

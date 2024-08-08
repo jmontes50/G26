@@ -17,3 +17,12 @@ console.log("Links:", links);
 const arrLinks = Array.from(links);
 
 console.log("arrLinks:", arrLinks);
+
+arrLinks.forEach((li) => {
+  console.log("li:", li);
+  li.style.color = "blue";
+  if(li.innerText === "link1"){
+    li.style.fontWeight = "bold";
+    li.style.color = "green";
+  }
+})

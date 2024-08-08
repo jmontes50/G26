@@ -27,9 +27,21 @@ console.log("primicia", primicia);
 
 ///////////
 const olimpiadas = document.getElementById('olimpiadas');
-//no deja de ser un string
+//no deja de ser un string, me puede traer problemas porque hasta que lo añada no existe
 olimpiadas.innerHTML = `
     <p id="primicia">
         Turco gana 2da medalla de plata en tiro
     </p>
-`
+`;
+
+//creamos un elemento
+let divDeportes = document.createElement('div');
+//le llenamos de html como string
+divDeportes.innerHTML = `
+    <p id="futbol">Partidos de hoy</p>
+    <p id="voley">Semifinales</p>
+    <p id="velero">Perú medalla de bronce</p>
+`;
+//añadimos el elemento ya llenito a un elemento que ya existe dentro del HTML como olimpiadas
+olimpiadas.appendChild(divDeportes);
+

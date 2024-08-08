@@ -50,3 +50,13 @@ const inputEmail = document.querySelector("input[type=email]");
 console.log("inputEmail",inputEmail);
 
 inputEmail.placeholder = "ingrese su email";
+
+//querySelectorAll - varios elementos, igual funciona con la sintaxis de CSS
+const spans = document.querySelectorAll('.info');
+
+console.log("Spans:", spans);
+
+spans.forEach((item) => {
+  item.style.display = "block";
+  item.style.color = "purple";
+})

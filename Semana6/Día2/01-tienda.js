@@ -86,7 +86,7 @@ const biblioteca = {
   actualizarLibro: function(posicion, propiedad, valor){
     //posicion ===> 0, 3, 5
     const libroAModificar = this.libros[posicion]; //01 libro en forma de un objeto
-    //notacion de corchetes en objetos, porque propiedad va a ser un string
+    //notación de corchetes en objetos, porque propiedad va a ser un string
     libroAModificar[propiedad] = valor;
   }
 };

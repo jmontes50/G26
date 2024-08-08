@@ -42,6 +42,30 @@ divDeportes.innerHTML = `
     <p id="voley">Semifinales</p>
     <p id="velero">Perú medalla de bronce</p>
 `;
+const futbol = divDeportes.querySelector("#futbol");
+
+console.log("p futbol:", futbol);
+
 //añadimos el elemento ya llenito a un elemento que ya existe dentro del HTML como olimpiadas
 olimpiadas.appendChild(divDeportes);
+
+//
+const crearTarjeta = (titulo, texto) => {
+    //tarjeta ya es un elemento
+    const tarjeta = document.createElement('div');
+    //llenar de html con contenido
+    tarjeta.innerHTML = `
+        <h2 id="titulo-tarjeta">${titulo}</h2>
+        <p>${texto}</p>
+    `;
+    //añadir lógica asociada a la tarjeta
+    const h2 = tarjeta.querySelector('#titulo-tarjeta');
+    h2.style.color = "red";
+    //más lógica
+    return tarjeta;
+};
+
+const noticia1 = crearTarjeta("Japón pierde contra Italia en volley", "La Selección de Voleibol masculino de Japón vivió una amarga derrota en los cuartos de final.");
+
+olimpiadas.appendChild(noticia1);
 

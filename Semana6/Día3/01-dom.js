@@ -21,8 +21,25 @@ console.log("arrLinks:", arrLinks);
 arrLinks.forEach((li) => {
   console.log("li:", li);
   li.style.color = "blue";
+  //innerText me da el texto de un elemento
   if(li.innerText === "link1"){
     li.style.fontWeight = "bold";
     li.style.color = "green";
   }
-})
+});
+
+//obtenemos 01 elemento como si se tratara de CSS
+//#id, .clase, atributo[valor]
+//#principal {propiedades de css}
+const principal = document.querySelector("#principal");
+
+console.log("main", principal);
+//innerHTML me va a dar el html incluido
+console.log("contenido main:", principal.innerHTML);
+//al ser una propiedad me permite modificarlo
+principal.innerHTML = `
+  <section>
+    <h2>Japón porqueeeeeeee</h2>
+    <p id="primicia">lorem ipsum etc etc etc</p>
+  </section>
+`

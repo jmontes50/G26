@@ -42,4 +42,11 @@ principal.innerHTML = `
     <h2>Japón porqueeeeeeee</h2>
     <p id="primicia">lorem ipsum etc etc etc</p>
   </section>
-`
+`;
+
+//el querySelector es muy versátil al trabajar con la sintaxis de CSS
+const inputEmail = document.querySelector("input[type=email]");
+
+console.log("inputEmail",inputEmail);
+
+inputEmail.placeholder = "ingrese su email";

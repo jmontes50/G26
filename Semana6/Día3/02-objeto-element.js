@@ -49,7 +49,7 @@ console.log("p futbol:", futbol);
 //añadimos el elemento ya llenito a un elemento que ya existe dentro del HTML como olimpiadas
 olimpiadas.appendChild(divDeportes);
 
-//
+//Componentes, Fábrica de componentes
 const crearTarjeta = (titulo, texto) => {
     //tarjeta ya es un elemento
     const tarjeta = document.createElement('div');
@@ -67,5 +67,6 @@ const crearTarjeta = (titulo, texto) => {
 
 const noticia1 = crearTarjeta("Japón pierde contra Italia en volley", "La Selección de Voleibol masculino de Japón vivió una amarga derrota en los cuartos de final.");
 
+//push, añade el final 
 olimpiadas.appendChild(noticia1);
 

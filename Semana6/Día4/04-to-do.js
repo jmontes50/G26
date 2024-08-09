@@ -44,3 +44,15 @@ form.addEventListener("submit", (ev) => {
     arregloTareas.push(nuevaTarea);
     console.log("arregloTareas:", arregloTareas);
 });
+
+// que se encargue de crear el elemento que represente una nuevaTarea
+const crearTarea = (objTarea) => {
+    const divTarea = document.createElement("div");
+    divTarea.innerHTML = `
+      <input type="checkbox" id="hecho"/>
+      <span>${objTarea.tarea}</span>
+    `
+    return divTarea;
+}
+
+//que se encargue de dibujar esos elementos

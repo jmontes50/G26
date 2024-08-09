@@ -57,6 +57,18 @@ const crearTarea = (objTarea) => {
       <span>${objTarea.tarea}</span>
     `
     // console.log(liTarea);
+    //puedo utilizar querySelector pero no getElementById
+    const checkHecho = liTarea.querySelector("#hecho");
+    console.log("check", checkHecho);
+
+    checkHecho.addEventListener("click", () => {
+      // console.log("click check:", objTarea);
+      const deseaEliminar = confirm("Desea eliminar la tarea??");
+      if(deseaEliminar){
+        liTarea.remove();
+      }
+    })
+
     return liTarea;
 }
 

@@ -20,7 +20,7 @@ const inputNombre =  document.getElementById('inputNombre');
 
 const listaTareas = document.querySelector('.lista-tareas');
 
-const arregloTareas = []; //se van a guardar todas mis tareas
+// const arregloTareas = []; //se van a guardar todas mis tareas
 
 //El evento que va a manejar el form es el evento submit
 form.addEventListener("submit", (ev) => {
@@ -40,26 +40,31 @@ form.addEventListener("submit", (ev) => {
     //ev.target me indica desde donde se disparo el evento, en este caso el formulario
 
     const dataFormulario = new FormData(ev.target);
-    // console.log(dataFormulario);
+    console.log(dataFormulario);
     const nuevaTarea = Object.fromEntries(dataFormulario.entries());
-    // console.log(formValues);
-    arregloTareas.push(nuevaTarea);
-    console.log("arregloTareas:", arregloTareas);
+    console.log(nuevaTarea);
+    // arregloTareas.push(nuevaTarea);
+    // console.log("arregloTareas:", arregloTareas);
+    dibujarTarea(nuevaTarea);
 });
 
 // que se encargue de crear el elemento que represente una nuevaTarea
 const crearTarea = (objTarea) => {
     const liTarea = document.createElement("li");
+    // console.log(liTarea.innerHTML);
     liTarea.innerHTML = `
       <input type="checkbox" id="hecho"/>
       <span>${objTarea.tarea}</span>
     `
+    // console.log(liTarea);
     return liTarea;
 }
 
 //que se encargue de dibujar esos elementos
 const dibujarTarea = (tarea) => {
+  // ul = listaTareas
   const liNuevaTarea = crearTarea(tarea);
   listaTareas.appendChild(liNuevaTarea);
+  
   // listaTareas.
 }

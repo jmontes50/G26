@@ -19,3 +19,14 @@ input.addEventListener('change', (evento) => {
   //puedo obtener el valor del input directamente de su evento
   console.log("value", evento.target.value);
 })
+
+const anchor = document.getElementById("anchor");
+
+anchor.addEventListener("click", (ev) => {
+  console.log(ev.preventDefault);
+  //el preventDefault corta el evento por defecto que tiene un elemento, como un break en el for;
+  ev.preventDefault();
+  alert("Hola!!! desde el ancla!");
+  //me esta llevando hasta una url
+  //comportamiento por defecto, ancla, form
+})

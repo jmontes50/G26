@@ -18,6 +18,8 @@ const form = document.getElementById('agregarTareas');
 const inputTarea = document.getElementById('nuevaTarea');
 const inputNombre =  document.getElementById('inputNombre');
 
+const listaTareas = document.querySelector('.lista-tareas');
+
 const arregloTareas = []; //se van a guardar todas mis tareas
 
 //El evento que va a manejar el form es el evento submit
@@ -47,12 +49,17 @@ form.addEventListener("submit", (ev) => {
 
 // que se encargue de crear el elemento que represente una nuevaTarea
 const crearTarea = (objTarea) => {
-    const divTarea = document.createElement("div");
-    divTarea.innerHTML = `
+    const liTarea = document.createElement("li");
+    liTarea.innerHTML = `
       <input type="checkbox" id="hecho"/>
       <span>${objTarea.tarea}</span>
     `
-    return divTarea;
+    return liTarea;
 }
 
 //que se encargue de dibujar esos elementos
+const dibujarTarea = (tarea) => {
+  const divNuevaTarea = crearTarea(tarea);
+  listaTareas.appendChild(divNuevaTarea);
+  // listaTareas.
+}

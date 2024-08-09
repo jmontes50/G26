@@ -18,23 +18,29 @@ const form = document.getElementById('agregarTareas');
 const inputTarea = document.getElementById('nuevaTarea');
 const inputNombre =  document.getElementById('inputNombre');
 
+const arregloTareas = []; //se van a guardar todas mis tareas
+
 //El evento que va a manejar el form es el evento submit
 form.addEventListener("submit", (ev) => {
     //para que no se dispare el evento por defecto de submit
     ev.preventDefault();
-    // console.log("inputTarea", inputTarea.value);
-    // console.log("inputNombre", inputNombre.value);
-    // const nuevaTarea = {
-    //     tarea: inputTarea.value,
-    //     nombre: inputNombre.value
-    // }
-    // console.log(nuevaTarea);
+    /*
+    console.log("inputTarea", inputTarea.value);
+    console.log("inputNombre", inputNombre.value);
+    const nuevaTarea = {
+        tarea: inputTarea.value,
+        nombre: inputNombre.value
+    }
+    console.log(nuevaTarea)
+    */
    
     //formData, va a obtener la información de los input que esten dentro de un formulario en un objeto especial llamado formData
     //ev.target me indica desde donde se disparo el evento, en este caso el formulario
 
     const dataFormulario = new FormData(ev.target);
-    console.log(dataFormulario);
-    const formValues = Object.fromEntries(dataFormulario.entries());
-    console.log(formValues);
+    // console.log(dataFormulario);
+    const nuevaTarea = Object.fromEntries(dataFormulario.entries());
+    // console.log(formValues);
+    arregloTareas.push(nuevaTarea);
+    console.log("arregloTareas:", arregloTareas);
 });

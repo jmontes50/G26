@@ -59,7 +59,7 @@ const crearTarea = (objTarea) => {
 
 //que se encargue de dibujar esos elementos
 const dibujarTarea = (tarea) => {
-  const divNuevaTarea = crearTarea(tarea);
-  listaTareas.appendChild(divNuevaTarea);
+  const liNuevaTarea = crearTarea(tarea);
+  listaTareas.appendChild(liNuevaTarea);
   // listaTareas.
 }

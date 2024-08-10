@@ -30,9 +30,11 @@ fetch("https://reqres.in/api/users?page=2")
 const obtenerUsuarios = async () => {
   try {
     const URL = 'https://reqres.in/api/users?page=2';
-    const respuesta = await fetch(URL);
+    const respuesta = await fetch(URL); //esperamos al resultado con fetch y cuando termina, pasa a la siguiente línea
     console.log("Response:", respuesta);
-    
+    const datos = await respuesta.json();
+    console.log(datos);
+    console.table(datos.data)
   } catch (error) {
     console.log(error);
   }

@@ -17,4 +17,8 @@ const Card = (product) => {
       <button class="btn btn-primary btn-sm">Click!</button>
     </div>
   `;
+
+  return divCard;
 }
+
+export default Card; //01 sólo

@@ -15,6 +15,8 @@ const getProducts = async () => {
   }
 }
 
+//consideraria que este archivo va a tener más funciones, para obtener, crear, actualizar, eliminar
+
 export {
   getProducts
 }

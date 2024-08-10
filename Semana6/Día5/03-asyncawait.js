@@ -7,10 +7,10 @@ const ejecutar = () => {
 */
 // async function ejecutar (){
 const ejecutar = async () => {
-  return "Éxito 😺"; //resolve
-  // throw "Algo falló! 😷"; //reject
+  // return "Éxito 😺"; //resolve
+  throw "Algo falló! 😷"; //reject
 }
-
+/*
 ejecutar()
 .then((resultado) => {
   console.log(resultado);
@@ -18,3 +18,15 @@ ejecutar()
 .catch((error) => {
   console.log(error)
 })
+*/
+const comenzar = async () => {
+  //trycatch me permite capturar errores, no solo de promesas
+  try {
+    //intenta esto
+    const resultado = await ejecutar();
+    console.log(resultado);
+  } catch (error) {
+    console.log(error);
+  }
+}
+comenzar();

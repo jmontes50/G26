@@ -1,3 +1,4 @@
+/*
 //FETCH Va a darme una promesa
 // fetch(url)
 fetch("https://reqres.in/api/users?page=2")
@@ -24,3 +25,4 @@ fetch("https://reqres.in/api/users?page=2")
   //NO VA A SALTAR CUANDO SEA UN ERROR 404
   console.log(error);
 })
+*/

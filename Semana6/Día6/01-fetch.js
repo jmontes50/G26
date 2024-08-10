@@ -32,9 +32,13 @@ const obtenerUsuarios = async () => {
     const URL = 'https://reqres.in/api/users?page=2';
     const respuesta = await fetch(URL); //esperamos al resultado con fetch y cuando termina, pasa a la siguiente línea
     console.log("Response:", respuesta);
-    const datos = await respuesta.json();
-    console.log(datos);
-    console.table(datos.data)
+    if(respuesta.status === 200) {
+      const datos = await respuesta.json();
+      console.log(datos);
+      console.table(datos.data)
+    } else {
+      throw new Error("La petición no se completo de forma correcta");
+    }
   } catch (error) {
     console.log(error);
   }

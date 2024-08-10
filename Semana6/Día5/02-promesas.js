@@ -31,13 +31,15 @@ const hornear = () => {
 
 const prepararCubierta = (torta) => new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve(`${torta} y cubierta lista!!`)
+    resolve(`${torta} y cubierta lista!!`);
+    // reject(`revento el microondas`);
   }, 3000);
 })
 
 const decorado = (tortaYCubierta) => new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve(`${tortaYCubierta} ya decorada!`)
+    // resolve(`${tortaYCubierta} ya decorada!`);
+    reject(`pipipi se me cayo la torta al piso`);
   }, 3000);
 })
 
@@ -50,6 +52,10 @@ hornear()
 //colocamos abajo el then pero que estará asociado a la promesa que retornamos antes
 .then((tortaConCubierta) => {
   console.log(tortaConCubierta);
+  return decorado(tortaConCubierta);
+})
+.then((tortaFinal) => {
+  console.log(tortaFinal);
 })
 .catch((error) => { //catch me permite capturar el resultado de reject
   console.log(error)

@@ -23,7 +23,8 @@ const hornear = () => {
     // dentro de la promesa es donde vamos a poner nuestra tarea asíncrona
     setTimeout(() => {
       const resultado = "torta horneada!";
-      resolve(resultado); //fue bien, es un resultado ➕
+      // resolve(resultado); //fue bien, es un resultado ➕
+      reject("Se quemo la torta 🔥"); //resultado negativo ➖
     }, 2000)
   })
 }
@@ -31,4 +32,7 @@ const hornear = () => {
 hornear()
 .then((torta) => { //then me permite obtener el resultado de resolve
   console.log(torta);
+})
+.catch((error) => { //catch me permite capturar el resultado de reject
+  console.log(error)
 });

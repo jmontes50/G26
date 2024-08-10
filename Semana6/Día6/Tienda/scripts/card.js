@@ -7,7 +7,7 @@ const Card = (product) => {
   //añadir una clase a un elemento
   divCard.classList.add('card'); //<div class="card" ...></div>
   divCard.innerHTML = `
-    <img class="card-img-top" src="${imagen} alt="foto ${nombre}" />
+    <img class="card-img-top" src="${imagen}" alt="foto ${nombre}" />
     <div class="card-body">
       <h5 class="card-title">${nombre}</h5>
       <p class="fs-6 text-secondary">S/ ${price}</p>
@@ -18,7 +18,7 @@ const Card = (product) => {
     </div>
   `;
 
-  return divCard;
+  return divCard; //objeto
 }
 
 export default Card; //01 sólo

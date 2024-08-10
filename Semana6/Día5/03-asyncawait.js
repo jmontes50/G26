@@ -23,9 +23,9 @@ const comenzar = async () => {
   //trycatch me permite capturar errores, no solo de promesas
   try {
     //intenta esto
-    const resultado = await ejecutar();
+    const resultado = await ejecutar(); //then ⌛
     console.log(resultado);
-  } catch (error) {
+  } catch (error) { //catch
     console.log(error);
   }
 }

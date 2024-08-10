@@ -1,3 +1,5 @@
+import useModal from "./modal.js";
+
 //podemos crear una funcion que represente un elemento
 const Card = (product) => {
   //desestructuración
@@ -17,6 +19,11 @@ const Card = (product) => {
       <button class="btn btn-primary btn-sm">Click!</button>
     </div>
   `;
+  const button = divCard.querySelector('button'); //busca como si fuera CSS, en este caso seria como si buscara: button {}, directamente por la etiqueta HTML
+
+  button.addEventListener('click', () => {
+    useModal(`ID: ${id} | NOMBRE: ${nombre}`);
+  });
 
   return divCard; //objeto
 }

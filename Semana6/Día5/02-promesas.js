@@ -1,4 +1,5 @@
 //hornear -> prepararCubierta -> decorar
+/*
 const hornear = (callback) => {
   //el horneado demorará un ⏱️
   setTimeout(() => {
@@ -15,4 +16,19 @@ const prepararCubierta = (torta) => {
 }
 
 hornear(prepararCubierta);
+*/
 
+const hornear = () => {
+  return new Promise((resolve, reject) => {
+    // dentro de la promesa es donde vamos a poner nuestra tarea asíncrona
+    setTimeout(() => {
+      const resultado = "torta horneada!";
+      resolve(resultado); //fue bien, es un resultado ➕
+    }, 2000)
+  })
+}
+
+hornear()
+.then((torta) => { //then me permite obtener el resultado de resolve
+  console.log(torta);
+});

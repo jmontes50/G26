@@ -26,3 +26,15 @@ fetch("https://reqres.in/api/users?page=2")
   console.log(error);
 })
 */
+
+const obtenerUsuarios = async () => {
+  try {
+    const URL = 'https://reqres.in/api/users?page=2';
+    const respuesta = await fetch(URL);
+    console.log("Response:", respuesta);
+    
+  } catch (error) {
+    console.log(error);
+  }
+}
+obtenerUsuarios();

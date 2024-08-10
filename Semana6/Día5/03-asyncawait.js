@@ -1,14 +1,19 @@
-/*
-const ejecutar = () => {
-  return new Promise((resolve, reject) => {
-    resolve("Éxito 😺");
-  });
-};
-*/
+
+// const ejecutar = () => {
+//   return new Promise((resolve, reject) => {
+//     resolve("Éxito 😺");
+//   });
+// };
+
 // async function ejecutar (){
 const ejecutar = async () => {
-  // return "Éxito 😺"; //resolve
-  throw "Algo falló! 😷"; //reject
+  return "Éxito 😺"; //resolve
+  // throw "Algo falló! 😷"; //reject
+
+  //en algo como esto no se puede utilizar async por la sintaxis y el uso de la palabra reservada return
+  // setTimeout(() => {
+  //   return "Éxito 😺"; //resolve
+  // }, 2000);
 }
 /*
 ejecutar()

@@ -29,6 +29,12 @@ const hornear = () => {
   })
 }
 
+const prepararCubierta = (torta) => new Promise((torta) => {
+  setTimeout(() => {
+    resolve(`${torta} y cubierta lista!!`)
+  }, 3000);
+})
+
 hornear()
 .then((torta) => { //then me permite obtener el resultado de resolve
   console.log(torta);

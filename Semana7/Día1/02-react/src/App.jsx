@@ -1,3 +1,5 @@
+import Titulo from "./Titulo"; //si es un archivo de js o de jsx no necesita colocarse la extensión
+
 //Que caracteristicas componenen y se requieren para crear un componente
 
 //1. Componente es una función, una función que comienza con mayúsculas
@@ -10,6 +12,8 @@ const App = () => {
   //Toda etiqueta tiene que estar cerrada o autocerrada
   return (
     <>
+      <Titulo />
+      <Titulo />
       <h1>Hola! {titulo} {10+10}</h1>
       <hr />
       <p>

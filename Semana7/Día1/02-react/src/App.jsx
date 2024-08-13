@@ -12,8 +12,10 @@ const App = () => {
   //Toda etiqueta tiene que estar cerrada o autocerrada
   return (
     <>
-      <Titulo texto="Paris 2024" deportes="100" />
-      <Titulo />
+      <Titulo texto="París 2024" deportes="100" />
+      <Titulo texto="Los Angeles 2028" deportes={20}  />
+      <Titulo texto={titulo}  deportes={30} />
+      <Titulo texto={1234}  deportes={40} />
       {/* <h1>Hola! {titulo} {10+10}</h1> */}
       <hr />
       <p>

@@ -32,9 +32,7 @@ Reemplaza "my-react-app" con el nombre que desees para tu proyecto.
 
 > [!WARNING]  
 > En el caso de que al ejecutar el comando `npm create vite@latest` tengas un error como este:
-
 > <code style="color: red;">No se puede cargar el archivo C:\Program Files\nodejs\npm.ps1 porque la ejecución de scripts está deshabilitada en este sistema....</code>
-
 > Considera la siguiente [documentación](https://www.cdmon.com/es/blog/la-ejecucion-de-scripts-esta-deshabilitada-en-este-sistema-te-contamos-como-actuar) y vuelve a probar.
 
 3. Navega al directorio del proyecto:

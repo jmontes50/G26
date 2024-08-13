@@ -31,12 +31,11 @@ npm create vite@latest my-react-app -- --template react
 Reemplaza "my-react-app" con el nombre que desees para tu proyecto.
 
 > [!WARNING]  
-> En el caso de que tengas un error similar a este al ejecutar el comando `npm create vite@latest`
+> En el caso de que al ejecutar el comando `npm create vite@latest` tengas un error como este:
 > ```bash
-> # [ERROR]
-> No se puede cargar el archivo C:\Program Files\nodejs\npm.ps1 porque la ejecución de scripts está deshabilitada en este sistema. Para obtener más información, consulta el tema about_Execution_Policies en https:/go.microsoft.com/fwlink/?LinkID=135170.
+> <span style="color: red;">No se puede cargar el archivo C:\Program Files\nodejs\npm.ps1 porque la ejecución de scripts está deshabilitada en este sistema....</span>
 > ```
-> Considera la siguiente [documentación](https://www.cdmon.com/es/blog/la-ejecucion-de-scripts-esta-deshabilitada-en-este-sistema-te-contamos-como-actuar) y vuelve a probar
+> Considera la siguiente [documentación](https://www.cdmon.com/es/blog/la-ejecucion-de-scripts-esta-deshabilitada-en-este-sistema-te-contamos-como-actuar) y vuelve a probar y conitnua... 
 
 3. Navega al directorio del proyecto:
 

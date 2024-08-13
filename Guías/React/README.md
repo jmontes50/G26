@@ -3,13 +3,19 @@
 ## Instalación de Node.js
 
 1. Visita el sitio oficial de Node.js: https://nodejs.org/
-2. Descarga la versión LTS (Long Term Support) para tu sistema operativo.
+2. En el apartado "Download" busca y descarga la versión LTS (Long Term Support) para tu sistema operativo.
 3. Ejecuta el instalador y sigue las instrucciones en pantalla.
-4. Verifica la instalación abriendo una terminal y ejecutando:
+4. Verifica la instalación abriendo cualquier terminal y ejecutando:
 
 ```bash
 node --version
 npm --version
+```
+
+El resultado debe ser algo así, el número de versión puede variar pero debe dar un resultado
+
+```bash
+v22.4.1
 ```
 
 ## Creación de un proyecto React con Vite
@@ -23,6 +29,13 @@ npm create vite@latest my-react-app -- --template react
 ```
 
 Reemplaza "my-react-app" con el nombre que desees para tu proyecto.
+
+> [!WARNING]  
+> En el caso de que tengas un error similar a este al ejecutar el comando npm create vite@latest
+> ```bash
+> No se puede cargar el archivo C:\Program Files\nodejs\npm.ps1 porque la ejecución de scripts está deshabilitada en este sistema. Para obtener más información, consulta el tema about_Execution_Policies en https:/go.microsoft.com/fwlink/?LinkID=135170.
+> ```
+> Considera la siguiente [documentación](https://www.cdmon.com/es/blog/la-ejecucion-de-scripts-esta-deshabilitada-en-este-sistema-te-contamos-como-actuar) y vuelve a probar
 
 3. Navega al directorio del proyecto:
 

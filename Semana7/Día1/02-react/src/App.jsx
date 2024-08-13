@@ -2,12 +2,16 @@
 
 //1. Componente es una función, una función que comienza con mayúsculas
 const App = () => {
+  const titulo = "Olimpiadas 2024";
 
   //2. es que tiene que retornar JSX (JSX como html, pero no es html, tiene diferencias)
   //2.1 solamente podemos retornar 01 solo elemento en cada componente
+  //para poner JS dentro del JSX basta con abrir llaves {} y referenciarlo dentro
+  //Toda etiqueta tiene que estar cerrada o autocerrada
   return (
     <>
-      Hola!
+      <h1>Hola! {titulo} {10+10}</h1>
+      <hr />
       <p>
       Lorem ipsum dolor sit amet
       </p>

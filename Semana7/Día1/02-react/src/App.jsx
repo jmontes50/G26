@@ -4,10 +4,14 @@
 const App = () => {
 
   //2. es que tiene que retornar JSX (JSX como html, pero no es html, tiene diferencias)
+  //2.1 solamente podemos retornar 01 solo elemento en cada componente
   return (
-    <div>
+    <>
       Hola!
-    </div>
+      <p>
+      Lorem ipsum dolor sit amet
+      </p>
+    </>
   )
 }
 

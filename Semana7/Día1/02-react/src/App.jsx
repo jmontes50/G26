@@ -5,7 +5,7 @@ import Titulo from "./Titulo"; //si es un archivo de js o de jsx no necesita col
 //1. Componente es una función, una función que comienza con mayúsculas
 const App = () => {
   const titulo = "Olimpiadas 2024";
-
+  const variableJS = "Texto de JS";
 
 
   //2. es que tiene que retornar JSX (JSX como html, pero no es html, tiene diferencias)
@@ -21,6 +21,7 @@ const App = () => {
       <Titulo texto={titulo}  deportes={30} />
       <Titulo texto={1234}  deportes={40} />
       {/* <h1>Hola! {titulo} {10+10}</h1> */}
+      <p>Lorem ipsum dolor sit amet consectetur {variableJS}</p>
       <hr />
       <p>
       Lorem ipsum dolor sit amet

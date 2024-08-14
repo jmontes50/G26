@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Mostrar from "./Mostrar";
+import Cambiar from "./Cambiar";
 
 const App = () => {
   //const [estado, setFuncionEstado] = useState(valor_inicial);
@@ -40,7 +41,10 @@ const App = () => {
       <hr />
 
       <Mostrar contador={contador} />
-
+      <Cambiar 
+        setContador={setContador} 
+        contador={contador} 
+      />
 
     </div>
   );

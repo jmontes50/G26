@@ -8,6 +8,10 @@ const App = () => {
   const variableJS = "Texto de JS";
   const contenido1 = "Perú juega partido de volley";
   const contenido2 = "Descubrimiento de agua líquida en Marte";
+  const abrirAlerta = (mensaje) => {
+    alert(mensaje);
+  }
+
   //2. es que tiene que retornar JSX (JSX como html, pero no es html, tiene diferencias)
   //2.1 solamente podemos retornar 01 solo elemento en cada componente
   //para poner JS dentro del JSX basta con abrir llaves {} y referenciarlo dentro
@@ -22,8 +26,8 @@ const App = () => {
       <Titulo texto={1234}  deportes={40} />
       {/* <h1>Hola! {titulo} {10+10}</h1> */}
       <hr />
-      <Parrafo contenido={contenido1} importante={true}/>
-      <Parrafo contenido={contenido2} importante={false}/>
+      <Parrafo contenido={contenido1} importante={true} abrir={abrirAlerta} />
+      <Parrafo contenido={contenido2} importante={false} abrir={abrirAlerta} />
       <hr />
       <p>Lorem ipsum dolor sit amet consectetur {variableJS}</p>
       <hr />

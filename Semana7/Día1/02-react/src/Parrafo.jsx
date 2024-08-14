@@ -10,7 +10,7 @@ const Parrafo = (props) => {
         Texto de introducción: {props.contenido}
       </p>
       <span>Deseas saber más? </span>
-      <Boton />
+      <Boton contenido={props.contenido} abrirAlerta={props.abrir} />
     </div>
   )
 }

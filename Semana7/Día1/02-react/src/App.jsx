@@ -22,8 +22,8 @@ const App = () => {
       <Titulo texto={1234}  deportes={40} />
       {/* <h1>Hola! {titulo} {10+10}</h1> */}
       <hr />
-      <Parrafo contenido={contenido1} />
-      <Parrafo contenido={contenido2} />
+      <Parrafo contenido={contenido1} importante={true}/>
+      <Parrafo contenido={contenido2} importante={false}/>
       <hr />
       <p>Lorem ipsum dolor sit amet consectetur {variableJS}</p>
       <hr />

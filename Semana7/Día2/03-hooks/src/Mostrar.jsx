@@ -1,3 +1,4 @@
+//Un componente también se volverá a dibujar/renderizar cuando reciba nuevos props
 const Mostrar = (props) => {
     // console.log("props de Mostrar:", props);
     return (

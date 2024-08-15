@@ -33,6 +33,11 @@ const App = () => {
         <br />
         <button onClick={agregarNuevaTarea}>Agregar Tarea</button>
         <hr />
+        {/* {Renderizado de Listas} */}
+        {/* datos -> JSX */}
+        {tareas.map((tarea) => { 
+          return <div>{tarea}</div>
+        })}
       </div>
     </>
   )

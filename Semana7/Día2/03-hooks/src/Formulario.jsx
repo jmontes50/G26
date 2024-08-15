@@ -23,6 +23,23 @@ const Formulario = () => {
           value={nombre}
           onChange={manejarNombre}
         />
+        <br/>
+        <label htmlFor="apellido">Apellido:</label>
+        <input 
+          id="apellido" 
+          type="text" 
+          placeholder="Ingrese su Apellido"
+
+        />
+        <br/>
+        <label htmlFor="dni">DNI:</label>
+        <input 
+          id="dni" 
+          type="text" 
+          placeholder="Ingrese su dni"
+
+        />
+        <br/>
         <button type="submit">Guardar</button>
       </form>
     </>

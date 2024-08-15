@@ -5,6 +5,10 @@ import { useState } from "react";
 
 const Formulario = () => {
   const [nombre, setNombre] = useState('Masha');
+  const [estadoForm, setEstadoForm] = useState({
+    apellido:'y el Oso',
+    dni:'12345678'
+  })
 
   const manejarNombre = (ev) => {
     console.log(ev.target.value);
@@ -29,6 +33,8 @@ const Formulario = () => {
           id="apellido" 
           type="text" 
           placeholder="Ingrese su Apellido"
+          value={estadoForm.apellido}
+          name="apellido"
         />
         <br/>
         <label htmlFor="dni">DNI:</label>
@@ -36,7 +42,8 @@ const Formulario = () => {
           id="dni" 
           type="text" 
           placeholder="Ingrese su dni"
-
+          value={estadoForm.dni}
+          name="dni"
         />
         <br/>
         <button type="submit">Guardar</button>

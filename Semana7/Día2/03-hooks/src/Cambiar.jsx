@@ -1,5 +1,5 @@
 const Cambiar = (props) => {
-  console.log("Props de cambiar:", props);
+  // console.log("Props de cambiar:", props);
   const manejarClick = () => {
     props.setContador(props.contador + 100);
   }

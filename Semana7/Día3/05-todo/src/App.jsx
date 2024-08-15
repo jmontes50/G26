@@ -19,6 +19,9 @@ const App = () => {
     setTareas([...tareas, inputTarea]);
   }
 
+  //Como lo harias usando un useEffect?
+  //cada vez que cambie el estado de tareas -> hacer que inputTarea este limpio
+
   return (
     <>
       <div>

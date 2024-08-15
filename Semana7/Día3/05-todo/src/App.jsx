@@ -10,6 +10,15 @@ const App = () => {
     setInputTarea(e.target.value);
   }
 
+  const agregarNuevaTarea = () => {
+    //usando push
+    // const copiaTareas = [...tareas];
+    // copiaTareas.push(inputTarea);
+    // setTareas(copiaTareas);
+    //usando spread operator
+    setTareas([...tareas, inputTarea]);
+  }
+
   return (
     <>
       <div>
@@ -22,7 +31,7 @@ const App = () => {
           onChange={manejarInputTarea}
         />
         <br />
-        <button>Agregar Tarea</button>
+        <button onClick={agregarNuevaTarea}>Agregar Tarea</button>
         <hr />
       </div>
     </>

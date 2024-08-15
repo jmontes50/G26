@@ -5,7 +5,12 @@ import { useState } from "react";
 
 const Formulario = () => {
   const [nombre, setNombre] = useState('Masha');
-  
+
+  const manejarNombre = (ev) => {
+    console.log(ev.target.value);
+    setNombre(ev.target.value);
+  }
+
   return (
     <>
       <h2>Formulario</h2>
@@ -15,6 +20,8 @@ const Formulario = () => {
           id="nombre" 
           type="text" 
           placeholder="Ingrese su nombre"
+          value={nombre}
+          onChange={manejarNombre}
         />
         <button type="submit">Guardar</button>
       </form>

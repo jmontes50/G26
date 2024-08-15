@@ -9,9 +9,15 @@ const Contador = () => {
   //useEffect(función, [dependencias])
   //el useEffect por defecto siempre se va a ejecutar cuando cualquier estado ó dependencia cambie y en el montaje del componente
   useEffect(() => {
+    //contador
     console.log(`El contador es: ${contador}`);
+    //en base a las dependencias que tenga el useEffect se va a ejecutar su Efecto
+  },[contador]);
+
+  useEffect(() => {
+    //valor
     console.log(`El estado del input es: ${valor}`);
-  })
+  }, [valor]);
   return (
     <>
       <h2>Contador es: {contador}</h2>

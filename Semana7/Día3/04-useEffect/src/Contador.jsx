@@ -18,6 +18,12 @@ const Contador = () => {
     //valor
     console.log(`El estado del input es: ${valor}`);
   }, [valor]);
+
+  //si tenemos una useEffect con las dependencias vacias, sin ninguna, este efecto solamente se ejecutara en el montaje del componente
+  useEffect(() => {
+    console.log("Holaaaaaa")
+  }, []);
+
   return (
     <>
       <h2>Contador es: {contador}</h2>

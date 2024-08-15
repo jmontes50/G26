@@ -8,6 +8,7 @@ const Ciclo = () => {
   useEffect(() => {
     console.log("3. yo estoy dentro del useEffect");
     setTimeout(() => {
+      //cambio de estado después de 4 segundos
       setProducto({ nombre: "Adobo" });
     }, 4000);
   }, []);

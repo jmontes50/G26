@@ -15,6 +15,18 @@ const Formulario = () => {
     setNombre(ev.target.value);
   }
 
+  const manejarInput = (ev) => {
+    // console.log(ev.target);
+    const { value, name } = ev.target;
+    // console.log("value", value)
+    // console.log("name", name)
+    const nuevoEstado = {
+      ...estadoForm,
+      [name]: value
+    }
+    setEstadoForm(nuevoEstado);
+  }
+
   return (
     <>
       <h2>Formulario</h2>
@@ -35,6 +47,7 @@ const Formulario = () => {
           placeholder="Ingrese su Apellido"
           value={estadoForm.apellido}
           name="apellido"
+          onChange={manejarInput}
         />
         <br/>
         <label htmlFor="dni">DNI:</label>
@@ -44,6 +57,7 @@ const Formulario = () => {
           placeholder="Ingrese su dni"
           value={estadoForm.dni}
           name="dni"
+          onChange={manejarInput}
         />
         <br/>
         <button type="submit">Guardar</button>

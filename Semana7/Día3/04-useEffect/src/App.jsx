@@ -1,7 +1,10 @@
+import Contador from "./Contador";
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Contador />
+    </div>
   )
 }
 

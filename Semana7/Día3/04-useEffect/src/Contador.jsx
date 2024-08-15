@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const Contador = () => {
+  //const [estado, funcActEseEstado] = useState(valor_inicial);
   const [contador, setContador] = useState(0);
   return (
     <>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Mostrar from "./Mostrar";
 import Cambiar from "./Cambiar";
+import Formulario from "./Formulario";
 
 const App = () => {
   //const [estado, setFuncionEstado] = useState(valor_inicial);
@@ -45,6 +46,8 @@ const App = () => {
         setContador={setContador} 
         contador={contador} 
       />
+      <hr />
+      <Formulario />
 
     </div>
   );

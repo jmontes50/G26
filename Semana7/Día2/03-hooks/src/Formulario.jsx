@@ -29,7 +29,6 @@ const Formulario = () => {
           id="apellido" 
           type="text" 
           placeholder="Ingrese su Apellido"
-
         />
         <br/>
         <label htmlFor="dni">DNI:</label>

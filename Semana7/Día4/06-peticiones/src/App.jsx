@@ -7,17 +7,27 @@ const App = () => {
   useEffect(() => {
     fetch(URL)
     .then((response) => {
+      console.log("response", response); //Guía de remisión
       return response.json(); //solamente tengo la respuesta más no la data
     })
     .then((data) => {
-      console.log(data); //ya tenemos el JSON
+      console.log(data); //ya tenemos el JSON, ya tenemos el producto
+      setProductos(data);
     })
     .catch((err) => {
       console.log(err);
     });
   }, []);
   return (
-    <div>App</div>
+    <div>
+      {productos.map((prod) => (
+        <div key={prod.id}>
+          <h2>{prod.nombre}</h2>
+          <p>{prod.descripcion}</p>
+          <h4>{prod.price}</h4>
+        </div>
+      ))}
+    </div>
   )
 }
 

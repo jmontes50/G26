@@ -17,6 +17,7 @@ const App = () => {
     // setTareas(copiaTareas);
     //usando spread operator
     setTareas([...tareas, inputTarea]);
+    // setInputTarea('');
   };
 
   const eliminarTarea = (indice) => {
@@ -29,6 +30,10 @@ const App = () => {
       setTareas(copiaTareas);
     }
   }
+
+  useEffect(() => {
+    setInputTarea('');
+  },[tareas]);
 
   //Como lo harias usando un useEffect?
   //cada vez que cambie el estado de tareas -> hacer que inputTarea este limpio

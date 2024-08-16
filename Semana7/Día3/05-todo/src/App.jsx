@@ -4,11 +4,11 @@ const App = () => {
   //lista tareas que tengo pendientes
   const [tareas, setTareas] = useState([]);
   //componentes controlados, para el input de tarea
-  const [inputTarea, setInputTarea] = useState('');
+  const [inputTarea, setInputTarea] = useState("");
 
   const manejarInputTarea = (e) => {
     setInputTarea(e.target.value);
-  }
+  };
 
   const agregarNuevaTarea = () => {
     //usando push
@@ -17,6 +17,17 @@ const App = () => {
     // setTareas(copiaTareas);
     //usando spread operator
     setTareas([...tareas, inputTarea]);
+  };
+
+  const eliminarTarea = (indice) => {
+    // console.log("indice", indice);
+    const seElimina = confirm("Desea eliminar la tarea?");
+    if(seElimina){ //si es que seElimina es true, eliminamos
+      const copiaTareas = [...tareas]; //a esta copia si la podemos modificar
+      copiaTareas.splice(indice, 1);
+      // console.log(copiaTareas);
+      setTareas(copiaTareas);
+    }
   }
 
   //Como lo harias usando un useEffect?
@@ -38,10 +49,17 @@ const App = () => {
         <hr />
         {/* {Renderizado de Listas} */}
         {/* datos -> JSX */}
-        {tareas.map((tarea, indice) => (<div key={indice}>{tarea}</div>))}
+        {tareas.map((tarea, indice) => (
+          <div key={indice}>
+            <span>{tarea} </span>
+            <button onClick={() => {
+              eliminarTarea(indice);
+            }}>X</button>
+          </div>
+        ))}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -15,7 +15,8 @@ const App = () => {
           {/* Rutas especificas, path que va a ser la ruta y element que va a ser el JSX ó componente a mostrar */}
           <Route path='/' element={<Inicio />} />
           <Route path='/lista' element={<Lista />} />
-          <Route path='/detalle' element={<Detalle />} />
+          {/* al colocar :variable dentro de una ruta, me permite recibir información desde la url */}
+          <Route path='/detalle/:id' element={<Detalle />} />
         </Routes>
       </div>
     </BrowserRouter>

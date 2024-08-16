@@ -38,9 +38,7 @@ const App = () => {
         <hr />
         {/* {Renderizado de Listas} */}
         {/* datos -> JSX */}
-        {tareas.map((tarea) => { 
-          return <div>{tarea}</div>
-        })}
+        {tareas.map((tarea, indice) => (<div key={indice}>{tarea}</div>))}
       </div>
     </>
   )

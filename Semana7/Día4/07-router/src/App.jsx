@@ -1,4 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Inicio from "./components/Inicio";
+import Lista from "./components/Lista";
+import Detalle from "./components/Detalle";
 
 const App = () => {
   return (
@@ -10,9 +13,9 @@ const App = () => {
         {/* necesitamos un componente que indique que rutas se van a definir */}
         <Routes>
           {/* Rutas especificas, path que va a ser la ruta y element que va a ser el JSX ó componente a mostrar */}
-          <Route path='/' element={<h1>Inicio</h1>} />
-          <Route path='/lista' element={<h1>Lista</h1>} />
-          <Route path='/detalle' element={<h1>Detalle</h1>} />
+          <Route path='/' element={<Inicio />} />
+          <Route path='/lista' element={<Lista />} />
+          <Route path='/detalle' element={<Detalle />} />
         </Routes>
       </div>
     </BrowserRouter>

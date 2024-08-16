@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import DivTarea from "./DivTarea";
 
 const App = () => {
   //lista tareas que tengo pendientes
@@ -55,12 +56,19 @@ const App = () => {
         {/* {Renderizado de Listas} */}
         {/* datos -> JSX */}
         {tareas.map((tarea, indice) => (
-          <div key={indice}>
-            <span>{tarea} </span>
-            <button onClick={() => {
-              eliminarTarea(indice);
-            }}>X</button>
-          </div>
+          <DivTarea 
+            key={indice} 
+            indice={indice}
+            tarea={tarea}
+            eliminarTarea={eliminarTarea}
+          />
+          
+          // <div key={indice}>
+          //   <span>{tarea} </span>
+          //   <button onClick={() => {
+          //     eliminarTarea(indice);
+          //   }}>X</button>
+          // </div>
         ))}
       </div>
     </>

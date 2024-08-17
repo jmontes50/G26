@@ -3,6 +3,7 @@ import axios from "axios";
 
 const URL = "https://66b797cd7f7b1c6d8f1c4b3d.mockapi.io";
 
+//GET
 const obtenerProductos = async () => {
   try {
     const respuesta = await axios.get(`${URL}/productos`);
@@ -15,6 +16,11 @@ const obtenerProductos = async () => {
     throw error;
   }
 }
+
+//GET POR ID
+//POST - Crear
+//PUT - Actualizar
+//DELETE - Borrar
 
 export {
   obtenerProductos

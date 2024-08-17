@@ -20,19 +20,19 @@ const HomeView = () => {
       icono: "fa-solid fa-gift", //en vez de utilizar todo el html de font-awesome solo usamos sus clases
       texto: "Productos",
       numero: 100,
-      color: "#C1DEFE"
+      color: "#C1DEFE",
     },
     {
       icono: "fa-solid fa-users", //<i class="fa-solid fa-users"></i>
       texto: "Usuarios",
       numero: 400,
-      color: "#FCF4D7"
+      color: "#FCF4D7",
     },
     {
       icono: "fa-solid fa-plane-departure",
       texto: "Ordenes",
       numero: 20,
-      color:"#EFE0FD"
+      color: "#EFE0FD",
     },
   ];
 
@@ -54,10 +54,21 @@ const HomeView = () => {
       <div className="mb-3">
         <h2>
           <span className="badge text-bg-primary me-2">
-          <i className="fa-solid fa-gauge-simple-high"></i>
+            <i className="fa-solid fa-gauge-simple-high"></i>
           </span>
           Panel
         </h2>
+        <div className="d-flex">
+          {infoWidgets.map((caja, i) => (
+            <Widget
+              key={i}
+              color={caja.color}
+              texto={caja.texto}
+              numero={caja.numero}
+              icono={caja.icono}
+            />
+          ))}
+        </div>
       </div>
       <div>
         <h2>

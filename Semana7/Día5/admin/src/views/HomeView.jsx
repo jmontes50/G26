@@ -14,6 +14,27 @@ const HomeView = () => {
     "precio-oferta",
   ];
 
+  const infoWidgets = [
+    {
+      icono: "fa-solid fa-gift", //en vez de utilizar todo el html de font-awesome solo usamos sus clases
+      texto: "Productos",
+      numero: 100,
+      color: "#C1DEFE"
+    },
+    {
+      icono: "fa-solid fa-users", //<i class="fa-solid fa-users"></i>
+      texto: "Usuarios",
+      numero: 400,
+      color: "#FCF4D7"
+    },
+    {
+      icono: "fa-solid fa-plane-departure",
+      texto: "Ordenes",
+      numero: 20,
+      color:"#EFE0FD"
+    },
+  ]
+
   useEffect(() => {
     const getProductos = async () => {
       try {

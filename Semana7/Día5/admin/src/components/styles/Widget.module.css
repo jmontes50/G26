@@ -1,0 +1,16 @@
+/* Al agregarle el .module.css como extensión nos permite utilizarlo como 01 módulo especifico en react, en resumen podremos utilizarlo para 01 solo componente */
+
+.card-widget {
+    text-align:center;
+    font-weight:bold;
+    min-height: 220px;
+    min-width: 320px;
+}
+
+.texto-widget {
+    font-size: 12px;
+}
+
+.numero-widget {
+    font-size: 36px;
+}

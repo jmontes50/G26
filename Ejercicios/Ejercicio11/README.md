@@ -56,7 +56,7 @@ function App() {
   );
 }
 
-export default PeruRegionSelector;
+export default App;
 ```
 
 1. Implementa los siguientes estados usando `useState`:

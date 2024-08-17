@@ -17,11 +17,24 @@ const obtenerProductos = async () => {
   }
 }
 
-//GET POR ID
 //POST - Crear
+const crearProducto = async (producto) => {
+  //vamos a confiar que las propiedades de producto son lo que me pide el backend
+  try {
+    const respuesta = await axios.post(`${URL}/productos`, producto);
+    console.log("post axios", respuesta);
+    return respuesta.data;
+  } catch (error) {
+    throw error;
+  }
+
+}
+
+//GET POR ID
 //PUT - Actualizar
 //DELETE - Borrar
 
 export {
-  obtenerProductos
+  obtenerProductos,
+  crearProducto
 }

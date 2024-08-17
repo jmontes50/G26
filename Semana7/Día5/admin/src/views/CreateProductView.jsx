@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FormProduct from "../components/FormProduct";
 
 const CreateProductView = () => {
   const [nuevoProducto, setNuevoProducto] = useState({
@@ -25,7 +26,10 @@ const CreateProductView = () => {
   const categorias = ["Ropa", "Accesorios", "Zapatos", "Hogar"];
 
   return (
-    <div>CreateProductView</div>
+    <div>
+      <h2>Crear Producto</h2>
+      <FormProduct producto={nuevoProducto} manejarInputs={manejarInputs} />
+    </div>
   )
 }
 

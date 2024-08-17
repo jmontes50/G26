@@ -58,7 +58,7 @@ const HomeView = () => {
           </span>
           Panel
         </h2>
-        <div className="d-flex">
+        <div className="d-flex gap-4">
           {infoWidgets.map((caja, i) => (
             <Widget
               key={i}

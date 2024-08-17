@@ -16,10 +16,13 @@ const FormProduct = (props) => {
 
   return (
     <form className="row">
+      {/* cada label tiene que tener la clase form-label */}
+      {/* cada input, text-area tiene que tener la clase form-control */}
       {/* nombre */}
       <div className="col-12 col-md-6 mb-3">
-        <label htmlFor="nombre">Nombre</label>
+        <label className="form-label" htmlFor="nombre">Nombre</label>
         <input
+          className="form-control"
           type="text"
           id="nombre"
           name="nombre"
@@ -29,8 +32,9 @@ const FormProduct = (props) => {
       </div>
       {/* cantidad */}
       <div className="col-12 col-md-6 mb-3">
-        <label htmlFor="cantidad">Cantidad</label>
+        <label className="form-label" htmlFor="cantidad">Cantidad</label>
         <input
+          className="form-control"
           type="number"
           id="cantidad"
           name="cantidad"
@@ -40,8 +44,9 @@ const FormProduct = (props) => {
       </div>
       {/* precio */}
       <div className="col-12 col-md-6 mb-3">
-        <label htmlFor="precio">Precio</label>
+        <label className="form-label" htmlFor="precio">Precio</label>
         <input
+          className="form-control"
           type="number"
           id="precio"
           name="precio"
@@ -51,8 +56,9 @@ const FormProduct = (props) => {
       </div>
       {/* precio-oferta */}
       <div className="col-12 col-md-6 mb-3">
-        <label htmlFor="precio-oferta">Precio oferta</label>
+        <label className="form-label" htmlFor="precio-oferta">Precio oferta</label>
         <input
+          className="form-control"
           type="number"
           id="precio-oferta"
           name="precio-oferta"
@@ -61,6 +67,10 @@ const FormProduct = (props) => {
           onChange={manejarInputs}
         />
       </div>
+      {/* descripción */}
+
+      {/* detalles */}
+
     </form>
   );
 };

@@ -13,6 +13,17 @@ const CreateProductView = () => {
     categoria:''
   })
 
+  const manejarInputs = (e) => {
+    const { name, value } = e.target;
+    const copiaProducto = {
+      ...nuevoProducto,
+      [name]: value
+    }
+    setNuevoProducto(copiaProducto);
+  }
+
+  const categorias = ["Ropa", "Accesorios", "Zapatos", "Hogar"];
+
   return (
     <div>CreateProductView</div>
   )

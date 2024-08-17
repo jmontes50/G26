@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Lista = () => {
   const frutas = [
     {
@@ -18,7 +20,11 @@ const Lista = () => {
       <h2>Lista</h2>
       <ul>
         {frutas.map((fru) => (
-          <li key={fru.id}>{fru.nombre}</li>
+          <li key={fru.id}>
+            <Link to={`/detalle/${fru.id}`}>
+              {fru.nombre}
+            </Link>
+          </li>
         ))}
       </ul>
     </div>

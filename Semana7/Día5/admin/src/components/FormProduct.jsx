@@ -38,6 +38,29 @@ const FormProduct = (props) => {
           onChange={manejarInputs}
         />
       </div>
+      {/* precio */}
+      <div className="col-12 col-md-6 mb-3">
+        <label htmlFor="precio">Precio</label>
+        <input
+          type="number"
+          id="precio"
+          name="precio"
+          value={precio}
+          onChange={manejarInputs}
+        />
+      </div>
+      {/* precio-oferta */}
+      <div className="col-12 col-md-6 mb-3">
+        <label htmlFor="precio-oferta">Precio oferta</label>
+        <input
+          type="number"
+          id="precio-oferta"
+          name="precio-oferta"
+          // considerar que aqui el nombre de la propiedad es 'precio-oferta'
+          value={producto['precio-oferta']}
+          onChange={manejarInputs}
+        />
+      </div>
     </form>
   );
 };

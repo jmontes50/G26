@@ -18,16 +18,16 @@ const peruRegions = {
 };
 
 function App() {
-  // TODO: Implementar estados y lógica aquí
+  // Por hacer: Implementar estados y lógica aquí
 
   const departaments = Object.keys(peruRegions);
 
   const handleDepartmentChange = (event) => {
-    // TODO: Actualizar el departamento seleccionado
+    // Por hacer: Actualizar el departamento seleccionado
   };
 
   const handleProvinceChange = (event) => {
-    // TODO: Actualizar la provincia seleccionada
+    // Por hacer: Actualizar la provincia seleccionada
   };
 
   return (
@@ -46,11 +46,11 @@ function App() {
         <label htmlFor="province">Provincia:</label>
         <select id="province" onChange={handleProvinceChange}>
           <option value="">Seleccione una provincia</option>
-          {/* TODO: Mapear las provincias del departamento seleccionado */}
+          {/* Por hacer: Mapear las provincias del departamento seleccionado */}
         </select>
       </div>
       <div>
-        <p>Selección actual: {/* TODO: Mostrar departamento y provincia seleccionados */}</p>
+        <p>Selección actual: {/* Por hacer: Mostrar departamento y provincia seleccionados */}</p>
       </div>
     </div>
   );
@@ -66,7 +66,7 @@ export default PeruRegionSelector;
 
 2. Utiliza `useEffect` para actualizar la lista de provincias cuando cambie el departamento seleccionado.
 
-3. Crea dos selects:
+3. Usa los dos selects:
    * Uno para elegir el departamento
    * Otro para elegir la provincia
 
@@ -78,4 +78,4 @@ Implementa las funciones handleDepartmentChange y handleProvinceChange para mane
 
 Muestra la selección actual de departamento y provincia debajo de los selects.
 
-6. puedes utilizar `Object.keys` es un método en JavaScript que devuelve un array con las claves (propiedades enumerables) de un objeto.
+6. puedes utilizar [`Object.keys`](https://es.javascript.info/keys-values-entries) es un método en JavaScript que devuelve un array con las claves (propiedades enumerables) de un objeto.

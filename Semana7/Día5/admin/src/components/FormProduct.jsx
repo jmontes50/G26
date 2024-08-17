@@ -16,6 +16,7 @@ const FormProduct = (props) => {
 
   return (
     <form className="row">
+      {/* nombre */}
       <div className="col-12 col-md-6 mb-3">
         <label htmlFor="nombre">Nombre</label>
         <input
@@ -26,6 +27,7 @@ const FormProduct = (props) => {
           onChange={manejarInputs}
         />
       </div>
+      {/* cantidad */}
       <div className="col-12 col-md-6 mb-3">
         <label htmlFor="cantidad">Cantidad</label>
         <input

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <nav className="d-flex flex-column gap-2">
+    <nav className="d-flex flex-column gap-2 p-3 fw-bold">
       <Link to="/">
         <i className="fa-solid fa-house fa-2x me-2"></i>
         Panel

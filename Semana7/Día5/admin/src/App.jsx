@@ -5,11 +5,19 @@ import HomeView from "./views/HomeView";
 const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomeView />} />
-      </Routes>
+      <div className="row">
+        <div className="col-3">
+          {/* Navegación */}
+        </div>
+        <div className="col-9 pt-3">
+          {/* Rutas van a ir aquí, para que se dibujen solo en esta parte */}
+          <Routes>
+            <Route path="/" element={<HomeView />} />
+          </Routes>
+        </div>
+      </div>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;

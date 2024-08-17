@@ -22,7 +22,9 @@ const HomeView = () => {
   }, []);
 
   return (
-    <div>HomeView</div>
+    <div>
+      <TableData cabeceras={cabeceras} datos={productos} />
+    </div>
   )
 }
 

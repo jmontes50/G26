@@ -119,6 +119,20 @@ const FormProduct = (props) => {
           ))}
         </select>
       </div>
+      {/* estrellas */}
+      <div className="col-12 col-md-6 mb-3">
+        <label className="form-label" htmlFor="estrellas">
+          Estrellas
+        </label>
+        <input
+          className="form-control"
+          type="number"
+          id="estrellas"
+          name="estrellas"
+          value={estrellas}
+          onChange={manejarInputs}
+        />
+      </div>
     </form>
   );
 };

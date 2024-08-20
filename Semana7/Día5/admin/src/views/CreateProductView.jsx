@@ -16,6 +16,7 @@ const CreateProductView = () => {
 
   const manejarInputs = (e) => {
     const { name, value } = e.target;
+    console.log({ name, value });
     const copiaProducto = {
       ...nuevoProducto,
       [name]: value

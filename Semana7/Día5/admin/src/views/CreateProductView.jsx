@@ -27,7 +27,8 @@ const CreateProductView = () => {
     setNuevoProducto(copiaProducto);
   }
 
-  const manejarSubmit = async () => {
+  const manejarSubmit = async (e) => {
+    e.preventDefault();
     try {
       await crearProducto(nuevoProducto);
       alert('Producto creado!')

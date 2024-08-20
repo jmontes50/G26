@@ -16,8 +16,10 @@ const firebaseConfig = {
 //tenemos una referencia a la aplicación registrada
 const app = initializeApp(firebaseConfig);
 
+//al tener la referencia de la aplicacion en app, podemos obtener los diferentes módulos que estemos utilizando
 const storage = getStorage(app);
 
+//y los exportamos porque si van a ser necesarios para hacer las tareas relacionadas a cada módulo
 export {
     storage
 }

@@ -1,6 +1,6 @@
 const FormProduct = (props) => {
   // estamos desestructurando los props, producto es un objeto
-  const { producto, manejarInputs } = props;
+  const { producto, manejarInputs, categorias } = props;
   // desestructurar producto
   const {
     nombre,
@@ -100,6 +100,24 @@ const FormProduct = (props) => {
           value={detalles}
           onChange={manejarInputs}
         />
+      </div>
+      {/* categoria */}
+      <div className="col-12 col-md-6 mb-3">
+        <label className="form-label" htmlFor="categoria">
+          Categoría
+        </label>
+        <select
+          value={categoria}
+          className="form-select"
+          name="categoria"
+          id="categoria"
+          onChange={manejarInputs}
+        >
+          {/* renderizado de listas de categorías para generar las opciones */}
+          {categorias.map((cat, i) => (
+            <option key={i} value={cat}>{cat}</option>
+          ))}
+        </select>
       </div>
     </form>
   );

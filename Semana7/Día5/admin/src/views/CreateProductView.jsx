@@ -28,7 +28,7 @@ const CreateProductView = () => {
   return (
     <div>
       <h2>Crear Producto</h2>
-      <FormProduct producto={nuevoProducto} manejarInputs={manejarInputs} />
+      <FormProduct producto={nuevoProducto} manejarInputs={manejarInputs} categorias={categorias} />
     </div>
   )
 }

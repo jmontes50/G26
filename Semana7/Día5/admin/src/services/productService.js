@@ -1,7 +1,8 @@
 //vamos a incluir funciones que nos permitan trabajar con mockapi
 import axios from "axios";
 
-const URL = "https://66b797cd7f7b1c6d8f1c4b3d.mockapi.io";
+const URL = import.meta.env.VITE_API_BASE;
+// console.log("URL con env", URL)
 
 //GET
 const obtenerProductos = async () => {

@@ -1,5 +1,6 @@
 //Una referencia a nuestro propia aplicación ya registrada de firebase
 import { initializeApp } from "firebase/app";
+import { getStorage } from "firebase/storage";
 
 //firebase nos da unas credenciales asi que las estamos trayendo de las variables de entorno configuradas previamente
 const firebaseConfig = {
@@ -14,3 +15,9 @@ const firebaseConfig = {
 
 //tenemos una referencia a la aplicación registrada
 const app = initializeApp(firebaseConfig);
+
+const storage = getStorage(app);
+
+export {
+    storage
+}

@@ -17,6 +17,9 @@ const CreateProductView = () => {
     categoria: categorias[0],
   });
 
+  //aqui vamos a manejar el archivo jpg. png webp en si
+  const [archivo, setArchivo] = useState(null);
+
   const manejarInputs = (e) => {
     const { name, value } = e.target;
     console.log({ name, value });

@@ -6,7 +6,7 @@ const CreateProductView = () => {
     nombre:'',
     descripcion:'',
     precio:0,
-    imagen:'',
+    // imagen:'',
     detalles:'',
     'precio-oferta':0,
     cantidad:0,

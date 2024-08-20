@@ -6,7 +6,7 @@ const FormProduct = (props) => {
     nombre,
     descripcion,
     precio,
-    imagen,
+    // imagen,
     detalles,
     cantidad,
     estrellas,

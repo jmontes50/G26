@@ -1,6 +1,6 @@
 const FormProduct = (props) => {
   // estamos desestructurando los props, producto es un objeto
-  const { producto, manejarInputs, categorias } = props;
+  const { producto, manejarInputs, categorias, manejarSubmit } = props;
   // desestructurar producto
   const {
     nombre,
@@ -15,7 +15,7 @@ const FormProduct = (props) => {
   } = producto;
 
   return (
-    <form className="row">
+    <form className="row" onSubmit={manejarSubmit} >
       {/* cada label tiene que tener la clase form-label */}
       {/* cada input, text-area tiene que tener la clase form-control */}
       {/* nombre */}
@@ -133,6 +133,9 @@ const FormProduct = (props) => {
           onChange={manejarInputs}
         />
       </div>
+      <button type="submit">
+        Guardar
+      </button>
     </form>
   );
 };

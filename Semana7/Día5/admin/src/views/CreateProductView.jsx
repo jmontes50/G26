@@ -67,7 +67,8 @@ const CreateProductView = () => {
   return (
     <div>
       <h2>Crear Producto</h2>
-      <Loading />
+      {/* si esta cargando, muestro el componente Loading y si no pues no muestro nada */}
+      { cargando ? <Loading /> : null }
       <FormProduct
         producto={nuevoProducto}
         manejarInputs={manejarInputs}

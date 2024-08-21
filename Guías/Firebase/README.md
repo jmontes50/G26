@@ -44,8 +44,8 @@ Una vez instalado, es necesario configurar Firebase en tu aplicación. Lo recome
    REACT_APP_FIREBASE_APP_ID=your-app-id
    ```
 
-   > [!IMPORTANT]  
-   > Recuerda añadir este archivo `.env` a tu `.gitignore`
+> [!IMPORTANT]  
+> Recuerda añadir este archivo `.env` a tu `.gitignore`
 
 2. **Inicializar Firebase:**
 

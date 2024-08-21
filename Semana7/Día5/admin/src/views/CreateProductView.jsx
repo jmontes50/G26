@@ -6,6 +6,8 @@ import { subirArchivo } from "../services/storageService";
 //componentes
 import Loading from "../components/Loading";
 import FormProduct from "../components/FormProduct";
+//libreria externa
+import Swal from "sweetalert2";
 
 const categorias = ["Ropa", "Accesorios", "Zapatos", "Hogar"];
 
@@ -55,7 +57,12 @@ const CreateProductView = () => {
       await crearProducto({ ...nuevoProducto, imagen: urlImagen });
       //cuando termine de crear el producto
       setCargando(false);
-      alert("Producto creado!");
+      // alert("Producto creado!");
+      Swal.fire({
+        title:"Producto creado!",
+        text:`${nuevoProducto.nombre} se creó exitosamente`,
+        icon:"success"
+      })
     } catch (error) {
       alert("Error, revise la consola");
       console.log(error);

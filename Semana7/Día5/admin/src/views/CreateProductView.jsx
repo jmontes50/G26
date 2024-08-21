@@ -1,7 +1,11 @@
+//primero cosas de react, como hooks
 import { useState } from "react";
-import FormProduct from "../components/FormProduct";
+//servicios, funciones
 import { crearProducto } from "../services/productService";
 import { subirArchivo } from "../services/storageService";
+//componentes
+import Loading from "../components/Loading";
+import FormProduct from "../components/FormProduct";
 
 const categorias = ["Ropa", "Accesorios", "Zapatos", "Hogar"];
 
@@ -63,6 +67,7 @@ const CreateProductView = () => {
   return (
     <div>
       <h2>Crear Producto</h2>
+      <Loading />
       <FormProduct
         producto={nuevoProducto}
         manejarInputs={manejarInputs}

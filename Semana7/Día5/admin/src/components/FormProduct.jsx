@@ -146,6 +146,7 @@ const FormProduct = (props) => {
           id="imagen"
           name="imagen"
           onChange={manejarArchivo}
+          // multiple="multiple"
         />
       </div>
       <button 

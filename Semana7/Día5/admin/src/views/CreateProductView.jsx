@@ -22,7 +22,10 @@ const CreateProductView = () => {
 
   //manejar el archivo jpg png con el input
   const manejarArchivo = (e) => {
-    console.log("viendo evento archivo", e);
+    //evento
+    //target - objetivo de donde sale el evento
+    // console.log("viendo evento archivo", e.target.files[0]);
+    setArchivo(e.target.files[0]);
   }
 
   const manejarInputs = (e) => {

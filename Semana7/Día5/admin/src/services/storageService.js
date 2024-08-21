@@ -1,6 +1,7 @@
 import { ref, uploadBytes } from "firebase/storage";
 //nosotros ya tenemos una referencia al servicio de storage
 import { storage } from "../config/firebase";
+import { cambiarNombreConUUID } from "../utils/utils";
 
 const subirArchivo = async (archivo) => {
     //esta buscando tener una referencia del archivo que va a estar o está en firestore
@@ -9,10 +10,8 @@ const subirArchivo = async (archivo) => {
     //2.1 donde lo voy a guardar, en la refArchivo de firestore
     //3. tengo que transformar la información
     //4. como muestro el resultado del objetivo que estoy buscando
-    console.log("viendo archivo", archivo);
-    const nombreArchivo = archivo.name;
-    const refArchivo = ref(storage, nombreArchivo);
-    console.log(refArchivo);
+    const nuevoNombre = cambiarNombreConUUID(archivo.name); //archivo.name -> foto.jpg
+    const refArchivo = ref(storage, nuevoNombre);
     try {
         const resultado = await uploadBytes(refArchivo, archivo);
         console.log(resultado);

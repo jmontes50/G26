@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FormProduct from "../components/FormProduct";
 import { crearProducto } from "../services/productService";
+import { subirArchivo } from "../services/storageService";
 
 const categorias = ["Ropa", "Accesorios", "Zapatos", "Hogar"];
 
@@ -26,6 +27,8 @@ const CreateProductView = () => {
     //target - objetivo de donde sale el evento
     // console.log("viendo evento archivo", e.target.files[0]);
     setArchivo(e.target.files[0]);
+    // temporal
+    subirArchivo();
   }
 
   const manejarInputs = (e) => {

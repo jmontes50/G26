@@ -1,6 +1,6 @@
 const FormProduct = (props) => {
   // estamos desestructurando los props, producto es un objeto
-  const { producto, manejarInputs, categorias, manejarSubmit, manejarArchivo } = props;
+  const { producto, manejarInputs, categorias, manejarSubmit, cargando, manejarArchivo } = props;
   // desestructurar producto
   const {
     nombre,
@@ -152,8 +152,10 @@ const FormProduct = (props) => {
       <button 
         type="submit"
         className="btn btn-primary"
+        disabled={cargando}
       >
-          Guardar
+          {/* Guardar */}
+          { cargando ? "Guardando..." : "Guardar" }
       </button>
     </form>
   );

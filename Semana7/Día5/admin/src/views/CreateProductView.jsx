@@ -10,7 +10,7 @@ const CreateProductView = () => {
     nombre: "",
     descripcion: "",
     precio: 0,
-    // imagen:'',
+    imagen:'',
     detalles: "",
     "precio-oferta": 0,
     cantidad: 0,
@@ -27,8 +27,6 @@ const CreateProductView = () => {
     //target - objetivo de donde sale el evento
     // console.log("viendo evento archivo", e.target.files[0]);
     setArchivo(e.target.files[0]);
-    // temporal
-    subirArchivo(e.target.files[0]);
   }
 
   const manejarInputs = (e) => {
@@ -44,7 +42,9 @@ const CreateProductView = () => {
   const manejarSubmit = async (e) => {
     e.preventDefault(); //va a prevenir el evento por defecto del form
     try {
-      await crearProducto(nuevoProducto);
+      const urlImagen = await subirArchivo(archivo);
+      //estamos haciendo una copia de nuevoProducto, y le agregamos el campo imagen con la url de la imagen ya subida
+      await crearProducto({ ...nuevoProducto, imagen: urlImagen });
       alert("Producto creado!");
     } catch (error) {
       alert("Error, revise la consola");

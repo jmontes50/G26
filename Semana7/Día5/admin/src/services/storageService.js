@@ -15,7 +15,7 @@ const subirArchivo = async (archivo) => {
     try {
         await uploadBytes(refArchivo, archivo);
         const urlArchivo = await getDownloadURL(refArchivo);
-        console.log("url archivo", urlArchivo);
+        // console.log("url archivo", urlArchivo);
         return urlArchivo;
     } catch (error) {
         // console.log(error);

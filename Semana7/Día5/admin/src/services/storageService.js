@@ -1,4 +1,4 @@
-import { ref, uploadBytes } from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 //nosotros ya tenemos una referencia al servicio de storage
 import { storage } from "../config/firebase";
 import { cambiarNombreConUUID } from "../utils/utils";
@@ -13,10 +13,13 @@ const subirArchivo = async (archivo) => {
     const nuevoNombre = cambiarNombreConUUID(archivo.name); //archivo.name -> foto.jpg
     const refArchivo = ref(storage, nuevoNombre);
     try {
-        const resultado = await uploadBytes(refArchivo, archivo);
-        console.log(resultado);
+        await uploadBytes(refArchivo, archivo);
+        const urlArchivo = await getDownloadURL(refArchivo);
+        console.log("url archivo", urlArchivo);
+        return urlArchivo;
     } catch (error) {
-        console.log(error);
+        // console.log(error);
+        throw error;
     }
 }
 

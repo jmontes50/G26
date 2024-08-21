@@ -20,6 +20,7 @@ const CreateProductView = () => {
   //aqui vamos a manejar el archivo jpg. png webp en si
   const [archivo, setArchivo] = useState(null);
 
+  //manejar el archivo jpg png con el input
   const manejarArchivo = (e) => {
     console.log("viendo evento archivo", e);
   }
@@ -55,6 +56,7 @@ const CreateProductView = () => {
         manejarInputs={manejarInputs}
         categorias={categorias}
         manejarSubmit={manejarSubmit}
+        manejarArchivo={manejarArchivo}
       />
     </div>
   );

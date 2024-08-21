@@ -1,6 +1,6 @@
 const FormProduct = (props) => {
   // estamos desestructurando los props, producto es un objeto
-  const { producto, manejarInputs, categorias, manejarSubmit } = props;
+  const { producto, manejarInputs, categorias, manejarSubmit, manejarArchivo } = props;
   // desestructurar producto
   const {
     nombre,
@@ -15,7 +15,7 @@ const FormProduct = (props) => {
   } = producto;
 
   return (
-    <form className="row" onSubmit={manejarSubmit} >
+    <form className="row" onSubmit={manejarSubmit}>
       {/* cada label tiene que tener la clase form-label */}
       {/* cada input, text-area tiene que tener la clase form-control */}
       {/* nombre */}
@@ -115,7 +115,9 @@ const FormProduct = (props) => {
         >
           {/* renderizado de listas de categorías para generar las opciones */}
           {categorias.map((cat, i) => (
-            <option key={i} value={cat}>{cat}</option>
+            <option key={i} value={cat}>
+              {cat}
+            </option>
           ))}
         </select>
       </div>
@@ -133,8 +135,24 @@ const FormProduct = (props) => {
           onChange={manejarInputs}
         />
       </div>
-      <button type="submit">
-        Guardar
+      {/* imagen */}
+      <div className="col-12 mb-3">
+        <label className="form-label" htmlFor="imagen">
+          Imagen del producto
+        </label>
+        <input 
+          className="form-control"
+          type="file"
+          id="imagen"
+          name="imagen"
+          onChange={manejarArchivo}
+        />
+      </div>
+      <button 
+        type="submit"
+        className="btn btn-primary"
+      >
+          Guardar
       </button>
     </form>
   );

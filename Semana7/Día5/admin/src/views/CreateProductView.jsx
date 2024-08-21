@@ -1,5 +1,7 @@
 //primero cosas de react, como hooks
 import { useState } from "react";
+// react router
+import { useNavigate } from "react-router-dom";
 //servicios, funciones
 import { crearProducto } from "../services/productService";
 import { subirArchivo } from "../services/storageService";
@@ -28,6 +30,9 @@ const CreateProductView = () => {
 
   //aqui vamos a manejar el archivo jpg. png webp en si
   const [archivo, setArchivo] = useState(null);
+
+  //useNavigate
+  const navigate = useNavigate();
 
   //manejar el archivo jpg png con el input
   const manejarArchivo = (e) => {
@@ -58,11 +63,13 @@ const CreateProductView = () => {
       //cuando termine de crear el producto
       setCargando(false);
       // alert("Producto creado!");
-      Swal.fire({
+      await Swal.fire({
         title:"Producto creado!",
         text:`${nuevoProducto.nombre} se creó exitosamente`,
         icon:"success"
       })
+      //despues de que aparezca el sweetalert podemos navegar hacia otra ruta
+      navigate('/'); //ruta del panel
     } catch (error) {
       alert("Error, revise la consola");
       console.log(error);

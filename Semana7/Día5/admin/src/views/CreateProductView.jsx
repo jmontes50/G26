@@ -18,6 +18,8 @@ const CreateProductView = () => {
     categoria: categorias[0],
   });
 
+  const [cargando, setCargando] = useState(false);
+
   //aqui vamos a manejar el archivo jpg. png webp en si
   const [archivo, setArchivo] = useState(null);
 
@@ -42,9 +44,13 @@ const CreateProductView = () => {
   const manejarSubmit = async (e) => {
     e.preventDefault(); //va a prevenir el evento por defecto del form
     try {
+      //cuando comience la carga indicaremos que esta cargando...
+      setCargando(true);
       const urlImagen = await subirArchivo(archivo);
       //estamos haciendo una copia de nuevoProducto, y le agregamos el campo imagen con la url de la imagen ya subida
       await crearProducto({ ...nuevoProducto, imagen: urlImagen });
+      //cuando termine de crear el producto
+      setCargando(false);
       alert("Producto creado!");
     } catch (error) {
       alert("Error, revise la consola");
@@ -63,6 +69,7 @@ const CreateProductView = () => {
         categorias={categorias}
         manejarSubmit={manejarSubmit}
         manejarArchivo={manejarArchivo}
+        cargando={cargando}
       />
     </div>
   );

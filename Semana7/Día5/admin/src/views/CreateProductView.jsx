@@ -28,7 +28,7 @@ const CreateProductView = () => {
     // console.log("viendo evento archivo", e.target.files[0]);
     setArchivo(e.target.files[0]);
     // temporal
-    subirArchivo();
+    subirArchivo(e.target.files[0]);
   }
 
   const manejarInputs = (e) => {

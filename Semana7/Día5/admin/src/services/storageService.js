@@ -9,7 +9,9 @@ const subirArchivo = async (archivo) => {
     //2.1 donde lo voy a guardar, en la refArchivo de firestore
     //3. tengo que transformar la información
     //4. como muestro el resultado del objetivo que estoy buscando
-    const refArchivo = ref(storage, 'h1.png');
+    console.log("viendo archivo", archivo);
+    const nombreArchivo = archivo.name;
+    const refArchivo = ref(storage, nombreArchivo);
     console.log(refArchivo);
     try {
         const resultado = await uploadBytes(refArchivo, archivo);

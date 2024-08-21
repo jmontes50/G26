@@ -21,5 +21,6 @@ const storage = getStorage(app);
 
 //y los exportamos porque si van a ser necesarios para hacer las tareas relacionadas a cada módulo
 export {
+    //es una referencia del servicio, del módulo de storage de firebase
     storage
 }

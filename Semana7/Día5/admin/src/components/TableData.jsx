@@ -1,8 +1,18 @@
 // import "rutaarchivo.css"
 import { Link } from "react-router-dom";
+import { eliminarProducto } from "../services/productService";
+import Swal from "sweetalert2";
 
 const TableData = (props) => {
   const { datos, cabeceras, acciones } = props;
+
+  const manejarEliminacion = async (id) => {
+    try {
+      const accion = await Swal.fire()
+    } catch (error) {
+      
+    }
+  }
 
   return (
     // JSX no me permite utilizar palabras reservadas como for o class de JS

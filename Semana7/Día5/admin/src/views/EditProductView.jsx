@@ -4,6 +4,7 @@ import { obtenerProductoPorId, editarProducto } from "../services/productService
 import { subirArchivo } from "../services/storageService";
 import Loading from "../components/Loading";
 import FormProduct from "../components/FormProduct";
+import Swal from "sweetalert2";
 
 const categorias = ["Ropa", "Accesorios", "Zapatos", "Hogar"];
 
@@ -41,6 +42,11 @@ const EditProductView = () => {
       }
       await editarProducto(id, copiaProducto);
       setCargando(false);
+      await Swal.fire({
+        title:'Producto Actualizado!',
+        text:`${producto.nombre} se actualizo correctamente`,
+        icon:'success'
+      });
 
     } catch (error) {
       console.log(error)

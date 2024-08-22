@@ -172,6 +172,14 @@ const FormProduct = (props) => {
           <img src={imagen} alt={nombre} style={{ width: "300px", display:'block' }} />
         </div>
       ) : null}
+      
+      {/* imagen a subir */}
+      {urlImagenTemporal ? (
+        <div className="col-12 col-md-6 mb-3">
+          <label className="form-label">Nueva imagen a subir del producto</label>
+          <img src={urlImagenTemporal} alt={nombre} style={{ width: "300px", display:'block' }} />
+        </div>
+      ): null}
 
       <button type="submit" className="btn btn-primary" disabled={cargando}>
         {/* Guardar */}

@@ -77,7 +77,7 @@ const HomeView = () => {
           </span>
           Listado de Productos
         </h2>
-        <TableData cabeceras={cabeceras} datos={productos} />
+        <TableData cabeceras={cabeceras} datos={productos} acciones={true}/>
       </div>
     </>
   );

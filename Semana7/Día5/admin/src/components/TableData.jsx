@@ -1,7 +1,7 @@
 // import "rutaarchivo.css"
 
 const TableData = (props) => {
-  const { datos, cabeceras } = props;
+  const { datos, cabeceras, acciones } = props;
 
   return (
     // JSX no me permite utilizar palabras reservadas como for o class de JS
@@ -12,6 +12,8 @@ const TableData = (props) => {
           {cabeceras.map((texto, i) => (
             <th key={i}>{texto}</th>
           ))}
+          {/* acciones será un booleano */}
+          {acciones ? <th>Acciones</th> : null}
         </tr>
       </thead>
       <tbody>
@@ -22,11 +24,18 @@ const TableData = (props) => {
             {cabeceras.map((cab, j) => (
               <td key={j}>{fila[cab]}</td>
             ))}
+            {acciones ? (
+              <td>
+                <button className="btn btn-info btn-sm me-2">
+                  <i className="fa-solid fa-pencil"></i>
+                </button>
+              </td>
+            ) : null}
           </tr>
         ))}
       </tbody>
     </table>
-  )
-}
+  );
+};
 
-export default TableData
+export default TableData;

@@ -30,6 +30,9 @@ const TableData = (props) => {
                 <Link className="btn btn-info btn-sm me-2" to={`/editproduct/${fila.id}`}>
                   <i className="fa-solid fa-pencil"></i>
                 </Link>
+                <button className="btn btn-danger btn-sm">
+                  <i className="fa-solid fa-trash"></i>
+                </button>
               </td>
             ) : null}
           </tr>

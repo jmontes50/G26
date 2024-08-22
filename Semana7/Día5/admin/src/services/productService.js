@@ -47,6 +47,7 @@ const editarProducto = async (id, productoEditado) => {
     const respuesta = await axios.put(`${URL}/productos/${id}`, productoEditado)
     return respuesta.data;
   } catch (error) {
+    console.log(error)
     throw error;
   }
 }

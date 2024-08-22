@@ -29,7 +29,8 @@ const EditProductView = () => {
     setArchivo(e.target.files[0]);
   };
 
-  const manejarSubmit = async () => {
+  const manejarSubmit = async (e) => {
+    e.preventDefault();
     try {
       setCargando(true);
       //si es que el estado archivo tiene cargado algo, subiremos la nueva Imagen si no, dejamos la imagen tal cuál.

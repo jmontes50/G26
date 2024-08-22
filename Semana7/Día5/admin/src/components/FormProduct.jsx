@@ -7,6 +7,7 @@ const FormProduct = (props) => {
     manejarSubmit,
     cargando,
     manejarArchivo,
+    archivo
   } = props;
   // desestructurar producto
   const {
@@ -20,6 +21,14 @@ const FormProduct = (props) => {
     categoria,
     //precio-oferta
   } = producto;
+
+  let urlImagenTemporal = null;
+
+  if(archivo){
+    // esta URL ya viene un método que me permite crear una URL temporal para un archivo
+    urlImagenTemporal = URL.createObjectURL(archivo);
+    console.log("urlTemporal", urlImagenTemporal);
+  }
 
   return (
     <form className="row" onSubmit={manejarSubmit}>

@@ -75,6 +75,7 @@ const EditProductView = () => {
           manejarSubmit={manejarSubmit}
           manejarArchivo={manejarArchivo}
           cargando={cargando}
+          archivo={archivo}
         />
       ) : null}
     </div>

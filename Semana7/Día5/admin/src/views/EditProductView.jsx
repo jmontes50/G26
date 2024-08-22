@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { obtenerProductoPorId } from "../services/productService";
 import Loading from "../components/Loading";
+import FormProduct from "../components/FormProduct";
+
+const categorias = ["Ropa", "Accesorios", "Zapatos", "Hogar"];
 
 const EditProductView = () => {
   const [producto, setProducto] = useState(null);
@@ -9,6 +12,18 @@ const EditProductView = () => {
 
   const { id } = useParams();
   // console.log("id editproductview", id);
+
+  const manejarInputs = () => {
+
+  }
+
+  const manejarArchivo = () => {
+
+  }
+
+  const manejarSubmit = () => {
+
+  }
 
   useEffect(() => {
     const getProduct = async () => {
@@ -29,6 +44,14 @@ const EditProductView = () => {
     <div>
       <h2 className="mb-4">Editar Producto</h2>
       {cargando ? <Loading /> : null}
+      <FormProduct
+        producto={producto}
+        manejarInputs={manejarInputs}
+        categorias={categorias}
+        manejarSubmit={manejarSubmit}
+        manejarArchivo={manejarArchivo}
+        cargando={cargando}
+      />
     </div>
   )
 }

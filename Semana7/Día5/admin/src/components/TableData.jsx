@@ -1,4 +1,5 @@
 // import "rutaarchivo.css"
+import { Link } from "react-router-dom";
 
 const TableData = (props) => {
   const { datos, cabeceras, acciones } = props;
@@ -26,9 +27,9 @@ const TableData = (props) => {
             ))}
             {acciones ? (
               <td>
-                <button className="btn btn-info btn-sm me-2">
+                <Link className="btn btn-info btn-sm me-2" to={`/editproduct/${fila.id}`}>
                   <i className="fa-solid fa-pencil"></i>
-                </button>
+                </Link>
               </td>
             ) : null}
           </tr>

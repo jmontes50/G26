@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import HomeView from "./views/HomeView";
 import CreateProductView from "./views/CreateProductView";
+import EditProductView from "./views/EditProductView";
 //import "./assets/tuCSS.css"
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomeView />} />
             <Route path="/createproduct" element={<CreateProductView />} />
+            <Route path="/editproduct/:id" element={<EditProductView />} />
           </Routes>
         </div>
       </div>

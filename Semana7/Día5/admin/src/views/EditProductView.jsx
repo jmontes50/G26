@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { obtenerProductoPorId } from "../services/productService";
+import { obtenerProductoPorId, editarProducto } from "../services/productService";
+import { subirArchivo } from "../services/storageService";
 import Loading from "../components/Loading";
 import FormProduct from "../components/FormProduct";
 
@@ -28,7 +29,22 @@ const EditProductView = () => {
     setArchivo(e.target.files[0]);
   };
 
-  const manejarSubmit = () => {};
+  const manejarSubmit = async () => {
+    try {
+      setCargando(true);
+      //si es que el estado archivo tiene cargado algo, subiremos la nueva Imagen si no, dejamos la imagen tal cuál.
+      let copiaProducto = { ...producto };
+      if(archivo){ //si es truthy
+        const urlImagen = await subirArchivo(archivo);
+        copiaProducto.imagen = urlImagen;
+      }
+      await editarProducto(id, copiaProducto);
+      setCargando(false);
+
+    } catch (error) {
+      console.log(error)
+    }
+  };
 
   useEffect(() => {
     const getProduct = async () => {

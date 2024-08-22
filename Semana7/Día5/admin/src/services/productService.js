@@ -41,10 +41,10 @@ const obtenerProductoPorId = async (id) => {
 }
 
 //PUT - Actualizar
-const editarProducto = async (id) => {
+const editarProducto = async (id, productoEditado) => {
   try {
     // vamos a utilizar el verbo put http mediante el método put
-    const respuesta = await axios.put(`${URL}/productos/${id}`)
+    const respuesta = await axios.put(`${URL}/productos/${id}`, productoEditado)
     return respuesta.data;
   } catch (error) {
     throw error;

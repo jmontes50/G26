@@ -28,14 +28,23 @@ const crearProducto = async (producto) => {
   } catch (error) {
     throw error;
   }
-
 }
 
 //GET POR ID
+const obtenerProductoPorId = async (id) => {
+  try {
+    const respuesta = await axios.get(`${URL}/productos/${id}`);
+    return respuesta.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
 //PUT - Actualizar
 //DELETE - Borrar
 
 export {
   obtenerProductos,
-  crearProducto
+  crearProducto,
+  obtenerProductoPorId
 }

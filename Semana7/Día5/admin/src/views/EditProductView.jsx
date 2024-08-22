@@ -9,7 +9,15 @@ const EditProductView = () => {
   // console.log("id editproductview", id);
 
   useEffect(() => {
-
+    const getProduct = async () => {
+      try {
+        const productoObtenido = await obtenerProductoPorId(id);
+        console.log("producto obtenido: ", productoObtenido)
+      } catch (error) {
+        alert("Ocurrio un error intente de nuevo");
+      }
+    }
+    getProduct();
   }, []);
 
   return (

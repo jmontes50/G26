@@ -1,12 +1,19 @@
 const FormProduct = (props) => {
   // estamos desestructurando los props, producto es un objeto
-  const { producto, manejarInputs, categorias, manejarSubmit, cargando, manejarArchivo } = props;
+  const {
+    producto,
+    manejarInputs,
+    categorias,
+    manejarSubmit,
+    cargando,
+    manejarArchivo,
+  } = props;
   // desestructurar producto
   const {
     nombre,
     descripcion,
     precio,
-    // imagen,
+    imagen,
     detalles,
     cantidad,
     estrellas,
@@ -140,7 +147,7 @@ const FormProduct = (props) => {
         <label className="form-label" htmlFor="imagen">
           Imagen del producto
         </label>
-        <input 
+        <input
           className="form-control"
           type="file"
           id="imagen"
@@ -149,13 +156,17 @@ const FormProduct = (props) => {
           // multiple="multiple"
         />
       </div>
-      <button 
-        type="submit"
-        className="btn btn-primary"
-        disabled={cargando}
-      >
-          {/* Guardar */}
-          { cargando ? "Guardando..." : "Guardar" }
+      {/* imagen actual */}
+      {imagen ? (
+        <div className="col-12 col-md-6 mb-3">
+          <label className="form-label">Imagen actual del producto</label>
+          <img src={imagen} alt={nombre} style={{ width: "300px", display:'block' }} />
+        </div>
+      ) : null}
+
+      <button type="submit" className="btn btn-primary" disabled={cargando}>
+        {/* Guardar */}
+        {cargando ? "Guardando..." : "Guardar"}
       </button>
     </form>
   );

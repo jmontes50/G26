@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { obtenerProductoPorId, editarProducto } from "../services/productService";
 import { subirArchivo } from "../services/storageService";
 import Loading from "../components/Loading";
@@ -15,6 +15,8 @@ const EditProductView = () => {
 
   const { id } = useParams();
   // console.log("id editproductview", id);
+
+  const navigate = useNavigate();
 
   const manejarInputs = (e) => {
     const { name, value } = e.target;
@@ -47,6 +49,7 @@ const EditProductView = () => {
         text:`${producto.nombre} se actualizo correctamente`,
         icon:'success'
       });
+      navigate('/');
 
     } catch (error) {
       console.log(error)

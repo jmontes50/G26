@@ -8,7 +8,7 @@ const URL = import.meta.env.VITE_API_BASE;
 const obtenerProductos = async () => {
   try {
     const respuesta = await axios.get(`${URL}/productos`);
-    console.log("get axios", respuesta);
+    // console.log("get axios", respuesta);
     if(respuesta.status === 200) {
       return respuesta.data;
     }

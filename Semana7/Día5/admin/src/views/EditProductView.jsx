@@ -9,6 +9,7 @@ const categorias = ["Ropa", "Accesorios", "Zapatos", "Hogar"];
 const EditProductView = () => {
   const [producto, setProducto] = useState(null);
   const [cargando, setCargando] = useState(false);
+  const [archivo, setArchivo] = useState(null);
 
   const { id } = useParams();
   // console.log("id editproductview", id);
@@ -21,15 +22,13 @@ const EditProductView = () => {
       [name]: value,
     };
     setProducto(copiaProducto);
-  }
+  };
 
   const manejarArchivo = () => {
+    setArchivo(e.target.files[0]);
+  };
 
-  }
-
-  const manejarSubmit = () => {
-
-  }
+  const manejarSubmit = () => {};
 
   useEffect(() => {
     const getProduct = async () => {
@@ -42,7 +41,7 @@ const EditProductView = () => {
         alert("Ocurrio un error intente de nuevo");
         setCargando(false);
       }
-    }
+    };
     getProduct();
   }, []);
 
@@ -50,16 +49,19 @@ const EditProductView = () => {
     <div>
       <h2 className="mb-4">Editar Producto</h2>
       {cargando ? <Loading /> : null}
-      <FormProduct
-        producto={producto}
-        manejarInputs={manejarInputs}
-        categorias={categorias}
-        manejarSubmit={manejarSubmit}
-        manejarArchivo={manejarArchivo}
-        cargando={cargando}
-      />
+      {/* truthy & falsy */}
+      {producto ? (
+        <FormProduct
+          producto={producto}
+          manejarInputs={manejarInputs}
+          categorias={categorias}
+          manejarSubmit={manejarSubmit}
+          manejarArchivo={manejarArchivo}
+          cargando={cargando}
+        />
+      ) : null}
     </div>
-  )
-}
+  );
+};
 
-export default EditProductView
+export default EditProductView;

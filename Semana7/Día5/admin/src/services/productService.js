@@ -47,15 +47,24 @@ const editarProducto = async (id, productoEditado) => {
     const respuesta = await axios.put(`${URL}/productos/${id}`, productoEditado)
     return respuesta.data;
   } catch (error) {
-    console.log(error)
+    // console.log(error)
     throw error;
   }
 }
 //DELETE - Borrar
+const eliminarProducto = async (id) => {
+  try {
+    await axios.delete(`${URL}/productos/${id}`);
+    return true
+  } catch (error) {
+    throw error;
+  }
+}
 
 export {
   obtenerProductos,
   crearProducto,
   obtenerProductoPorId,
-  editarProducto
+  editarProducto,
+  eliminarProducto
 }

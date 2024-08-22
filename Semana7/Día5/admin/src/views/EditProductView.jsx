@@ -13,8 +13,14 @@ const EditProductView = () => {
   const { id } = useParams();
   // console.log("id editproductview", id);
 
-  const manejarInputs = () => {
-
+  const manejarInputs = (e) => {
+    const { name, value } = e.target;
+    console.log({ name, value });
+    const copiaProducto = {
+      ...producto,
+      [name]: value,
+    };
+    setProducto(copiaProducto);
   }
 
   const manejarArchivo = () => {

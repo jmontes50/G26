@@ -25,7 +25,7 @@ const EditProductView = () => {
     setProducto(copiaProducto);
   };
 
-  const manejarArchivo = () => {
+  const manejarArchivo = (e) => {
     setArchivo(e.target.files[0]);
   };
 

@@ -1,40 +1,8 @@
 // import "rutaarchivo.css"
 import { Link } from "react-router-dom";
-import { eliminarProducto } from "../services/productService";
-import Swal from "sweetalert2";
 
 const TableData = (props) => {
-  const { datos, cabeceras, acciones } = props;
-
-  const manejarEliminacion = async (id, nombre) => {
-    try {
-      const accion = await Swal.fire({
-        title: `¿Desea eliminar ${nombre}?`,
-        text: "Esta acción es irreversible",
-        icon: "question",
-        html:`<i class="fa-solid fa-spinner fa-2x fa-spin"></i>`,
-        showCancelButton: true,
-        cancelButtonText: 'No, no deseo eliminar',
-        confirmButtonText: "Si, si deseo eliminar",
-        confirmButtonColor: '#ff0000',
-      });
-      console.log(accion)
-      if(accion.isConfirmed){
-        await eliminarProducto(id);
-        Swal.fire({
-          title:`Se eliminó ${nombre}`,
-          text:"La operación se realizó con éxito",
-          icon:"success"
-        })
-      }
-    } catch (error) {
-      Swal.fire({
-        title:`Ocurrio un error`,
-        text:"La operación tuvo un error",
-        icon:"error"
-      });
-    }
-  };
+  const { datos, cabeceras, acciones, manejarEliminacion } = props;
 
   return (
     // JSX no me permite utilizar palabras reservadas como for o class de JS

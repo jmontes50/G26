@@ -1,8 +1,9 @@
 //vistas utilizaran los servicios para hacer las operaciones
 import { useState, useEffect } from "react";
-import { obtenerProductos } from "../services/productService";
+import { obtenerProductos, eliminarProducto } from "../services/productService";
 import TableData from "../components/TableData";
 import Widget from "../components/Widget";
+import Swal from "sweetalert2";
 
 const HomeView = () => {
   const [productos, setProductos] = useState([]);
@@ -35,6 +36,36 @@ const HomeView = () => {
       color: "#EFE0FD",
     },
   ];
+  
+  const manejarEliminacion = async (id, nombre) => {
+    try {
+      const accion = await Swal.fire({
+        title: `¿Desea eliminar ${nombre}?`,
+        text: "Esta acción es irreversible",
+        icon: "question",
+        html:`<i class="fa-solid fa-spinner fa-2x fa-spin"></i>`,
+        showCancelButton: true,
+        cancelButtonText: 'No, no deseo eliminar',
+        confirmButtonText: "Si, si deseo eliminar",
+        confirmButtonColor: '#ff0000',
+      });
+      console.log(accion)
+      if(accion.isConfirmed){
+        await eliminarProducto(id);
+        Swal.fire({
+          title:`Se eliminó ${nombre}`,
+          text:"La operación se realizó con éxito",
+          icon:"success"
+        })
+      }
+    } catch (error) {
+      Swal.fire({
+        title:`Ocurrio un error`,
+        text:"La operación tuvo un error",
+        icon:"error"
+      });
+    }
+  };
 
   useEffect(() => {
     const getProductos = async () => {
@@ -77,7 +108,12 @@ const HomeView = () => {
           </span>
           Listado de Productos
         </h2>
-        <TableData cabeceras={cabeceras} datos={productos} acciones={true}/>
+        <TableData 
+          cabeceras={cabeceras} 
+          datos={productos} 
+          acciones={true}
+          manejarEliminacion={manejarEliminacion}
+        />
       </div>
     </>
   );

@@ -27,7 +27,13 @@ const TableData = (props) => {
           icon:"success"
         })
       }
-    } catch (error) {}
+    } catch (error) {
+      Swal.fire({
+        title:`Ocurrio un error`,
+        text:"La operación tuvo un error",
+        icon:"error"
+      });
+    }
   };
 
   return (

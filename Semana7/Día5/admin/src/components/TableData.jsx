@@ -6,13 +6,15 @@ import Swal from "sweetalert2";
 const TableData = (props) => {
   const { datos, cabeceras, acciones } = props;
 
-  const manejarEliminacion = async (id) => {
+  const manejarEliminacion = async (id, nombre) => {
     try {
-      const accion = await Swal.fire()
-    } catch (error) {
-      
-    }
-  }
+      const accion = await Swal.fire({
+        title: `¿Desea eliminar ${nombre}?`,
+        text: "Esta acción es irreversible",
+        icon: "question",
+      });
+    } catch (error) {}
+  };
 
   return (
     // JSX no me permite utilizar palabras reservadas como for o class de JS
@@ -37,10 +39,18 @@ const TableData = (props) => {
             ))}
             {acciones ? (
               <td>
-                <Link className="btn btn-info btn-sm me-2" to={`/editproduct/${fila.id}`}>
+                <Link
+                  className="btn btn-info btn-sm me-2"
+                  to={`/editproduct/${fila.id}`}
+                >
                   <i className="fa-solid fa-pencil"></i>
                 </Link>
-                <button className="btn btn-danger btn-sm">
+                <button
+                  className="btn btn-danger btn-sm"
+                  onClick={() => {
+                    manejarEliminacion(fila.id, fila.nombre);
+                  }}
+                >
                   <i className="fa-solid fa-trash"></i>
                 </button>
               </td>

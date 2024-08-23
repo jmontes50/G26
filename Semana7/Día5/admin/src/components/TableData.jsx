@@ -12,6 +12,10 @@ const TableData = (props) => {
         title: `¿Desea eliminar ${nombre}?`,
         text: "Esta acción es irreversible",
         icon: "question",
+        showCancelButton: true,
+        cancelButtonText: 'No, no deseo eliminar',
+        confirmButtonText: "Si, si deseo eliminar",
+        confirmButtonColor: '#ff0000',
       });
     } catch (error) {}
   };

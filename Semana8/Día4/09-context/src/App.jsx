@@ -1,6 +1,7 @@
 import { CountContextProvider } from "./contexts/CountContext";
 import Titulo from "./components/Titulo";
 import MostrarContador from "./components/MostrarContador";
+import CambiarContador from "./components/CambiarContador";
 
 const App = () => {
   return (
@@ -14,6 +15,8 @@ const App = () => {
         </Titulo>
         <hr />
         <MostrarContador />
+        <hr />
+        <CambiarContador />
       </div>
       {/* Rutas */}
       {/* {otro contexto} */}

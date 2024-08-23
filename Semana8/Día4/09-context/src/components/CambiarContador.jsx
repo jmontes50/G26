@@ -1,10 +1,21 @@
-import { useContext } from 'react';
-import { CountContext } from '../contexts/CountContext';
+import { useContext } from "react";
+import { CountContext } from "../contexts/CountContext";
 
 const CambiarContador = () => {
-  return (
-    <div>CambiarContador</div>
-  )
-}
+  const { contador, setContador } = useContext(CountContext);
 
-export default CambiarContador
+  return (
+    <div>
+      <h3>CambiarContador</h3>
+      <button
+        onClick={() => {
+          setContador(contador + 1);
+        }}
+      >
+        Incrementar
+      </button>
+    </div>
+  );
+};
+
+export default CambiarContador;

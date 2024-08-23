@@ -1,7 +1,11 @@
 const Titulo = (props) => {
   console.log(props)
+  const { children } = props;
   return (
-    <div>Titulo</div>
+    <div>
+        <h1>Titulo</h1>
+        {children}
+    </div>
   )
 }
 

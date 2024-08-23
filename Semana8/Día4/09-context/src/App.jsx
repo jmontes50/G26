@@ -1,4 +1,4 @@
-import Titulo from "./components/Titulo"
+import Titulo from "./components/Titulo";
 
 const App = () => {
   return (
@@ -7,9 +7,10 @@ const App = () => {
       <hr />
       <Titulo>
         Hola!
+        <p>Lorem ipsum dolor sit amet.</p>
       </Titulo>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

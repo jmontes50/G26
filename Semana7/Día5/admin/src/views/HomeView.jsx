@@ -36,6 +36,10 @@ const HomeView = () => {
       color: "#EFE0FD",
     },
   ];
+
+  const filtrarProductos = (id, arrProductos) => {
+    return arrProductos.filter((prod) => prod.id !== id)
+  }
   
   const manejarEliminacion = async (id, nombre) => {
     try {
@@ -52,6 +56,9 @@ const HomeView = () => {
       console.log(accion)
       if(accion.isConfirmed){
         await eliminarProducto(id);
+        //filtramos el producto sin considerar el producto eliminado
+        const productosFiltrados = filtrarProductos(id, productos);
+        setProductos(productosFiltrados);
         Swal.fire({
           title:`Se eliminó ${nombre}`,
           text:"La operación se realizó con éxito",

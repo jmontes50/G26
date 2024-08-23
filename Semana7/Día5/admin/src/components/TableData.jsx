@@ -18,6 +18,15 @@ const TableData = (props) => {
         confirmButtonText: "Si, si deseo eliminar",
         confirmButtonColor: '#ff0000',
       });
+      console.log(accion)
+      if(accion.isConfirmed){
+        await eliminarProducto(id);
+        Swal.fire({
+          title:`Se eliminó ${nombre}`,
+          text:"La operación se realizó con éxito",
+          icon:"success"
+        })
+      }
     } catch (error) {}
   };
 

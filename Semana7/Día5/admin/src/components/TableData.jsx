@@ -12,6 +12,7 @@ const TableData = (props) => {
         title: `¿Desea eliminar ${nombre}?`,
         text: "Esta acción es irreversible",
         icon: "question",
+        html:`<i class="fa-solid fa-spinner fa-2x fa-spin"></i>`,
         showCancelButton: true,
         cancelButtonText: 'No, no deseo eliminar',
         confirmButtonText: "Si, si deseo eliminar",

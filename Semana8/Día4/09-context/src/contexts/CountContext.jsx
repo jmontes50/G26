@@ -8,9 +8,14 @@ const CountContextProvider = ({ children }) => {
   const [contador, setContador] = useState(0);
 
   //lo que deseemos compartir ira en un prop llamado value
-  return <CountContext.Provider value={{ contador: contador }}>
-    { children }
-  </CountContext.Provider>
+  return (
+    <CountContext.Provider
+    // value={{ contador: contador }} 
+      value={{ contador, setContador }}
+    >
+      { children }
+    </CountContext.Provider>
+  )
 }
 
 export {

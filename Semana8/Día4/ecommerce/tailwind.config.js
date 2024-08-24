@@ -15,9 +15,25 @@ export default {
         normal: 400,
         medium: 500,
         bold: 700
+      },
+      colors: {
+        light: {
+          background: "#ffffff",
+          text:"#333333",
+          primary: "#3490dc",
+          secondary: "#f6ed4a"
+        },
+        dark: {
+          background: "#1a202c",
+          text:"#e2e8f0",
+          primary: "#63b3ed",
+          secondary: "#faf089"
+        }
       }
     },
   },
   plugins: [],
+  // indicamos el modo dark
+  darkMode: "class"
 }
 

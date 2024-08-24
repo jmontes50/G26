@@ -17,4 +17,13 @@ const AuthContextProvider = ({ children }) => {
       console.log(error)
     }
   }
+
+  return (<AuthContext.Provider value={{user, loginWithGoogle}}>
+    { children }
+  </AuthContext.Provider>)
+}
+
+export {
+  AuthContext,
+  AuthContextProvider
 }

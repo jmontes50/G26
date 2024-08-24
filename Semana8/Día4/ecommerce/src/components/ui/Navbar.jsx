@@ -20,7 +20,11 @@ const Navbar = () => {
           {/* div con otros items */}
           <div className="flex items-center justify-end gap-4">
             <button className="btn btn-primary" onClick={toggleDarkMode}>
-              Tema {isDark ? "claro" : "oscuro"}
+              {isDark ? (
+                <i className="fa-regular fa-sun"></i>
+              ) : (
+                <i className="fa-regular fa-moon"></i>
+              )}
             </button>
             <button className="btn btn-primary">Login</button>
           </div>

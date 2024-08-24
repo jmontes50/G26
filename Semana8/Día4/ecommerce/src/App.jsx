@@ -7,15 +7,17 @@ const App = () => {
   return (
     <BrowserRouter>
       <AuthContextProvider>
-        <h1>Ecommerce</h1>
-        <Link to='/login'>Ir a Login</Link>
-        <Routes>
-          <Route path="/" element={<HomeView />} />
-          <Route path="/login" element={<LoginView />} />
-        </Routes>
+        <div className="dark">
+          <h1 className="">Ecommerce</h1>
+          <Link to="/login">Ir a Login</Link>
+          <Routes>
+            <Route path="/" element={<HomeView />} />
+            <Route path="/login" element={<LoginView />} />
+          </Routes>
+        </div>
       </AuthContextProvider>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;

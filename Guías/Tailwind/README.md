@@ -48,11 +48,11 @@ Luego, asegúrate de importar `index.css` en tu `index.js` o `index.jsx`:
 import './index.css';
 ```
 
-#### 4. Explicación Ultra Corta de Utility Clases
+#### 4. Utility Clases
 
 Tailwind CSS utiliza clases utilitarias (utility classes) que son pequeñas clases predefinidas para aplicar estilos individuales, como márgenes, padding, colores, etc., directamente en los elementos HTML.
 
-#### 5. Ejemplo de un Botón con Utility Clases
+#### 5. Ejemplo con Utility Clases
 
 A continuación, un ejemplo de un botón estilizado utilizando utility clases de Tailwind CSS:
 
@@ -75,5 +75,3 @@ En este ejemplo:
 - `py-2 px-4`: aplica padding vertical y horizontal.
 - `rounded`: hace que los bordes sean redondeados.
 - `hover:bg-blue-700`: cambia el color de fondo al pasar el cursor sobre el botón.
-
-¡Listo! Ahora tienes una guía completa para instalar y configurar Tailwind CSS en un proyecto React, junto con un ejemplo básico de uso.

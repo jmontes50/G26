@@ -13,9 +13,14 @@ h1 --> base
   /* las utilizamos utilizando @apply */
   .btn {
     /* forma del boton */
-    @apply rounded font-semibold py-1.5 px-4;
+    @apply px-4 py-2 font-normal rounded-md;
   }
+
   .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700 transition duration-300
+    @apply bg-slate-700 text-white hover:bg-slate-800 transition duration-300
+  }
+
+  .container {
+    @apply px-4 mx-auto lg:px-8 xl:max-w-7xl
   }
 }

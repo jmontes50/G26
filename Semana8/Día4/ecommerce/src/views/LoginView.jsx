@@ -3,6 +3,7 @@ import { AuthContext } from "../contexts/AuthContext";
 
 const LoginView = () => {
   const { loginWithGoogle } = useContext(AuthContext);
+  
   return (
     <>
       <div>LoginView</div>

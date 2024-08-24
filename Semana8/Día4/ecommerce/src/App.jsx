@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className={isDark ? "dark" : ""}>
       <Navbar />
-      <h1 className="dark:bg-dark-background text-light-text">Ecommerce</h1>
+      <h1 className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text">Ecommerce</h1>
       <Link to="/login">Ir a Login</Link>
       <Routes>
         <Route path="/" element={<HomeView />} />

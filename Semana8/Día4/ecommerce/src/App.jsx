@@ -1,7 +1,5 @@
 import { useContext } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { AuthContextProvider } from "./contexts/AuthContext";
-import { ThemeContextProvider } from "./contexts/ThemeContext";
+import { Routes, Route, Link } from "react-router-dom";
 import { ThemeContext } from "./contexts/ThemeContext";
 import HomeView from "./views/HomeView";
 import LoginView from "./views/LoginView";
@@ -13,9 +11,6 @@ const App = () => {
   console.log(isDark);
 
   return (
-    // <BrowserRouter>
-    //   <AuthContextProvider>
-    //     <ThemeContextProvider>
     <div className={isDark ? "dark" : ""}>
       <Navbar />
       <h1 className="dark:bg-dark-background text-light-text">Ecommerce</h1>
@@ -25,9 +20,6 @@ const App = () => {
         <Route path="/login" element={<LoginView />} />
       </Routes>
     </div>
-    //     </ThemeContextProvider>
-    //   </AuthContextProvider>
-    // </BrowserRouter>
   );
 };
 

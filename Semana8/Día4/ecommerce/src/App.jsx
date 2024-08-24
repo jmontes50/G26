@@ -9,26 +9,25 @@ import LoginView from "./views/LoginView";
 import Navbar from "./components/ui/Navbar";
 
 const App = () => {
-
   const { isDark } = useContext(ThemeContext);
-  console.log(isDark)
+  console.log(isDark);
 
   return (
-    <BrowserRouter>
-      <AuthContextProvider>
-        <ThemeContextProvider>
-          <div className={ isDark ? 'dark' : '' }>
-            <Navbar />
-            <h1 className="dark:bg-dark-background text-light-text">Ecommerce</h1>
-            <Link to="/login">Ir a Login</Link>
-            <Routes>
-              <Route path="/" element={<HomeView />} />
-              <Route path="/login" element={<LoginView />} />
-            </Routes>
-          </div>
-        </ThemeContextProvider>
-      </AuthContextProvider>
-    </BrowserRouter>
+    // <BrowserRouter>
+    //   <AuthContextProvider>
+    //     <ThemeContextProvider>
+    <div className={isDark ? "dark" : ""}>
+      <Navbar />
+      <h1 className="dark:bg-dark-background text-light-text">Ecommerce</h1>
+      <Link to="/login">Ir a Login</Link>
+      <Routes>
+        <Route path="/" element={<HomeView />} />
+        <Route path="/login" element={<LoginView />} />
+      </Routes>
+    </div>
+    //     </ThemeContextProvider>
+    //   </AuthContextProvider>
+    // </BrowserRouter>
   );
 };
 

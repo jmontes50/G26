@@ -37,12 +37,12 @@ module.exports = {
 Crea un archivo `index.css` en la carpeta `src` (si no existe ya) y añade las siguientes líneas para importar las capas base, components y utilities de Tailwind:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 ```
 
-Luego, asegúrate de importar `index.css` en tu `index.js` o `index.jsx`:
+Luego, asegúrate de importar `index.css`.
 
 ```javascript
 import './index.css';

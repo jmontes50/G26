@@ -19,9 +19,17 @@ const AuthContextProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    onAuthStateChanged(auth, (dataUser) => {
-      console.log("escuchando usuario:",dataUser)
+    const desuscribir = onAuthStateChanged(auth, (dataUser) => {
+      //en el argumento del callback obtendremos la información del usuario
+      //En el caso de que no este logueado ningún usuario dataUser será igual a null
+      // console.log("escuchando usuario:",dataUser)
+      setUser(dataUser);
     });
+
+    return () => {
+      //y esto se ejecutará cuando el componente se destruya
+      desuscribir();
+    }
   }, [])
 
   return (<AuthContext.Provider value={{user, loginWithGoogle}}>

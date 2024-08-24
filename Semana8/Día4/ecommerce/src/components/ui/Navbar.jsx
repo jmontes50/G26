@@ -7,12 +7,10 @@ const Navbar = () => {
   return (
     <nav className="dark:bg-dark-background dark:text-dark-text">
       {/* container */}
-      <div className="px-4 mx-auto lg:px-8 xl:max-w-7xl">
+      <div className="container">
         <div className="flex justify-between py-4">
           {/* logo */}
-          <div className="flex items-center">
-            Logo
-          </div>
+          <div className="flex items-center">Logo</div>
           {/* ul */}
           <ul className="flex items-center justify-center gap-10">
             <li>Inicio</li>
@@ -20,11 +18,13 @@ const Navbar = () => {
             <li>Carrito</li>
           </ul>
           {/* div con otros items */}
-          
+          <div className="flex items-center justify-end gap-4">
+            <button className="btn btn-primary" onClick={toggleDarkMode}>
+              Tema {isDark ? "claro" : "oscuro"}
+            </button>
+            <button className="btn btn-primary">Login</button>
+          </div>
         </div>
-        <button className="btn btn-primary" onClick={toggleDarkMode}>
-          Cambiar Tema {isDark ? "claro" : "oscuro"}
-        </button>
       </div>
     </nav>
   );

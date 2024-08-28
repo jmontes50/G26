@@ -5,7 +5,7 @@ import HomeView from "./views/HomeView";
 import LoginView from "./views/LoginView";
 import ProductsView from "./views/ProductsView";
 import DetailView from "./views/DetailView";
-import CartView from "./views/CartViewView";
+import CartView from "./views/CartView";
 // components
 import Navbar from "./components/ui/Navbar";
 

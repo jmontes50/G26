@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const handleOpen = () => {
     setOpen(!open);
-  }
+  };
 
   return (
     <nav className="dark:bg-dark-background dark:text-dark-text">
@@ -37,10 +37,7 @@ const Navbar = () => {
           </div>
           {/* responsive */}
           <div className="lg:hidden">
-            <button 
-              className="btn btn-primary"
-              onClick={handleOpen}
-            >
+            <button className="btn btn-primary" onClick={handleOpen}>
               <i className="fa-solid fa-bars"></i>
             </button>
           </div>
@@ -58,9 +55,23 @@ const Navbar = () => {
         >
           <div className="overflow-hidden lg:hidden">
             <nav className="flex flex-col gap-2 py-4 border-t border-gray-200">
-              <a className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600">
+              <a className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white">
                 Inicio
               </a>
+              <a className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white">
+                Productos
+              </a>
+              <a className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white">
+                Carrito
+              </a>
+              <button className="btn btn-secondary" onClick={toggleDarkMode}>
+                {isDark ? (
+                  <i className="fa-regular fa-sun"></i>
+                ) : (
+                  <i className="fa-regular fa-moon"></i>
+                )}
+              </button>
+              <button className="btn btn-primary">Login</button>
             </nav>
           </div>
         </Transition>

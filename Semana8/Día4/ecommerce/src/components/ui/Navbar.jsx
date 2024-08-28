@@ -39,6 +39,7 @@ const Navbar = () => {
           <div className="lg:hidden">
             <button 
               className="btn btn-primary"
+              onClick={handleOpen}
             >
               <i className="fa-solid fa-bars"></i>
             </button>

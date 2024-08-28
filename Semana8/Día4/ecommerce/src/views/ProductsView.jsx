@@ -1,15 +1,19 @@
+import { useState } from "react";
 import useGetAxios from "../hooks/useGetAxios"
 
 const ProductsView = () => {
-  const URL = "https://json-server-vercel-eosin-tau.vercel.app/products"
+  const [page, setPage] = useState(1);
+  const URL = `https://json-server-vercel-eosin-tau.vercel.app/products?_page=${page}`
   const { data, loading, error } = useGetAxios(URL);
-  
-  console.log("data", data)
-  console.log("loading", loading)
-  console.log("error", error)
+
+  // console.log(data)
+  // console.log("loading", loading)
+  // console.log("error", error)
 
   return (
-    <div>ProductsView</div>
+    <div>ProductsView
+      <button onClick={() => {setPage(page + 1)}}>Ver más</button>
+    </div>
   )
 }
 

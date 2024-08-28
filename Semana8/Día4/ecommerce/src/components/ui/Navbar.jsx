@@ -1,8 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { Transition } from "@headlessui/react";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   const { isDark, toggleDarkMode } = useContext(ThemeContext);
+
+  const handleOpen = () => {
+    setOpen(!open);
+  }
 
   return (
     <nav className="dark:bg-dark-background dark:text-dark-text">
@@ -12,13 +19,13 @@ const Navbar = () => {
           {/* logo */}
           <div className="flex items-center">Logo</div>
           {/* ul */}
-          <ul className="flex items-center justify-center gap-10">
+          <ul className="items-center justify-center hidden gap-10 lg:flex">
             <li>Inicio</li>
             <li>Productos</li>
             <li>Carrito</li>
           </ul>
           {/* div con otros items */}
-          <div className="flex items-center justify-end gap-4">
+          <div className="items-center justify-end hidden gap-4 lg:flex">
             <button className="btn btn-secondary" onClick={toggleDarkMode}>
               {isDark ? (
                 <i className="fa-regular fa-sun"></i>
@@ -29,7 +36,7 @@ const Navbar = () => {
             <button className="btn btn-primary">Login</button>
           </div>
           {/* responsive */}
-          <div className="">
+          <div className="lg:hidden">
             <button 
               className="btn btn-primary"
             >
@@ -37,6 +44,8 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+        {/* mobile */}
+
       </div>
     </nav>
   );

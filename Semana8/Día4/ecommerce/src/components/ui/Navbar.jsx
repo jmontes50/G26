@@ -55,7 +55,13 @@ const Navbar = () => {
           leaveFrom="max-h-screen opacity-100"
           leaveTo="max-h-0 opacity-0"
         >
-          
+          <div className="overflow-hidden lg:hidden">
+            <nav className="flex flex-col gap-2 py-4 border-t border-gray-200">
+              <a className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600">
+                Inicio
+              </a>
+            </nav>
+          </div>
         </Transition>
       </div>
     </nav>

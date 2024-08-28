@@ -28,6 +28,14 @@ const Navbar = () => {
             </button>
             <button className="btn btn-primary">Login</button>
           </div>
+          {/* responsive */}
+          <div className="">
+            <button 
+              className="btn btn-primary"
+            >
+              <i className="fa-solid fa-bars"></i>
+            </button>
+          </div>
         </div>
       </div>
     </nav>

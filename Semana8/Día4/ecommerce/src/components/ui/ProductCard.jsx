@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const ProductCard = ({ product }) => {
   const { id, nombre, descripcion, precio, precio_oferta, imagen } = product;
   return (
-    <div className="flex flex-col max-w-lg gap-2">
+    <Link to={`/detail/${id}`} className="flex flex-col max-w-lg gap-2">
       {/* contedor imagen */}
       <div className="object-cover w-full overflow-hidden aspect-auto">
         <img src={imagen} alt={`foto ${nombre}`} className="w-full"/>
@@ -14,7 +16,7 @@ const ProductCard = ({ product }) => {
           S/ {precio.toFixed(2)}
         </span>
       </div>
-    </div>
+    </Link>
   );
 };
 

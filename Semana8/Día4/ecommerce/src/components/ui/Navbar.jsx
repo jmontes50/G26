@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { Transition } from "@headlessui/react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -20,9 +21,9 @@ const Navbar = () => {
           <div className="flex items-center">Logo</div>
           {/* ul */}
           <ul className="items-center justify-center hidden gap-10 lg:flex">
-            <li>Inicio</li>
-            <li>Productos</li>
-            <li>Carrito</li>
+            <li><Link to="/">Inicio</Link></li>
+            <li><Link to="/products">Productos</Link></li>
+            <li><Link to="/cart">Carrito</Link></li>
           </ul>
           {/* div con otros items */}
           <div className="items-center justify-end hidden gap-4 lg:flex">
@@ -33,7 +34,7 @@ const Navbar = () => {
                 <i className="fa-regular fa-moon"></i>
               )}
             </button>
-            <button className="btn btn-primary">Login</button>
+            <Link to='/login' className="btn btn-primary">Login</Link>
           </div>
           {/* responsive */}
           <div className="lg:hidden">
@@ -55,15 +56,15 @@ const Navbar = () => {
         >
           <div className="overflow-hidden lg:hidden">
             <nav className="flex flex-col gap-2 py-4 border-t border-gray-200">
-              <a className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white">
+              <Link to="/" className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white">
                 Inicio
-              </a>
-              <a className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white">
+              </Link>
+              <Link to="/products" className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white">
                 Productos
-              </a>
-              <a className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white">
+              </Link>
+              <Link to="/cart" className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white">
                 Carrito
-              </a>
+              </Link>
               <button className="btn btn-secondary" onClick={toggleDarkMode}>
                 {isDark ? (
                   <i className="fa-regular fa-sun"></i>
@@ -71,7 +72,7 @@ const Navbar = () => {
                   <i className="fa-regular fa-moon"></i>
                 )}
               </button>
-              <button className="btn btn-primary">Login</button>
+              <Link to="/login" className="btn btn-primary">Login</Link>
             </nav>
           </div>
         </Transition>

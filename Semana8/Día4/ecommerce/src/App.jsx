@@ -8,7 +8,7 @@ import Navbar from "./components/ui/Navbar";
 
 const App = () => {
   const { isDark } = useContext(ThemeContext);
-  console.log(isDark);
+  // console.log(isDark);
 
   return (
     <div className={isDark ? "dark" : ""}>

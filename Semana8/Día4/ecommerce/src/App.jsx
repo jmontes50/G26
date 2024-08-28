@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { ThemeContext } from "./contexts/ThemeContext";
 import HomeView from "./views/HomeView";
 import LoginView from "./views/LoginView";
@@ -16,15 +16,15 @@ const App = () => {
   return (
     <div className={isDark ? "dark" : ""}>
       <Navbar />
-      <h1 className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text">Ecommerce</h1>
-      <Link to="/login">Ir a Login</Link>
-      <Routes>
-        <Route path="/" element={<HomeView />} />
-        <Route path="/login" element={<LoginView />} />
-        <Route path="/products" element={<ProductsView />} />
-        <Route path="/detail/:id" element={<DetailView />} />
-        <Route path="/cart" element={<CartView />} />
-      </Routes>
+      <div className="min-h-screen dark:bg-dark-background dark:text-dark-text">
+        <Routes>
+          <Route path="/" element={<HomeView />} />
+          <Route path="/login" element={<LoginView />} />
+          <Route path="/products" element={<ProductsView />} />
+          <Route path="/detail/:id" element={<DetailView />} />
+          <Route path="/cart" element={<CartView />} />
+        </Routes>
+      </div>
     </div>
   );
 };

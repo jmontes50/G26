@@ -3,6 +3,9 @@ import { Routes, Route, Link } from "react-router-dom";
 import { ThemeContext } from "./contexts/ThemeContext";
 import HomeView from "./views/HomeView";
 import LoginView from "./views/LoginView";
+import ProductsView from "./views/ProductsView";
+import DetailView from "./views/DetailView";
+import CartView from "./views/CartViewView";
 // components
 import Navbar from "./components/ui/Navbar";
 
@@ -18,6 +21,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomeView />} />
         <Route path="/login" element={<LoginView />} />
+        <Route path="/products" element={<ProductsView />} />
+        <Route path="/detail/:id" element={<DetailView />} />
+        <Route path="/cart" element={<CartView />} />
       </Routes>
     </div>
   );

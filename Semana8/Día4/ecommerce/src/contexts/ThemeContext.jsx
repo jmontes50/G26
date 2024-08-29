@@ -13,6 +13,8 @@ const ThemeContextProvider = ({ children }) => {
     localStorage.setItem("darkMode", newDarkMode);
   };
 
+  //codigo operaciones
+
   useEffect(() => {
     // console.log(typeof localStorage.getItem("darkMode")); //es un string
     const isDarkLS = localStorage.getItem("darkMode") === "true"; //al compararlo a "true" me daria un booleano

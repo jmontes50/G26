@@ -34,9 +34,9 @@ const DetailView = () => {
               </div>
               <p className="">{data.descripcion}</p>
             </div>
-            {/* detalles */}
+            
           </div>
-
+          {/* detalles */}
           <div className="pt-5 border-t-2 border-slate-300">
             <h4 className="mb-5 text-xl font-semibold">Detalles</h4>
             <p>{data.detalles}</p>

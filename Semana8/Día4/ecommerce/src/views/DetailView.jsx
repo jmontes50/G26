@@ -1,16 +1,25 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { useParams } from "react-router-dom";
 import useGetAxios from "../hooks/useGetAxios";
 import Stars from "../components/ui/Stars";
 
 const DetailView = () => {
+  const [quantity, setQuantity] = useState(1);
+
   const { id } = useParams();
 
   const URL = "https://json-server-vercel-eosin-tau.vercel.app/products";
   const { data, loading, error } = useGetAxios(`${URL}/${id}`);
 
   const { cart, addProductToCart } = useContext(CartContext);
+
+  const incrementQty = () => setQuantity(quantity + 1);
+
+  const decrementQty = () => {
+    if (quantity === 1) return;
+    setQuantity(quantity - 1);
+  };
 
   return (
     <div className="container py-10">
@@ -40,13 +49,19 @@ const DetailView = () => {
               <div className="flex gap-4 mb-5">
                 {/* 1er botón */}
                 <div className="flex">
-                  <button className="p-4 border-y-2 border-s-2 border-slate-950 rounded-s-lg dark:border-white">
-                    <i class="fa-solid fa-minus"></i>
+                  <button
+                    className="p-4 border-y-2 border-s-2 border-slate-950 rounded-s-lg dark:border-white"
+                    onClick={decrementQty}
+                  >
+                    <i className="fa-solid fa-minus"></i>
                   </button>
                   <span className="p-4 border-y-2 border-slate-950 dark:border-white">
-                    1
+                    {quantity}
                   </span>
-                  <button className="p-4 border-y-2 border-e-2 border-slate-950 rounded-e-lg dark:border-white">
+                  <button
+                    className="p-4 border-y-2 border-e-2 border-slate-950 rounded-e-lg dark:border-white"
+                    onClick={incrementQty}
+                  >
                     <i className="fa-solid fa-plus"></i>
                   </button>
                 </div>
@@ -56,7 +71,6 @@ const DetailView = () => {
                 </button>
               </div>
             </div>
-            
           </div>
           {/* detalles */}
           <div className="pt-5 border-t-2 border-slate-300">

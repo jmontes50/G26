@@ -10,11 +10,22 @@ const DetailView = () => {
 
   return (
     <div className="container py-10">
-      {/* <h1 className="mb-10 text-4xl text-center">Productos</h1> */}
       {data ? (
-        <div className="flex">
+        <div className="flex gap-10">
+          {/* imagen */}
           <div className="w-1/2 aspect-auto md:w-full">
             <img src={data.imagen} alt={data.nombre} />
+          </div>
+          {/* resto de la data */}
+          <div className="w-1/2 md:w-full">
+            <h1 className="mb-5 text-3xl font-semibold">{data.nombre}</h1>
+            <div className="mb-5 text-xl">
+              <span className="me-2">{`S/ ${data.precio_oferta.toFixed(2)}`}</span>
+              <span className="line-through text-slate-600">{`S/ ${data.precio.toFixed(2)}`}</span>
+            </div>
+            <p className="">
+              {data.descripcion}
+            </p>
           </div>
         </div>
       ) : null}

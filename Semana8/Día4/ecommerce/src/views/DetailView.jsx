@@ -1,13 +1,16 @@
+import { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
 import { useParams } from "react-router-dom";
 import useGetAxios from "../hooks/useGetAxios";
 import Stars from "../components/ui/Stars";
 
 const DetailView = () => {
   const { id } = useParams();
-  console.log("id params", id);
+
   const URL = "https://json-server-vercel-eosin-tau.vercel.app/products";
   const { data, loading, error } = useGetAxios(`${URL}/${id}`);
-  console.log("data detailview", data);
+
+  const { cart, addProductToCart } = useContext(CartContext);
 
   return (
     <div className="container py-10">

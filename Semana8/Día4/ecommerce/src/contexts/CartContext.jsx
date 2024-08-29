@@ -9,7 +9,18 @@ const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addProductToCart = (product) => {
-    setCart([...cart, product]);
+    //1. necesitamos identificar si el producto existe
+    const exists = cart.findIndex(prod => prod.id === product.id);
+    // console.log("exists", exists);
+    //2. si es nuevo o sea -1, no pasa nada lo seguimos agregando como siempre
+    if(exists === -1) {
+      setCart([...cart, product]);
+    }else {
+    //3, si NO es nuevo solamente deberia cambiar la cantidad
+      const copyCart = [...cart];
+      copyCart[exists].cantidad = product.cantidad; //ya actualizamos la cantidad
+      setCart(copyCart);
+    }
   };
 
   const removeProductFromCart = (id) => {};

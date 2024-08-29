@@ -32,7 +32,22 @@ const DetailView = () => {
                   2
                 )}`}</span>
               </div>
-              <p className="">{data.descripcion}</p>
+              <p className="mb-5">{data.descripcion}</p>
+              {/* botones */}
+              <div className="flex mb-5">
+                {/* 1er botón */}
+                <div className="flex">
+                  <button className="p-4 border-y-2 border-s-2 border-slate-950 rounded-s-lg">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <span className="p-4 border-y-2 border-slate-950">
+                    1
+                  </span>
+                  <button className="p-4 border-y-2 border-e-2 border-slate-950 rounded-e-lg">
+                    <i className="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
             </div>
             
           </div>

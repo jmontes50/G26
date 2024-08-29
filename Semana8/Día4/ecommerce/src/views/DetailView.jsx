@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import useGetAxios from "../hooks/useGetAxios";
+import Stars from "../components/ui/Stars";
 
 const DetailView = () => {
   const { id } = useParams();
@@ -19,6 +20,9 @@ const DetailView = () => {
           {/* resto de la data */}
           <div className="w-1/2 md:w-full">
             <h1 className="mb-5 text-3xl font-semibold">{data.nombre}</h1>
+            <div className="mb-5">
+              <Stars rating={data.estrellas} />
+            </div>
             <div className="mb-5 text-xl">
               <span className="me-2">{`S/ ${data.precio_oferta.toFixed(2)}`}</span>
               <span className="line-through text-slate-600">{`S/ ${data.precio.toFixed(2)}`}</span>

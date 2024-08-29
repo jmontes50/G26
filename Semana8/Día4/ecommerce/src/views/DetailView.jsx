@@ -37,16 +37,20 @@ const DetailView = () => {
               <div className="flex gap-4 mb-5">
                 {/* 1er botón */}
                 <div className="flex">
-                  <button className="p-4 border-y-2 border-s-2 border-slate-950 rounded-s-lg">
+                  <button className="p-4 border-y-2 border-s-2 border-slate-950 rounded-s-lg dark:border-white">
                     <i class="fa-solid fa-minus"></i>
                   </button>
-                  <span className="p-4 border-y-2 border-slate-950">
+                  <span className="p-4 border-y-2 border-slate-950 dark:border-white">
                     1
                   </span>
-                  <button className="p-4 border-y-2 border-e-2 border-slate-950 rounded-e-lg">
+                  <button className="p-4 border-y-2 border-e-2 border-slate-950 rounded-e-lg dark:border-white">
                     <i className="fa-solid fa-plus"></i>
                   </button>
                 </div>
+                {/* 2do */}
+                <button className="btn btn-primary grow">
+                  Añadir al carrito
+                </button>
               </div>
             </div>
             

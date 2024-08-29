@@ -3,6 +3,7 @@ import { CartContext } from "../contexts/CartContext";
 import { useParams } from "react-router-dom";
 import useGetAxios from "../hooks/useGetAxios";
 import Stars from "../components/ui/Stars";
+import { toast } from "react-toastify";
 
 const DetailView = () => {
   const [quantity, setQuantity] = useState(1);
@@ -21,11 +22,14 @@ const DetailView = () => {
     setQuantity(quantity - 1);
   };
 
+  const notify = () => toast(`Se agregó ${data.nombre} al Carrito!`, { position: "bottom-right" });
+
   //la idea es que esta función reciba el producto, con su id, nombre,
   const handleProductToCart = (product) => {
     const productWithQty = { ...product, cantidad: quantity };
     // console.log("productWithQty", productWithQty);
     addProductToCart(productWithQty);
+    notify();
   };
 
   return (

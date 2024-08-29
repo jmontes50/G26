@@ -34,7 +34,7 @@ const DetailView = () => {
               </div>
               <p className="mb-5">{data.descripcion}</p>
               {/* botones */}
-              <div className="flex mb-5">
+              <div className="flex gap-4 mb-5">
                 {/* 1er botón */}
                 <div className="flex">
                   <button className="p-4 border-y-2 border-s-2 border-slate-950 rounded-s-lg">

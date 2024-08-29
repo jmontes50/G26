@@ -21,6 +21,13 @@ const DetailView = () => {
     setQuantity(quantity - 1);
   };
 
+  //la idea es que esta función reciba el producto, con su id, nombre,
+  const handleProductToCart = (product) => {
+    const productWithQty = { ...product, cantidad: quantity };
+    // console.log("productWithQty", productWithQty);
+    addProductToCart(productWithQty);
+  };
+
   return (
     <div className="container py-10">
       {data ? (
@@ -66,7 +73,12 @@ const DetailView = () => {
                   </button>
                 </div>
                 {/* 2do */}
-                <button className="btn btn-primary grow">
+                <button
+                  className="btn btn-primary grow"
+                  onClick={() => {
+                    handleProductToCart(data);
+                  }}
+                >
                   Añadir al carrito
                 </button>
               </div>

@@ -8,7 +8,9 @@ const CartContextProvider = ({ children }) => {
   //tendremos un estado para guardar los items del carrito
   const [cart, setCart] = useState([]);
 
-  const addProductToCart = (product) => {};
+  const addProductToCart = (product) => {
+    setCart([...cart, product]);
+  };
 
   const removeProductFromCart = (id) => {};
 

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ThemeContext } from "./contexts/ThemeContext";
+import { ToastContainer } from "react-toastify";
 import HomeView from "./views/HomeView";
 import LoginView from "./views/LoginView";
 import ProductsView from "./views/ProductsView";
@@ -8,6 +9,8 @@ import DetailView from "./views/DetailView";
 import CartView from "./views/CartView";
 // components
 import Navbar from "./components/ui/Navbar";
+//css
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const App = () => {
   const { isDark } = useContext(ThemeContext);
@@ -25,6 +28,7 @@ const App = () => {
           <Route path="/cart" element={<CartView />} />
         </Routes>
       </div>
+      <ToastContainer />
     </div>
   );
 };

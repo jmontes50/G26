@@ -7,6 +7,7 @@ const CartView = () => {
         <div className="w-full p-5 md:w-2/3">Tabla</div>
         {/* subtotal y confirmar compra */}
         <div className="w-full p-5 md:w-1/3">
+          {/* Subtotal */}
           <div className="flex justify-between mb-5 font-semibold">
             <span>Subtotal</span>
             <span>S/ 200</span>
@@ -23,6 +24,16 @@ const CartView = () => {
                 Aplicar
               </button>
             </div>
+          </div>
+          {/* delivery */}
+          <div className="flex justify-between mb-5 font-normal">
+            <span>Delivery</span>
+            <span>S/ 200</span>
+          </div>
+          {/* total */}
+          <div className="flex justify-between mb-5 font-semibold">
+            <span>TOTAL</span>
+            <span>S/ 200</span>
           </div>
         </div>
       </div>

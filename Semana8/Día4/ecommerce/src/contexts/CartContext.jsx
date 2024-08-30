@@ -23,7 +23,10 @@ const CartContextProvider = ({ children }) => {
     }
   };
 
-  const removeProductFromCart = (id) => {};
+  const removeProductFromCart = (id) => {
+    const filteredCart = cart.filter((product) => product.id !== id);
+    setCart(filteredCart);
+  };
 
   const totalCart = 0;
 

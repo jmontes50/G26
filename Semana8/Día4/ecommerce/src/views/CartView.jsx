@@ -6,7 +6,7 @@ import TableCart from "../components/Cart/TableCart";
 const CartView = () => {
   const headings = ["id", "nombre", "precio", "cantidad"];
 
-  const { cart } = useContext(CartContext);
+  const { cart, removeProductFromCart } = useContext(CartContext);
 
   return (
     <div className="container py-10">
@@ -25,7 +25,7 @@ const CartView = () => {
             </TabList>
             <TabPanels>
               <TabPanel>
-                <TableCart headings={headings} data={cart} actions={true} />
+                <TableCart headings={headings} data={cart} actions={true} handleDelete={removeProductFromCart} />
               </TabPanel>
               <TabPanel>Form Envio</TabPanel>
             </TabPanels>

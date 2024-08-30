@@ -1,4 +1,4 @@
-const TableCart = ({ headings, data, actions }) => {
+const TableCart = ({ headings, data, actions, handleDelete }) => {
   return (
     <table className="w-full">
       <thead className="text-xs text-gray-700 uppercase">
@@ -21,7 +21,12 @@ const TableCart = ({ headings, data, actions }) => {
             ))}
             {actions ? (
               <td className="px-6 py-4">
-                <button className="p-1 border rounded hover:text-red-600">
+                <button 
+                  className="p-1 border rounded hover:text-red-600" 
+                  onClick={() => {
+                    handleDelete(item.id)
+                  }}
+                >
                   <i className="fa-solid fa-trash"></i>
                 </button>
               </td>

@@ -3,7 +3,7 @@ const RegisterView = () => {
     <div className="w-full">
       <div className="flex flex-col min-h-screen md:flex-row">
         {/* imagen */}
-        <div className="w-full max-h-screen overflow-hidden bg-yellow-400 md:w-7/12">
+        <div className="flex items-center justify-center w-full max-h-screen overflow-hidden bg-yellow-400 md:w-7/12">
           <img
             className="object-cover object-center w-full"
             alt="foto"

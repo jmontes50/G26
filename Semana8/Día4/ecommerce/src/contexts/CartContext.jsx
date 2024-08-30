@@ -41,7 +41,7 @@ const CartContextProvider = ({ children }) => {
   //en el value indicamos que vamos a compartir
   return (
     <CartContext.Provider
-      value={{ cart, addProductToCart, removeProductFromCart, totalCart }}
+      value={{ cart, addProductToCart, removeProductFromCart, totalCart, cantTotal }}
     >
       {children}
     </CartContext.Provider>

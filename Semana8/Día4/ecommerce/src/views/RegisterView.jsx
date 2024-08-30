@@ -17,6 +17,7 @@ const RegisterView = () => {
           </div>
           {/* input */}
           <form className="mt-8 space-y-6">
+            {/* input */}
             <div className="space-y-4 rounded-md shadow-md">
               <div>
                 <label
@@ -31,6 +32,37 @@ const RegisterView = () => {
                   className="w-full px-3 py-1.5 border rounded-md"
                   placeholder="email@dominio.com"
                 />
+              </div>
+            </div>
+             {/* password */}
+             <div className="space-y-4 rounded-md shadow-md">
+              <div>
+                <label
+                  htmlFor="password"
+                  className="text-xs font-light text-gray-500"
+                >
+                  Contraseña
+                </label>
+                <input
+                  id="password"
+                  type="password"
+                  className="w-full px-3 py-1.5 border rounded-md"
+                  placeholder="Indique su contraseña"
+                />
+              </div>
+            </div>
+            {/* botón */}
+            <div className="space-y-4 rounded-md shadow-md">
+              <button className="w-full btn btn-primary">
+                Registrarme
+              </button>
+            </div>
+            <div className="space-y-4 text-center">
+              <span className="block text-gray-400">O continua con Google</span>
+            </div>
+            <div className="space-y-4 rounded-md shadow-md">
+              <div className="p-2 text-center border-2 border-black rounded-md">
+                Google
               </div>
             </div>
           </form>

@@ -1,10 +1,27 @@
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+
 const CartView = () => {
   return (
     <div className="container py-10">
       <h1 className="mb-5 text-4xl font-semibold text-center">Checkout</h1>
       <div className="flex flex-col w-full gap-5 md:flex-row">
         {/* contenedor tabla y form envio */}
-        <div className="w-full p-5 md:w-2/3">Tabla</div>
+        <div className="w-full p-5 md:w-2/3">
+          <TabGroup>
+            <TabList>
+              <Tab className="data-[selected]:bg-slate-600 data-[selected]:text-white px-2 py-1.5 ">
+                Productos
+              </Tab>
+              <Tab className="data-[selected]:bg-slate-600 data-[selected]:text-white px-2 py-1.5 ">
+                Información de envio
+              </Tab>
+            </TabList>
+            <TabPanels>
+              <TabPanel>Tabla</TabPanel>
+              <TabPanel>Form Envio</TabPanel>
+            </TabPanels>
+          </TabGroup>
+        </div>
         {/* subtotal y confirmar compra */}
         <div className="w-full p-5 md:w-1/3">
           {/* Subtotal */}

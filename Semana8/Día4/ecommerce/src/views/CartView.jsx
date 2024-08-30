@@ -4,8 +4,7 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import TableCart from "../components/Cart/TableCart";
 
 const CartView = () => {
-
-  const headings = ['id','nombre', 'precio','cantidad'];
+  const headings = ["id", "nombre", "precio", "cantidad"];
 
   const { cart } = useContext(CartContext);
 
@@ -26,7 +25,7 @@ const CartView = () => {
             </TabList>
             <TabPanels>
               <TabPanel>
-                <TableCart headings={headings} data={cart} actions={true}/>
+                <TableCart headings={headings} data={cart} actions={true} />
               </TabPanel>
               <TabPanel>Form Envio</TabPanel>
             </TabPanels>

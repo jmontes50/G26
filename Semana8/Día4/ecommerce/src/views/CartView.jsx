@@ -1,6 +1,10 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import TableCart from "../components/Cart/TableCart";
 
 const CartView = () => {
+
+  const headings = ['id','nombre', 'precio','cantidad'];
+
   return (
     <div className="container py-10">
       <h1 className="mb-5 text-4xl font-semibold text-center">Checkout</h1>
@@ -17,7 +21,9 @@ const CartView = () => {
               </Tab>
             </TabList>
             <TabPanels>
-              <TabPanel>Tabla</TabPanel>
+              <TabPanel>
+                <TableCart headings={headings} />
+              </TabPanel>
               <TabPanel>Form Envio</TabPanel>
             </TabPanels>
           </TabGroup>

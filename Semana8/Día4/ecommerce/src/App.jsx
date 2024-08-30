@@ -7,6 +7,7 @@ import LoginView from "./views/LoginView";
 import ProductsView from "./views/ProductsView";
 import DetailView from "./views/DetailView";
 import CartView from "./views/CartView";
+import RegisterView from "./views/RegisterView";
 // components
 import Navbar from "./components/ui/Navbar";
 //css
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/products" element={<ProductsView />} />
           <Route path="/detail/:id" element={<DetailView />} />
           <Route path="/cart" element={<CartView />} />
+          <Route path="/register" element={<RegisterView />} />
         </Routes>
       </div>
       <ToastContainer />

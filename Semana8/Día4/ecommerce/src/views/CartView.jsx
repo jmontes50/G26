@@ -1,9 +1,15 @@
+import { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import TableCart from "../components/Cart/TableCart";
 
 const CartView = () => {
 
   const headings = ['id','nombre', 'precio','cantidad'];
+
+  const { cart } = useContext(CartContext);
+
+  console.log(cart)
 
   return (
     <div className="container py-10">

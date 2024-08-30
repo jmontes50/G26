@@ -10,13 +10,13 @@ const CartContextProvider = ({ children }) => {
 
   const addProductToCart = (product) => {
     //1. necesitamos identificar si el producto existe
-    const exists = cart.findIndex(prod => prod.id === product.id);
+    const exists = cart.findIndex((prod) => prod.id === product.id);
     // console.log("exists", exists);
     //2. si es nuevo o sea -1, no pasa nada lo seguimos agregando como siempre
-    if(exists === -1) {
+    if (exists === -1) {
       setCart([...cart, product]);
-    }else {
-    //3, si NO es nuevo solamente deberia cambiar la cantidad
+    } else {
+      //3, si NO es nuevo solamente deberia cambiar la cantidad
       const copyCart = [...cart];
       copyCart[exists].cantidad = product.cantidad; //ya actualizamos la cantidad
       setCart(copyCart);
@@ -28,7 +28,15 @@ const CartContextProvider = ({ children }) => {
     setCart(filteredCart);
   };
 
-  const totalCart = 0;
+  const totalCart = cart.reduce(
+    (acumulator, prod) => acumulator + prod.cantidad * prod.precio,
+    0
+  );
+
+  const cantTotal = art.reduce(
+    (acumulator, prod) => acumulator + prod.cantidad,
+    0
+  );
 
   //en el value indicamos que vamos a compartir
   return (
@@ -40,7 +48,4 @@ const CartContextProvider = ({ children }) => {
   );
 };
 
-export {
-  CartContext,
-  CartContextProvider
-}
+export { CartContext, CartContextProvider };

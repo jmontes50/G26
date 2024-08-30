@@ -11,6 +11,30 @@ const RegisterView = () => {
           />
         </div>
         {/* form registro */}
+        <div className="flex flex-col items-center justify-center w-full p-8 md:w-5/12">
+          <div className="w-full max-w-md space-y-8 text-center">
+            <h2 className="mt-6 text-3xl font-bold">Registrate</h2>
+          </div>
+          {/* input */}
+          <form className="mt-8 space-y-6">
+            <div className="space-y-4 rounded-md shadow-md">
+              <div>
+                <label
+                  htmlFor="email"
+                  className="text-xs font-light text-gray-500"
+                >
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  className="w-full px-3 py-1.5 border rounded-md"
+                  placeholder="email@dominio.com"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import TableCart from "../components/Cart/TableCart";
 const CartView = () => {
   const headings = ["id", "nombre", "precio", "cantidad"];
 
-  const { cart, removeProductFromCart } = useContext(CartContext);
+  const { cart, removeProductFromCart, totalCart } = useContext(CartContext);
 
   return (
     <div className="container py-10">
@@ -36,7 +36,7 @@ const CartView = () => {
           {/* Subtotal */}
           <div className="flex justify-between mb-5 font-semibold">
             <span>Subtotal</span>
-            <span>S/ 200</span>
+            <span>S/ {totalCart.toFixed(2)}</span>
           </div>
           {/* descuento */}
           <div className="mb-5">
@@ -54,12 +54,12 @@ const CartView = () => {
           {/* delivery */}
           <div className="flex justify-between mb-5 font-normal">
             <span>Delivery</span>
-            <span>S/ 200</span>
+            <span>S/ 10</span>
           </div>
           {/* total */}
           <div className="flex justify-between mb-5 font-semibold">
             <span>TOTAL</span>
-            <span>S/ 200</span>
+            <span>S/ {(totalCart + 10).toFixed(2)}</span>
           </div>
           <button className="w-full p-5 text-center text-white rounded-lg bg-slate-950 dark:bg-white dark:text-black">
             Confirmar Pago

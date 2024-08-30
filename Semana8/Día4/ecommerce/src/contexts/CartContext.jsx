@@ -33,7 +33,7 @@ const CartContextProvider = ({ children }) => {
     0
   );
 
-  const cantTotal = art.reduce(
+  const cantTotal = cart.reduce(
     (acumulator, prod) => acumulator + prod.cantidad,
     0
   );

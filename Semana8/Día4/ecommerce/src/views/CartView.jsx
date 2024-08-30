@@ -26,7 +26,7 @@ const CartView = () => {
             </TabList>
             <TabPanels>
               <TabPanel>
-                <TableCart headings={headings} data={cart} />
+                <TableCart headings={headings} data={cart} actions={true}/>
               </TabPanel>
               <TabPanel>Form Envio</TabPanel>
             </TabPanels>

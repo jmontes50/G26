@@ -15,8 +15,17 @@ const TableCart = ({ headings, data, actions }) => {
         {data.map((item) => (
           <tr key={item.id} className="text-center bg-gray-100 border-b-2">
             {headings.map((text, i) => (
-              <td key={i} className="px-6 py-4">{item[text]}</td>
+              <td key={i} className="px-6 py-4">
+                {item[text]}
+              </td>
             ))}
+            {actions ? (
+              <td className="px-6 py-4">
+                <button className="p-1 border rounded hover:text-red-600">
+                  <i className="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            ) : null}
           </tr>
         ))}
       </tbody>

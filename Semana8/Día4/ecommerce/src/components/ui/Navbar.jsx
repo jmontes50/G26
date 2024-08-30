@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { CartContext } from "../../contexts/CartContext";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 
@@ -7,6 +8,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const { isDark, toggleDarkMode } = useContext(ThemeContext);
+  const { cantTotal } = useContext(CartContext);
 
   const handleOpen = () => {
     setOpen(!open);
@@ -21,9 +23,20 @@ const Navbar = () => {
           <div className="flex items-center">Logo</div>
           {/* ul */}
           <ul className="items-center justify-center hidden gap-10 lg:flex">
-            <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/products">Productos</Link></li>
-            <li><Link to="/cart">Carrito</Link></li>
+            <li>
+              <Link to="/">Inicio</Link>
+            </li>
+            <li>
+              <Link to="/products">Productos</Link>
+            </li>
+            <li className="relative">
+              <Link to="/cart">Carrito</Link>
+              {cantTotal > 0 ? (
+                <span className="p-0.5 rounded-full bg-yellow-400 text-xs absolute -top-1 -right-4 block w-5 text-center font-bold">
+                  {cantTotal}
+                </span>
+              ) : null}
+            </li>
           </ul>
           {/* div con otros items */}
           <div className="items-center justify-end hidden gap-4 lg:flex">
@@ -34,7 +47,9 @@ const Navbar = () => {
                 <i className="fa-regular fa-moon"></i>
               )}
             </button>
-            <Link to='/login' className="btn btn-primary">Login</Link>
+            <Link to="/login" className="btn btn-primary">
+              Login
+            </Link>
           </div>
           {/* responsive */}
           <div className="lg:hidden">
@@ -56,13 +71,22 @@ const Navbar = () => {
         >
           <div className="overflow-hidden lg:hidden">
             <nav className="flex flex-col gap-2 py-4 border-t border-gray-200">
-              <Link to="/" className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white">
+              <Link
+                to="/"
+                className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white"
+              >
                 Inicio
               </Link>
-              <Link to="/products" className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white">
+              <Link
+                to="/products"
+                className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white"
+              >
                 Productos
               </Link>
-              <Link to="/cart" className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white">
+              <Link
+                to="/cart"
+                className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 border rounded-lg dark:text-white"
+              >
                 Carrito
               </Link>
               <button className="btn btn-secondary" onClick={toggleDarkMode}>
@@ -72,7 +96,9 @@ const Navbar = () => {
                   <i className="fa-regular fa-moon"></i>
                 )}
               </button>
-              <Link to="/login" className="btn btn-primary">Login</Link>
+              <Link to="/login" className="btn btn-primary">
+                Login
+              </Link>
             </nav>
           </div>
         </Transition>

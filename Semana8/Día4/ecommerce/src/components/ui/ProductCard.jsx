@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
         <img src={imagen} alt={`foto ${nombre}`} className="w-full"/>
       </div>
       <h4 className="mt-2 font-semibold">{nombre}</h4>
-      <p>{descripcion}</p>
+      <p>{descripcion.substring(0, 40)} ...</p>
       <div className="flex gap-2 mt-auto">
         <span className="font-semibold">S/ {precio_oferta.toFixed(2)}</span>
         <span className="text-gray-500 line-through">

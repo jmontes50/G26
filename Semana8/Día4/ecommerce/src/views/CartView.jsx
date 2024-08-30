@@ -35,6 +35,9 @@ const CartView = () => {
             <span>TOTAL</span>
             <span>S/ 200</span>
           </div>
+          <button className="w-full p-5 text-center text-white rounded-lg bg-slate-950 dark:bg-white dark:text-black">
+            Confirmar Pago
+          </button>
         </div>
       </div>
     </div>

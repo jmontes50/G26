@@ -1,4 +1,16 @@
+import { useContext, useRef } from "react";
+import { AuthContext } from "../contexts/AuthContext";
+
 const RegisterView = () => {
+  const { register, loginWithGoogle } = useContext(AuthContext);
+  const inputEmail = useRef();
+  const inputPassword = useRef();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(inputEmail.current.value, inputPassword.current.value)
+  }
+
   return (
     <div className="w-full">
       <div className="flex flex-col min-h-screen md:flex-row">

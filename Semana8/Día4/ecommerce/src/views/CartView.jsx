@@ -35,21 +35,21 @@ const CartView = () => {
                     <label className="text-xs text-gray-500 text-light">
                       Nombre completo:
                     </label>
-                    <input type="text" placeholder="Juan Perez" />
+                    <input type="text" placeholder="Juan Perez" className="dark:text-dark-text dark:bg-dark-background"/>
                   </div>
                    {/* campo */}
                    <div className="flex flex-col mb-3">
                     <label className="text-xs text-gray-500 text-light">
                       Dirección:
                     </label>
-                    <input type="text" placeholder="Av. Calle. Jr. Dpto." />
+                    <input type="text" placeholder="Av. Calle. Jr. Dpto." className="dark:text-dark-text dark:bg-dark-background"/>
                   </div>
                    {/* campo */}
                    <div className="flex flex-col mb-3">
                     <label className="text-xs text-gray-500 text-light">
                       Teléfono:
                     </label>
-                    <input type="text" placeholder="9########" />
+                    <input type="text" placeholder="9########" className="dark:text-dark-text dark:bg-dark-background"/>
                   </div>
                 </form>
               </TabPanel>

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
+import { AuthContext } from "../contexts/AuthContext"
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { useForm } from "react-hook-form";
 import TableCart from "../components/Cart/TableCart";
@@ -8,7 +9,8 @@ const CartView = () => {
   const headings = ["id", "nombre", "precio", "cantidad"];
 
   const { cart, removeProductFromCart, totalCart } = useContext(CartContext);
-
+  const { user } = useContext(AuthContext);
+  // console.log(user);
   /**register para registrar los input,
    * handleSubmit, para manejar el submit
    * errors, para controlar las validaciones de los input registrados
@@ -59,6 +61,7 @@ const CartView = () => {
                       type="text"
                       placeholder="Juan Perez"
                       className="dark:text-dark-text dark:bg-dark-background"
+                      defaultValue={user.displayName}
                       // a cada input hay que registrarlo
                       {...register('nombreCompleto')}
                     />

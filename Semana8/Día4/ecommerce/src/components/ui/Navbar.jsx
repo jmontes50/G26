@@ -12,19 +12,19 @@ const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
   const { cantTotal } = useContext(CartContext);
 
-  console.log(user)
+  console.log(user);
 
   const handleOpen = () => {
     setOpen(!open);
   };
 
-  const handleLogout = async() => {
+  const handleLogout = async () => {
     try {
       await logout();
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   return (
     <nav className="dark:bg-dark-background dark:text-dark-text">
@@ -51,7 +51,7 @@ const Navbar = () => {
             </li>
           </ul>
           {/* div con otros items */}
-          <div className="items-center justify-end hidden gap-4 lg:flex">
+          <div className="items-center justify-end hidden gap-2 lg:flex">
             <button className="btn btn-secondary" onClick={toggleDarkMode}>
               {isDark ? (
                 <i className="fa-regular fa-sun"></i>
@@ -59,12 +59,21 @@ const Navbar = () => {
                 <i className="fa-regular fa-moon"></i>
               )}
             </button>
-            <Link to="/login" className="btn btn-primary">
-              Login
-            </Link>
+            {user === null ? (
+              <>
+                <Link to="/login" className="btn btn-primary">
+                  Login
+                </Link>
+                <Link to="/register" className="btn btn-primary">
+                  Registrate
+                </Link>
+              </>
+            ) : null}
             {user !== null ? (
-                <button className="btn btn-primary" onClick={handleLogout}>Cerrar sesión</button>
-              ) : null}
+              <button className="btn btn-primary" onClick={handleLogout}>
+                Cerrar sesión
+              </button>
+            ) : null}
           </div>
           {/* responsive */}
           <div className="lg:hidden">
@@ -115,7 +124,9 @@ const Navbar = () => {
                 Login
               </Link>
               {user !== null ? (
-                <button className="btn btn-primary" onClick={handleLogout}>Cerrar sesión</button>
+                <button className="btn btn-primary" onClick={handleLogout}>
+                  Cerrar sesión
+                </button>
               ) : null}
             </nav>
           </div>

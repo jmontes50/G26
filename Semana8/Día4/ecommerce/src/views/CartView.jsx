@@ -29,7 +29,29 @@ const CartView = () => {
               </TabPanel>
               <TabPanel>
                 {/* Formulario con hook forms */}
-                <input />
+                <form className="py-4">
+                  {/* campo */}
+                  <div className="flex flex-col mb-3">
+                    <label className="text-xs text-gray-500 text-light">
+                      Nombre completo:
+                    </label>
+                    <input type="text" placeholder="Juan Perez" />
+                  </div>
+                   {/* campo */}
+                   <div className="flex flex-col mb-3">
+                    <label className="text-xs text-gray-500 text-light">
+                      Dirección:
+                    </label>
+                    <input type="text" placeholder="Av. Calle. Jr. Dpto." />
+                  </div>
+                   {/* campo */}
+                   <div className="flex flex-col mb-3">
+                    <label className="text-xs text-gray-500 text-light">
+                      Teléfono:
+                    </label>
+                    <input type="text" placeholder="9########" />
+                  </div>
+                </form>
               </TabPanel>
             </TabPanels>
           </TabGroup>

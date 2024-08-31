@@ -10,7 +10,6 @@ const ProtectedRoute = ({children}) => {
     return <Navigate to='/login' replace={true} />
   }
 
-  //outlet va a ser el equivalente a children pero en forma de componente
   //<Titulo><p>va a renderizar el contenido del componente</p></Titulo>
   return children;
 }

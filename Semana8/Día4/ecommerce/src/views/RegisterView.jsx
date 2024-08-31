@@ -8,7 +8,15 @@ const RegisterView = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(inputEmail.current.value, inputPassword.current.value)
+    // console.log(inputEmail.current.value, inputPassword.current.value)
+    try {
+      const email = inputEmail.current.value;
+      const password = inputPassword.current.value;
+      const registered = await register(email, password);
+      console.log(registered);
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (

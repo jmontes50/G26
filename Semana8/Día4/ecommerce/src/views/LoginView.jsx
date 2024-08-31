@@ -15,9 +15,9 @@ const LoginView = () => {
       const email = inputEmail.current.value;
       const password = inputPassword.current.value;
       const loggued = await signIn(email, password);
-      if(loggued){
+      if (loggued) {
         //si se loguea que me lleve hacia el home
-        navigate('/');
+        navigate("/");
       }
     } catch (error) {
       console.log(error);
@@ -80,15 +80,20 @@ const LoginView = () => {
             </div>
             {/* botón */}
             <div className="space-y-4 rounded-md shadow-md">
-              <button className="w-full btn btn-primary">Ingresar</button>
+              <button type="submit" className="w-full btn btn-primary">
+                Ingresar
+              </button>
             </div>
             <div className="space-y-4 text-center">
               <span className="block text-gray-400">O continua con Google</span>
             </div>
             <div className="space-y-4 rounded-md shadow-md">
-              <div className="p-2 text-center border-2 border-black rounded-md">
+              <button
+                className="w-full p-2 text-center border-2 border-black rounded-md"
+                onClick={loginWithGoogle}
+              >
                 Google
-              </div>
+              </button>
             </div>
           </form>
         </div>

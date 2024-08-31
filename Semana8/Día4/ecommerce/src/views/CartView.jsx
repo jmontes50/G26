@@ -27,7 +27,10 @@ const CartView = () => {
               <TabPanel>
                 <TableCart headings={headings} data={cart} actions={true} handleDelete={removeProductFromCart} />
               </TabPanel>
-              <TabPanel>Form Envio</TabPanel>
+              <TabPanel>
+                {/* Formulario con hook forms */}
+                <input />
+              </TabPanel>
             </TabPanels>
           </TabGroup>
         </div>

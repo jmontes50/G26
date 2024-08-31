@@ -32,7 +32,8 @@ export default {
       }
     },
   },
-  plugins: [],
+  //va a traer clases listas para utilizar para forms
+  plugins: [require('@tailwindcss/forms')],
   // indicamos el modo dark
   darkMode: "class"
 }

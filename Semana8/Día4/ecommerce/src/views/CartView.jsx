@@ -1,12 +1,27 @@
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import { useForm } from "react-hook-form";
 import TableCart from "../components/Cart/TableCart";
 
 const CartView = () => {
   const headings = ["id", "nombre", "precio", "cantidad"];
 
   const { cart, removeProductFromCart, totalCart } = useContext(CartContext);
+
+  /**register para registrar los input,
+   * handleSubmit, para manejar el submit
+   * errors, para controlar las validaciones de los input registrados
+   */
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const getDataSubmit = (data) => {
+    console.log(data);
+  }
 
   return (
     <div className="container py-10">
@@ -25,31 +40,52 @@ const CartView = () => {
             </TabList>
             <TabPanels>
               <TabPanel>
-                <TableCart headings={headings} data={cart} actions={true} handleDelete={removeProductFromCart} />
+                <TableCart
+                  headings={headings}
+                  data={cart}
+                  actions={true}
+                  handleDelete={removeProductFromCart}
+                />
               </TabPanel>
               <TabPanel>
                 {/* Formulario con hook forms */}
-                <form className="py-4">
+                <form className="py-4" onSubmit={handleSubmit(getDataSubmit)} id="form-envio">
                   {/* campo */}
                   <div className="flex flex-col mb-3">
                     <label className="text-xs text-gray-500 text-light">
                       Nombre completo:
                     </label>
-                    <input type="text" placeholder="Juan Perez" className="dark:text-dark-text dark:bg-dark-background"/>
+                    <input
+                      type="text"
+                      placeholder="Juan Perez"
+                      className="dark:text-dark-text dark:bg-dark-background"
+                      // a cada input hay que registrarlo
+                      {...register('nombreCompleto')}
+                    />
                   </div>
-                   {/* campo */}
-                   <div className="flex flex-col mb-3">
+                  {/* campo */}
+                  <div className="flex flex-col mb-3">
                     <label className="text-xs text-gray-500 text-light">
                       Dirección:
                     </label>
-                    <input type="text" placeholder="Av. Calle. Jr. Dpto." className="dark:text-dark-text dark:bg-dark-background"/>
+                    <input
+                      type="text"
+                      placeholder="Av. Calle. Jr. Dpto."
+                      className="dark:text-dark-text dark:bg-dark-background"
+                      {...register('direccion')}
+                    />
                   </div>
-                   {/* campo */}
-                   <div className="flex flex-col mb-3">
+                  {/* campo */}
+                  <div className="flex flex-col mb-3">
                     <label className="text-xs text-gray-500 text-light">
                       Teléfono:
                     </label>
-                    <input type="text" placeholder="9########" className="dark:text-dark-text dark:bg-dark-background"/>
+                    <input
+                      type="text"
+                      placeholder="9########"
+                      className="dark:text-dark-text dark:bg-dark-background"
+                      {...register('telefono')}
+                    />
                   </div>
                 </form>
               </TabPanel>
@@ -86,7 +122,11 @@ const CartView = () => {
             <span>TOTAL</span>
             <span>S/ {(totalCart + 10).toFixed(2)}</span>
           </div>
-          <button className="w-full p-5 text-center text-white rounded-lg bg-slate-950 dark:bg-white dark:text-black">
+          {/* mediante el atributo form puedo indicar que un botón externo dispare el evento submit de una etiqueta form */}
+          <button 
+            className="w-full p-5 text-center text-white rounded-lg bg-slate-950 dark:bg-white dark:text-black"
+            form="form-envio"
+          >
             Confirmar Pago
           </button>
         </div>

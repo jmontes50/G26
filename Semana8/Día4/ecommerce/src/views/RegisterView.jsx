@@ -15,9 +15,9 @@ const RegisterView = () => {
       const registered = await register(email, password);
       console.log(registered);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
     <div className="w-full">
@@ -55,8 +55,8 @@ const RegisterView = () => {
                 />
               </div>
             </div>
-             {/* password */}
-             <div className="space-y-4 rounded-md shadow-md">
+            {/* password */}
+            <div className="space-y-4 rounded-md shadow-md">
               <div>
                 <label
                   htmlFor="password"
@@ -75,17 +75,18 @@ const RegisterView = () => {
             </div>
             {/* botón */}
             <div className="space-y-4 rounded-md shadow-md">
-              <button className="w-full btn btn-primary">
-                Registrarme
-              </button>
+              <button className="w-full btn btn-primary">Registrarme</button>
             </div>
             <div className="space-y-4 text-center">
               <span className="block text-gray-400">O continua con Google</span>
             </div>
             <div className="space-y-4 rounded-md shadow-md">
-              <div className="p-2 text-center border-2 border-black rounded-md">
-                Google
-              </div>
+              <button
+                className="w-full p-2 text-center border-2 border-black rounded-md"
+                onClick={loginWithGoogle}
+              >
+                <i className="fa-brands fa-google"></i> Google
+              </button>
             </div>
           </form>
         </div>

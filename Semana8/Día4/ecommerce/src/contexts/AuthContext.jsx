@@ -6,6 +6,7 @@ import {
   onAuthStateChanged,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut
 } from "firebase/auth";
 import { auth } from "../config/firebase";
 
@@ -15,6 +16,15 @@ const AuthContext = createContext();
 
 const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      return "logout";
+    } catch (error) {
+      throw error;
+    }
+  }
 
   const loginWithGoogle = async () => {
     try {
@@ -57,7 +67,7 @@ const AuthContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, loginWithGoogle, register, signIn }}>
+    <AuthContext.Provider value={{ user, loginWithGoogle, register, signIn, logout }}>
       {children}
     </AuthContext.Provider>
   );

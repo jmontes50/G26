@@ -12,13 +12,13 @@ const LoginView = () => {
           <img
             className="object-cover object-center w-full"
             alt="foto"
-            src="https://images.unsplash.com/photo-1485231183945-fffde7cc051e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
         </div>
         {/* form registro */}
         <div className="flex flex-col items-center justify-center w-full p-8 md:w-5/12">
           <div className="w-full max-w-md space-y-8 text-center">
-            <h2 className="mt-6 text-3xl font-bold">Registrate</h2>
+            <h2 className="mt-6 text-3xl font-bold">Ingresa</h2>
           </div>
           {/* input */}
           <form className="mt-8 space-y-6">

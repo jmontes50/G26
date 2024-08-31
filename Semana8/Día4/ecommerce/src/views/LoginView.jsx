@@ -1,8 +1,28 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const LoginView = () => {
-  const { loginWithGoogle } = useContext(AuthContext);
+  const { loginWithGoogle, signIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const inputEmail = useRef();
+  const inputPassword = useRef();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const email = inputEmail.current.value;
+      const password = inputPassword.current.value;
+      const loggued = await signIn(email, password);
+      if(loggued){
+        //si se loguea que me lleve hacia el home
+        navigate('/');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="w-full">
@@ -58,7 +78,7 @@ const LoginView = () => {
             </div>
             {/* botón */}
             <div className="space-y-4 rounded-md shadow-md">
-              <button className="w-full btn btn-primary">Registrarme</button>
+              <button className="w-full btn btn-primary">Ingresar</button>
             </div>
             <div className="space-y-4 text-center">
               <span className="block text-gray-400">O continua con Google</span>

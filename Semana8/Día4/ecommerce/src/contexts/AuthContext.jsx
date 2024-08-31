@@ -26,7 +26,8 @@ const AuthContextProvider = ({ children }) => {
 
   const register = async (email, password) => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password)
+      await createUserWithEmailAndPassword(auth, email, password);
+      return true;
     } catch (error) {
       console.log(error)
     }
@@ -34,7 +35,8 @@ const AuthContextProvider = ({ children }) => {
 
   const signIn = async (email, password) => {
     try {
-      await signInWithEmailAndPassword(auth, email, password)
+      await signInWithEmailAndPassword(auth, email, password);
+      return true;
     } catch (error) {
       console.log(error)
     }

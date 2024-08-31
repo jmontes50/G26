@@ -28,7 +28,7 @@ const RegisterView = () => {
             <h2 className="mt-6 text-3xl font-bold">Registrate</h2>
           </div>
           {/* input */}
-          <form className="mt-8 space-y-6">
+          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             {/* input */}
             <div className="space-y-4 rounded-md shadow-md">
               <div>
@@ -43,6 +43,7 @@ const RegisterView = () => {
                   type="email"
                   className="w-full px-3 py-1.5 border rounded-md"
                   placeholder="email@dominio.com"
+                  ref={inputEmail}
                 />
               </div>
             </div>
@@ -60,6 +61,7 @@ const RegisterView = () => {
                   type="password"
                   className="w-full px-3 py-1.5 border rounded-md"
                   placeholder="Indique su contraseña"
+                  ref={inputPassword}
                 />
               </div>
             </div>

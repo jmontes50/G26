@@ -120,14 +120,21 @@ const Navbar = () => {
                   <i className="fa-regular fa-moon"></i>
                 )}
               </button>
-              <Link to="/login" className="btn btn-primary me-1">
-                Login
-              </Link>
+
               {user !== null ? (
                 <button className="btn btn-primary" onClick={handleLogout}>
                   Cerrar sesión
                 </button>
-              ) : null}
+              ) : (
+                <>
+                  <Link to="/login" className="btn btn-primary">
+                    Login
+                  </Link>
+                  <Link to="/register" className="btn btn-primary">
+                    Registrate
+                  </Link>
+                </>
+              )}
             </nav>
           </div>
         </Transition>

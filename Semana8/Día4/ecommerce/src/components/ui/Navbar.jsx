@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { AuthContext } from "../../contexts/AuthContext";
 import { CartContext } from "../../contexts/CartContext";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
@@ -8,11 +9,22 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const { isDark, toggleDarkMode } = useContext(ThemeContext);
+  const { user, logout } = useContext(AuthContext);
   const { cantTotal } = useContext(CartContext);
+
+  console.log(user)
 
   const handleOpen = () => {
     setOpen(!open);
   };
+
+  const handleLogout = async() => {
+    try {
+      await logout();
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <nav className="dark:bg-dark-background dark:text-dark-text">
@@ -50,6 +62,9 @@ const Navbar = () => {
             <Link to="/login" className="btn btn-primary">
               Login
             </Link>
+            {user !== null ? (
+                <button className="btn btn-primary" onClick={handleLogout}>Cerrar sesión</button>
+              ) : null}
           </div>
           {/* responsive */}
           <div className="lg:hidden">
@@ -96,9 +111,12 @@ const Navbar = () => {
                   <i className="fa-regular fa-moon"></i>
                 )}
               </button>
-              <Link to="/login" className="btn btn-primary">
+              <Link to="/login" className="btn btn-primary me-1">
                 Login
               </Link>
+              {user !== null ? (
+                <button className="btn btn-primary" onClick={handleLogout}>Cerrar sesión</button>
+              ) : null}
             </nav>
           </div>
         </Transition>

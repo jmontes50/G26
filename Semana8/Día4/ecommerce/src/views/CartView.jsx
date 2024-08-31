@@ -63,8 +63,14 @@ const CartView = () => {
                       className="dark:text-dark-text dark:bg-dark-background"
                       defaultValue={user.displayName}
                       // a cada input hay que registrarlo
-                      {...register('nombreCompleto')}
+                      {...register('nombreCompleto', {
+                        required: 'El nombre es obligatorio',
+                        minLength: { value: 3, message: 'El nombre debe tener más de 3 letras'},
+                        maxLength: { value: 20, message: 'El nombre debe tener hasta 20 letras'},
+                        // pattern: { value: /^[A-Z]+$/i , message: 'Solo acepta mayúsculas'}
+                      })}
                     />
+                    {errors.nombreCompleto && <p className="text-xs text-red-600">{errors.nombreCompleto.message}</p>}
                   </div>
                   {/* campo */}
                   <div className="flex flex-col mb-3">

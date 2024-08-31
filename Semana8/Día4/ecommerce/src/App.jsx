@@ -10,8 +10,9 @@ import CartView from "./views/CartView";
 import RegisterView from "./views/RegisterView";
 // components
 import Navbar from "./components/ui/Navbar";
+import ProtectedRoute from "./components/ProtectedRoute";
 //css
-import 'react-toastify/dist/ReactToastify.min.css';
+import "react-toastify/dist/ReactToastify.min.css";
 
 const App = () => {
   const { isDark } = useContext(ThemeContext);
@@ -26,7 +27,14 @@ const App = () => {
           <Route path="/login" element={<LoginView />} />
           <Route path="/products" element={<ProductsView />} />
           <Route path="/detail/:id" element={<DetailView />} />
-          <Route path="/cart" element={<CartView />} />
+          <Route
+            path="/cart"
+            element={
+              <ProtectedRoute>
+                <CartView />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/register" element={<RegisterView />} />
         </Routes>
       </div>

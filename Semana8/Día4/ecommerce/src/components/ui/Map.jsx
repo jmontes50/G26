@@ -23,6 +23,7 @@ const Map = ({ height = "400px", clickable, position, setPosition }) => {
             const { lat, lng } = e.latlng;
             setPosition([lat, lng]);
             // map.flyTo(e.latlng, map.getZoom());
+            setCoordsMap([lat, lng]);
           }
         }
     })

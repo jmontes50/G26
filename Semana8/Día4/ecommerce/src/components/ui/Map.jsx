@@ -5,6 +5,7 @@ import {
   Marker,
   useMapEvents,
   useMap,
+  Popup,
 } from "react-leaflet";
 
 const Map = ({ height = "400px", clickable, position, setPosition }) => {
@@ -40,11 +41,12 @@ const Map = ({ height = "400px", clickable, position, setPosition }) => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <LocationMarker />
-        {/* <Marker position={position}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-    </Marker> */}
+        {/* manera estática */}
+        <Marker position={coordsMap} >
+          <Popup>
+            Hola!
+          </Popup>
+        </Marker>
       </MapContainer>
     </div>
   );

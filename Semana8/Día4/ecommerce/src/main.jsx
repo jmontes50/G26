@@ -6,6 +6,7 @@ import { AuthContextProvider } from "./contexts/AuthContext";
 import { ThemeContextProvider } from "./contexts/ThemeContext";
 import { CartContextProvider } from "./contexts/CartContext.jsx";
 import "./index.css";
+import "leaflet/dist/leaflet.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

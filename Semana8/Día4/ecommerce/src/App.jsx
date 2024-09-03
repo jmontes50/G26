@@ -11,6 +11,7 @@ import RegisterView from "./views/RegisterView";
 // components
 import Navbar from "./components/ui/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Footer from "./components/ui/Footer";
 //css
 import "react-toastify/dist/ReactToastify.min.css";
 
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/register" element={<RegisterView />} />
         </Routes>
       </div>
+      <Footer />
       <ToastContainer />
     </div>
   );

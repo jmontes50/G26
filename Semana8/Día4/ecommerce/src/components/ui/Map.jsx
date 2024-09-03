@@ -13,6 +13,20 @@ const Map = ({ height = "400px", clickable, position, setPosition }) => {
 
   //es para poder utilizar caracteristicas que trae leaflet por si solo
   const LocationMarker = () => {
+    // escuchar el click
+    const map = useMapEvents({
+        //vamos a escuchar el evento click, NOTA! esto ya viene de leaflet
+        click(e) {
+          //y a partir del evento ver la longitud y latitud de donde estoy haciendo click en el mapa
+          console.log(e);
+          if(clickable){
+            const { lat, lng } = e.latlng;
+            setPosition([lat, lng]);
+            // map.flyTo(e.latlng, map.getZoom());
+          }
+        }
+    })
+
     //volar en el mapa
     if(coordsMap) {
       // console.log(coordsMap);
@@ -20,6 +34,12 @@ const Map = ({ height = "400px", clickable, position, setPosition }) => {
       const _map = useMap();
       _map.flyTo(coordsMap);
     }
+
+    return (
+      <>
+        { position ? <Marker position={position} /> : null } 
+      </>
+    )
   };
 
   useEffect(() => {
@@ -42,11 +62,11 @@ const Map = ({ height = "400px", clickable, position, setPosition }) => {
         />
         <LocationMarker />
         {/* manera estática */}
-        <Marker position={coordsMap} >
+        {/* <Marker position={coordsMap} >
           <Popup>
             Hola!
           </Popup>
-        </Marker>
+        </Marker> */}
       </MapContainer>
     </div>
   );

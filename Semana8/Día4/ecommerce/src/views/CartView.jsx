@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { AuthContext } from "../contexts/AuthContext"
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
@@ -8,6 +8,8 @@ import Map from "../components/ui/Map";
 
 const CartView = () => {
   const headings = ["id", "nombre", "precio", "cantidad"];
+
+  const [positionMarker, setPositionMarker] = useState(null);
 
   const { cart, removeProductFromCart, totalCart } = useContext(CartContext);
   const { user } = useContext(AuthContext);
@@ -99,7 +101,7 @@ const CartView = () => {
                   </div>
                 </form>
                 {/* Mapa Leaflet */}
-                <Map />
+                <Map clickable={true} position={positionMarker} setPosition={setPositionMarker} />
               </TabPanel>
             </TabPanels>
           </TabGroup>

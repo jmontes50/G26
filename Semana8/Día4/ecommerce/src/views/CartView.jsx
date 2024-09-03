@@ -4,6 +4,7 @@ import { AuthContext } from "../contexts/AuthContext"
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { useForm } from "react-hook-form";
 import TableCart from "../components/Cart/TableCart";
+import Map from "../components/ui/Map";
 
 const CartView = () => {
   const headings = ["id", "nombre", "precio", "cantidad"];
@@ -97,6 +98,8 @@ const CartView = () => {
                     />
                   </div>
                 </form>
+                {/* Mapa Leaflet */}
+                <Map />
               </TabPanel>
             </TabPanels>
           </TabGroup>

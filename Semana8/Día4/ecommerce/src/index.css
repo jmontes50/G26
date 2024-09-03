@@ -28,3 +28,9 @@ h1 --> base
     @apply px-4 mx-auto lg:px-8 xl:max-w-7xl
   }
 }
+
+/* leaflet trae un contenedor propio con la clase .leaflet-container */
+.leaflet-container {
+  height:100%;
+  width:100;
+}

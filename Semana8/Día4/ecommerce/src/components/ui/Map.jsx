@@ -10,6 +10,19 @@ import {
 const Map = ({ height = "400px", clickable, position, setPosition }) => {
   const [coordsMap, setCoordsMap] = useState([-12.0262542, -77.1525914]);
 
+  const LocationMarker = () => {};
+
+  useEffect(() => {
+    //para saber si tengo permisos
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((location) => {
+        // console.log(location)
+        const { coords: { latitude, longitude }} = location;
+        setCoordsMap( [ latitude, longitude ] );
+      })
+    }
+  }, []);
+
   return (
     <div className="w-full border-2 border-gray-600 rounded" style={{ height }}>
       <MapContainer center={coordsMap} zoom={13} scrollWheelZoom={false}>

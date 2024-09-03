@@ -10,7 +10,16 @@ import {
 const Map = ({ height = "400px", clickable, position, setPosition }) => {
   const [coordsMap, setCoordsMap] = useState([-12.0262542, -77.1525914]);
 
-  const LocationMarker = () => {};
+  //es para poder utilizar caracteristicas que trae leaflet por si solo
+  const LocationMarker = () => {
+    //volar en el mapa
+    if(coordsMap) {
+      // console.log(coordsMap);
+      //esto me permite utilizar los métodos de leaflet
+      const _map = useMap();
+      _map.flyTo(coordsMap);
+    }
+  };
 
   useEffect(() => {
     //para saber si tengo permisos
@@ -30,6 +39,7 @@ const Map = ({ height = "400px", clickable, position, setPosition }) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <LocationMarker />
         {/* <Marker position={position}>
       <Popup>
         A pretty CSS3 popup. <br /> Easily customizable.

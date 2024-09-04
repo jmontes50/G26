@@ -1,7 +1,7 @@
 //para obtener la información del estado, useSelector
 //para poder disparar una acción aparte de la acción, necesitare useDispatch
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "../app/counter/counterSlice";
+import { increment, decrement, setCounterValue } from "../app/counter/counterSlice";
 
 const Counter = () => {
   //es obtener lo justo y necesario que se requiera, no todo el estado
@@ -9,14 +9,16 @@ const Counter = () => {
 
   const dispatch = useDispatch(); //dispatch me va a permitir disparar una acción
 
-  console.log("count de useSelector", count);
-
   const handleIncrement = () => {
     dispatch(increment());
   }
 
   const handleDecrement = () => {
-    dispatch(decrement())
+    dispatch(decrement());
+  }
+
+  const handleCounterValue = () => {
+    dispatch(setCounterValue(1000));
   }
 
   return (
@@ -27,6 +29,9 @@ const Counter = () => {
       </button>
       <button onClick={handleDecrement}>
         Decrementar
+      </button>
+      <button onClick={handleCounterValue}>
+        Pasar a 100
       </button>
     </div>
   );

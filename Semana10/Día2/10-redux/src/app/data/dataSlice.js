@@ -6,7 +6,7 @@ const fetchUsers = createAsyncThunk(
   async (_ , thunkApi) => {
     try {
       //vamos a hacer la petición, la tarea asincrona
-      const result = fetch('https://reqres.in/api/users?page=2');
+      const result = await fetch('https://reqres.in/api/users?page=2');
       return result.json(); //aca ya esta transformado de JSON a un objeto de JS
     } catch (error) {
       thunkApi.rejectWithValue(error);

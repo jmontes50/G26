@@ -26,7 +26,25 @@ const dataSlice = createSlice({
       state.listUsers = action.payload;
       state.loading = false;
     }
+  },
+  //los extra reducers nos van a permitir manejar acciones que no estan consideradas originalmente
+  extraReducers: (builder) => {
+    builder
+    .addCase(fetchUsers.pending, (state) => {
+      state.loading = "loading"
+    })
+    .addCase(fetchUsers.fulfilled, (state, action) => {
+      state.loading = "succeded",
+      //en el payload vamos a recibir la respuesta de la petición, como tenemos data, le agrego data
+      state.listUsers = [...action.payload.data]
+    })
+    .addCase(fetchUsers.rejected, (state, action) => {
+      state.loading = "failed",
+      state.error = action.error
+    })
   }
 })
+
+export { fetchUsers };
 
 export default dataSlice.reducer;

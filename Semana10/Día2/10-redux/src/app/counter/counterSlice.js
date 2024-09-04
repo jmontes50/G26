@@ -11,12 +11,15 @@ const counterSlice = createSlice({
     increment: (state) => {
       state.value += 1;
     },
+    decrement: (state) => {
+      state.value -= 1;
+    }
   }
 })
 // console.log("counter slice", counterSlice);
 //acciones serán usualmente para los componentes
-const { increment } = counterSlice.actions;
+const { increment, decrement } = counterSlice.actions;
 
-export { increment };
+export { increment, decrement };
 //el reducer sera usado para que el store lo tenga en cuenta
 export default counterSlice.reducer;

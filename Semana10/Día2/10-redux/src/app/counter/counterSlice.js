@@ -13,3 +13,10 @@ const counterSlice = createSlice({
     },
   }
 })
+// console.log("counter slice", counterSlice);
+//acciones serán usualmente para los componentes
+const { increment } = counterSlice.actions;
+
+export { increment };
+//el reducer sera usado para que el store lo tenga en cuenta
+export default counterSlice.reducer;

@@ -1,6 +1,11 @@
+import Counter from "./components/Counter";
+
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <h1>App</h1>
+      <Counter />
+    </div>
   )
 }
 
